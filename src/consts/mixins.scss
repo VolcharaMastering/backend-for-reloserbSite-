@@ -1,0 +1,43 @@
+@import './consts.scss';
+
+@mixin to-center_row($align: center, $justify: space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin to-center_column($align: center, $justify: space-between) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin font-style(
+    $font-family: $main-font-family,
+    $font-size: 20px,
+    $font-weight: 400,
+    $color: $main-text-color
+) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+@mixin menu-style() {
+    width: 100%;
+}
+@mixin sub-menu-style {
+    @include to-center_row();
+    list-style-type: none;
+}
+// @mixin transition-for-text($transition: $transition-value) {
+//   transition: $transition;
+// }
+@mixin link-list($color: $main-text-color) {
+    text-decoration: none;
+    color: $main-text-color;
+}
+@mixin bookmark-link-hover($opacity: 90%, $text-decoration: underline) {
+    text-decoration: $text-decoration;
+    cursor: pointer;
+    opacity: $opacity;
+}
