@@ -1,16 +1,14 @@
 import { NavLink } from 'react-router-dom'
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import Logo from '../Logo/Logo'
 import logo from '../../assets/logo.svg'
 import './TheHeader.scss'
 import useLocationHook from '../../utils/hooks/useLocationHook'
 
 function TheHeader() {
-
-useEffect(() => {
-    
- const location = useLocationHook();
-}, []);
+    useEffect(() => {
+        const location = useLocationHook()
+    }, [])
     console.log(location)
     return (
         <header className="header">

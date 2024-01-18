@@ -7,23 +7,11 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "fix": "eslint --fix app",
+        "fix": "eslint --fix --ext .js,.jsx,.scss,.css,.json",
         "format": "prettier --write src/**/*.{js,jsx,scss,css,json}",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
         "lint-staged": "lint-staged",
         "prepare": "husky install"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "npm run fix",
-            "npm run format",
-            "git add"
-        ]
     },
     "eslintConfig": {
         "extends": [
@@ -54,6 +42,7 @@
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
+        "npm-run-all": "^4.1.5",
         "prettier": "^3.2.4",
         "vite": "^5.0.8"
     }
