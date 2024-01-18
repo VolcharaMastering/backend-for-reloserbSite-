@@ -15,7 +15,7 @@
     $font-family: $main-font-family,
     $font-size: 20px,
     $font-weight: 400,
-    $color: $main-text-color
+    $color: $dark-text-color
 ) {
     font-family: $font-family;
     font-size: $font-size;
@@ -25,16 +25,16 @@
 @mixin menu-style() {
     width: 100%;
 }
-@mixin sub-menu-style {
+@mixin list-without-dots {
     @include to-center_row();
     list-style-type: none;
 }
 // @mixin transition-for-text($transition: $transition-value) {
 //   transition: $transition;
 // }
-@mixin link-list($color: $main-text-color) {
+@mixin link-list($color: $dark-text-color) {
     text-decoration: none;
-    color: $main-text-color;
+    color: $dark-text-color;
 }
 @mixin bookmark-link-hover($opacity: 90%, $text-decoration: underline) {
     text-decoration: $text-decoration;

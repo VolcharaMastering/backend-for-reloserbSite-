@@ -11,10 +11,12 @@ html,
 body {
     width: 100vw;
     height: 100vh;
+    background-color: $light-background-color;
 }
 #root {
-    width: 100%;
-    overflow-x: hidden;
+    width: 94%;
+    overflow: hidden;
+    margin: 0 auto;
     @include font-style();
     @include to-center_column(center, space-between);
     h1 {

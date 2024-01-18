@@ -13,6 +13,18 @@
         "lint-staged": "lint-staged",
         "prepare": "husky install"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "npm run fix",
+            "npm run format",
+            "git add"
+        ]
+    },
     "eslintConfig": {
         "extends": [
             "react-app",
