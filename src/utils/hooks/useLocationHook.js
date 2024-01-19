@@ -1,26 +1,25 @@
-import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useState, useEffect } from "react";
 
-const useLocationHook = () => {
-    const location = useLocation()
-    const [myLocation, setMyLocation] = useState({ path: '', name: '' })
+const useLocationHook = (location) => {
+  const [myLocation, setMyLocation] = useState("");
 
+  useEffect(() => {
     switch (location.pathname) {
-        case '/about':
-            setMyLocation({ path: location.pathname, name: 'О нас' })
-            break
+      case "/about":
+        setMyLocation("О нас");
+        break;
 
-        case '/blog':
-            setMyLocation({ path: location.pathname, name: 'Блог' })
-            break
-
-        case '/contacts':
-            setMyLocation({ path: location.pathname, name: 'Контакты' })
-            break
-        default:
-            setMyLocation({ path: location.pathname, name: 'Main Page' })
-            break
+      case "/blog":
+        setMyLocation("Блог");
+        break;
+      case "/contacts":
+        setMyLocation("Контакты");
+        break;
+      default:
+        setMyLocation("Main Page");
+        break;
     }
-    return myLocation
-}
-export default useLocationHook
+  }, [location]);
+  return myLocation;
+};
+export default useLocationHook;

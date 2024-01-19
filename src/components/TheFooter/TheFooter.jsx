@@ -1,7 +1,7 @@
-import './TheFooter.scss'
+import "./TheFooter.scss";
 
 function TheFooter() {
-    return <div>TheFooter</div>
+  return <div>TheFooter</div>;
 }
 
-export default TheFooter
+export default TheFooter;

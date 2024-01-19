@@ -1,20 +1,20 @@
-@import '../../consts/consts.scss';
-@import '../../consts/mixins.scss';
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
 
 .header {
-    width: 100%;
-    @include to-center_row();
-    height: 70px;
+  width: 100%;
+  @include to-center_row();
+  height: 70px;
 }
 
 .header__main {
-    @include to-center_row;
+  @include to-center_row;
 }
 .header__menu {
 }
 .header__menu-block {
-    @include list-without-dots();
+  @include list-without-dots();
 }
 .header__menu-link {
-    @include link-list();
+  @include link-list();
 }
