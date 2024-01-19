@@ -36,7 +36,7 @@
 }
 @mixin text-link-hover($opacity: 90%, $text-decoration: underline) {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   cursor: pointer;
   opacity: $opacity;
