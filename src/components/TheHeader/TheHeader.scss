@@ -10,11 +10,4 @@
 .header__main {
   @include to-center_row;
 }
-.header__menu {
-}
-.header__menu-block {
-  @include list-without-dots();
-}
-.header__menu-link {
-  @include link-list();
-}
+

@@ -29,15 +29,23 @@
   @include to-center_row();
   list-style-type: none;
 }
-// @mixin transition-for-text($transition: $transition-value) {
-//   transition: $transition;
-// }
+@mixin transition-for-links($transition: 0.4s ease-in) {
+  position: relative;
+  width: 0;
+  transition: $transition;
+}
+@mixin text-link-hover($opacity: 90%, $text-decoration: underline) {
+  position: absolute;
+  top:0;
+  left: 0;
+  cursor: pointer;
+  opacity: $opacity;
+  background-color: $dark-background-color;
+  border: $border-color;
+  width: 100%;
+}
+
 @mixin link-list($color: $dark-text-color) {
   text-decoration: none;
   color: $dark-text-color;
-}
-@mixin bookmark-link-hover($opacity: 90%, $text-decoration: underline) {
-  text-decoration: $text-decoration;
-  cursor: pointer;
-  opacity: $opacity;
 }

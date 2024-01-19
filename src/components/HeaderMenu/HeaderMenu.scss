@@ -1,0 +1,26 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+.header__menu {
+  .header__menu-block {
+    @include list-without-dots();
+
+    .header__menu-link:hover .header__link-back {
+      @include text-link-hover();
+
+      .header__link-back {
+        @include transition-for-links();
+      }
+
+      .header__link {
+        @include link-list();
+      }
+      .header__link_active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// .header__link:hover {
+//   $color: $light-text-color;
+// }

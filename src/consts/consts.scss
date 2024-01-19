@@ -2,11 +2,12 @@ $light-background-color: #f2eeea;
 $dark-background-color: #000;
 $dark-text-color: #000;
 $light-text-color: #fff;
+$hover-color: #e4e4e0;
 $border-color: #979797;
 $separator-color: #999;
 $main-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $body-width: 90vw;
-$hover-border-color: #747474;
+$borders-default: 1px solid $border-color;
 
 $transition-value:
   opacity 0.2s linear,

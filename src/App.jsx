@@ -7,6 +7,7 @@ import Blog from "./Pages/Blog/Blog";
 import Contacts from "./Pages/Contacts/Contacts";
 import TheHeader from "./components/TheHeader/TheHeader";
 import TheFooter from "./components/TheFooter/TheFooter";
+import { useResize } from "./utils/hooks/useResize";
 
 function App() {
   return (
