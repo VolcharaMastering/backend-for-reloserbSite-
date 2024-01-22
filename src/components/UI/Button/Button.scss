@@ -1,23 +1,23 @@
 @import "../../../consts/consts.scss";
 @import "../../../consts/mixins.scss";
 
-.button{
-    @include button();
-    &.dark{
-        color: $light-text-color;
-    }
-    &.mobile{
-        width: 300px;
-    }
-    &.tablet{
-        font-size: 12px;
-        width: 150px;
-    }
-    &.desktop{
-        width: 200px;
-    }
+.button {
+  @include button();
+  &.dark {
+    color: $light-text-color;
+  }
+  &.mobile {
+    width: 300px;
+  }
+  &.tablet {
+    font-size: 12px;
+    width: 150px;
+  }
+  &.desktop {
+    width: 200px;
+  }
 }
-.button:hover{
-    cursor: pointer;
-    background-color: #00000005;
+.button:hover {
+  cursor: pointer;
+  background-color: #00000005;
 }
