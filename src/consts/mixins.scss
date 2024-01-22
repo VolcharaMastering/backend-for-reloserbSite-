@@ -29,7 +29,7 @@
   @include to-center_row();
   list-style-type: none;
 }
-@mixin transition-for-links($transition: 0.4s ease-in) {
+@mixin transition-for-links($transition: $transition) {
   position: relative;
   width: 0;
   transition: $transition;
@@ -44,7 +44,15 @@
   border: $border-color;
   width: 100%;
 }
-
+@mixin button($border: $borders-default, $color: $dark-text-color) {
+  border: $border;
+  border-radius: 2px;
+  @include font-style($font-size: 14px);
+  width: 210px;
+  height: 55px;
+  background-color: #0000;
+  transition: $transition;
+}
 @mixin link-list($color: $dark-text-color) {
   text-decoration: none;
   color: $dark-text-color;

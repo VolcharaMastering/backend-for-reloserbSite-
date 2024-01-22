@@ -1,8 +1,10 @@
-function Button({ name, type, action, color }) {
+import './Button.scss'
+
+function Button({ name, type, action, color, size }) {
   return (
     <div>
       <button
-        className={`button ${color}==="light" ? "button__light" : "button__dark"`}
+        className={`button ${color} ${size}`}
         onClick={action}
         type={type}
       >

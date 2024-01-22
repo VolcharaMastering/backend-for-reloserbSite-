@@ -9,6 +9,7 @@ $main-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $body-width: 90vw;
 $borders-default: 1px solid $border-color;
 
+$transition: 0.3s ease-in;
 $transition-value:
   opacity 0.2s linear,
   text-shadow 0.3s linear;
