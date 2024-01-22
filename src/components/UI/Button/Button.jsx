@@ -1,9 +1,12 @@
 import "./Button.scss";
 
-function Button({ name, type, action, color, size }) {
+function Button({ name, action, color, size }) {
+  const handleClick = () => {
+    action();
+  };
   return (
     <div>
-      <button className={`button ${color} ${size}`} onClick={action} type={type}>
+      <button className={`button ${color} ${size}`} onClick={handleClick} type="button">
         {name}
       </button>
     </div>
