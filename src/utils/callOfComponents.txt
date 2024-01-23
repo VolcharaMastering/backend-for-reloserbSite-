@@ -7,3 +7,9 @@
       /> 
       
       <Gallery galleryType='stringed' content={galleryContent} size={screenSize.trakResolutionValue} />
+      
+      <Gallery
+        galleryType="block"
+        content={galleryContent}
+        size={screenSize.trakResolutionValue}
+      />

@@ -60,10 +60,15 @@
 @mixin gridAutoFill(
   $justify: center,
   $align: center,
-  $template-cols: repeat(auto-fill, minmax(140px, 1fr)),
-  $gap: 10px 20px
+  $template-cols: repeat(auto-fill, minmax(250px, 1fr)),
+  $gap: 10px
 ) {
   display: grid;
   width: 100%;
   box-sizing: border-box;
+  grid-template-columns: $template-cols;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  overflow-y: scroll;
 }

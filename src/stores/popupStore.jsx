@@ -1,16 +1,22 @@
 import { makeAutoObservable } from "mobx";
 
 class PopupState {
-  opened = false;
+  popups = {};
 
   constructor() {
     makeAutoObservable(this);
   }
-  setOpened = () => {
-    this.opened = true;
-  };
+
   setClosed = () => {
-    this.opened = false;
+    this.popups = {};
+  };
+
+  isOpen = (index) => {
+    if (!this.popups[index]) {
+      this.popups[index] = false;
+    }
+    this.popups[index] = true;
+    console.log("this", this.popups[index]);
   };
 }
 export default new PopupState();

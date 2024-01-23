@@ -23,6 +23,9 @@
   overflow: hidden;
   object-fit: cover;
 }
+.photo-container__image:hover {
+  cursor: pointer;
+}
 .photo-container__caption {
   @include font-style($font-size: 12px);
   padding-bottom: 20px;

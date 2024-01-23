@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import "./Gallery.scss";
-import PhotoContainer from "../UI/PhotoDiv/PhotoContainer";
+import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
 import swipeSettings from "../../utils/swipeConfig";
 
 function Gallery({ galleryType, content, size }) {
@@ -17,6 +17,7 @@ function Gallery({ galleryType, content, size }) {
       {content.map((image, index) => (
         <PhotoContainer
           key={index}
+          index={index}
           photoLink={image.name.default}
           size={size}
           containerType="gallery"

@@ -7,11 +7,7 @@ function Main() {
   const screenSize = useResize();
   return (
     <>
-      <Gallery
-        galleryType="stringed"
-        content={galleryContent}
-        size={screenSize.trakResolutionValue}
-      />
+      <Gallery galleryType="block" content={galleryContent} size={screenSize.trakResolutionValue} />
     </>
   );
 }
