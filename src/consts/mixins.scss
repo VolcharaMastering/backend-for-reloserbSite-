@@ -57,3 +57,13 @@
   text-decoration: none;
   color: $dark-text-color;
 }
+@mixin gridAutoFill(
+  $justify: center,
+  $align: center,
+  $template-cols: repeat(auto-fill, minmax(140px, 1fr)),
+  $gap: 10px 20px
+) {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+}

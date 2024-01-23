@@ -2,24 +2,16 @@
 @import "../../../consts/mixins.scss";
 
 .photo-container {
-  $width: 240px;
-  width: $width;
+  $width: 300px;
+  max-width: $width;
   height: $width * 1.3;
   @include to-center_column();
   border: $borders-default;
-  &.mobile {
-    width: 140px;
-  }
-  &.tablet {
-    width: 150px;
-  }
-  &.desktop {
-    width: 200px;
-  }
 }
 .photo-container__news {
   width: 50vw;
   height: 600px;
+  border: $borders-default;
   @include to-center_column($align: flex-start);
   .photo-container__title {
     @include font-style($font-size: 25px, $font-weight: 600);
@@ -33,4 +25,5 @@
 }
 .photo-container__caption {
   @include font-style($font-size: 12px);
+  padding-bottom: 20px;
 }

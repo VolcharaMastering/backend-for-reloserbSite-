@@ -1,21 +1,18 @@
-import Button from "../../components/UI/Button/Button";
-import somePicture from "../../assets/coworkPictures/DSC00026.jpg";
 import { useResize } from "../../utils/hooks/useResize";
 import "./Main.scss";
-import PhotoContainer from "../../components/UI/PhotoDiv/PhotoContainer";
+import galleryContent from "../../utils/folderApi/getPhotos";
+import Gallery from "../../components/Gallery/Gallery";
 
 function Main() {
   const screenSize = useResize();
   return (
-    <main>
-      {/* <Button name="BUTTON" action="" color="light" size={screenSize.trakResolutionValue} /> */}
-      <PhotoContainer
-        photoLink={somePicture}
+    <>
+      <Gallery
+        galleryType="stringed"
+        content={galleryContent}
         size={screenSize.trakResolutionValue}
-        caption="this is description of coworking this is description of coworking this is description of coworking"
-        containerType="news"
       />
-    </main>
+    </>
   );
 }
 

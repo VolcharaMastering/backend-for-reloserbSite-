@@ -8,6 +8,8 @@ import Contacts from "./Pages/Contacts/Contacts";
 import TheHeader from "./components/TheHeader/TheHeader";
 import TheFooter from "./components/TheFooter/TheFooter";
 import { useResize } from "./utils/hooks/useResize";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
