@@ -5,22 +5,38 @@ import "./TheHeader.scss";
 import Logo from "../Logo/Logo";
 import logo from "../../assets/logo.svg";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import { useResize } from "../../utils/hooks/useResize";
+import { Spin as Hamburger } from "hamburger-react";
+import SwipeMenu from "../SwipeMenu/SwipeMenu";
 
 function TheHeader() {
   const location = useLocation();
-  const [namedLocation, setNamedLocation] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const screenSize = useResize();
 
   const tempLocation = useLocationHook(location);
 
-  useEffect(() => {
-    setNamedLocation(tempLocation);
-  }, [tempLocation]);
   return (
     <header className="header">
       <section className="header__main">
         <Logo src={logo} />
-        <HeaderMenu />
-        <h1 className="header__page-name">{namedLocation}</h1>
+        {!(
+          screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
+        ) && <HeaderMenu />}
+
+        <h1 className="header__page-name">{tempLocation}</h1>
+        {(screenSize.trakResolutionValue === "tablet" ||
+          screenSize.trakResolutionValue === "mobile") && (
+          <Hamburger
+            toggled={isOpen}
+            label="Show menu"
+            toggle={setIsOpen}
+            size={30}
+            direction="right"
+            color="#979797"
+          />
+        )}
+        {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
       </section>
     </header>
   );

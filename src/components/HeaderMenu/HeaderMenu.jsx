@@ -1,6 +1,6 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./HeaderMenu.scss";
-import { menu } from "../../content/labelsRu.json";
+import TextLink from "../UI/TextLink/TextLink";
 
 function HeaderMenu() {
   const location = useLocation();
@@ -8,40 +8,16 @@ function HeaderMenu() {
     <nav className="header__menu">
       <ul className="header__menu-block">
         <li className="header__menu-link">
-          <div className="header__link-back" />
-          <NavLink
-            to="/"
-            className={`header__link ${location.pathname === "/" && "header__link_active"}`}
-          >
-            {menu.main}
-          </NavLink>
+          <TextLink location={location} linkTo="/" />
         </li>
         <li className="header__menu-link">
-          <div className="header__link-back" />
-          <NavLink
-            to="/about"
-            className={`header__link ${location.pathname === "/about" && "header__link_active"}`}
-          >
-            {menu.about}
-          </NavLink>
+          <TextLink location={location} linkTo="/about" />
         </li>
         <li className="header__menu-link">
-          <div className="header__link-back" />
-          <NavLink
-            to="/blog"
-            className={`header__link ${location.pathname === "/blog" && "header__link_active"}`}
-          >
-            {menu.blog}
-          </NavLink>
+          <TextLink location={location} linkTo="/blog" />
         </li>
         <li className="header__menu-link">
-          <div className="header__link-back" />
-          <NavLink
-            to="/contacts"
-            className={`header__link ${location.pathname === "/contacts" && "header__link_active"}`}
-          >
-            {menu.contacts}
-          </NavLink>
+          <TextLink location={location} linkTo="/contacts" />
         </li>
       </ul>
     </nav>

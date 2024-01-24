@@ -3,24 +3,9 @@
 .header__menu {
   .header__menu-block {
     @include list-without-dots();
+    width: 35vw;
 
-    .header__menu-link:hover .header__link-back {
-      @include text-link-hover();
-
-      .header__link-back {
-        @include transition-for-links();
-      }
-
-      .header__link {
-        @include link-list();
-      }
-      .header__link_active {
-        text-decoration: underline;
-      }
+    .header__menu-link {
     }
   }
 }
-
-// .header__link:hover {
-//   $color: $light-text-color;
-// }

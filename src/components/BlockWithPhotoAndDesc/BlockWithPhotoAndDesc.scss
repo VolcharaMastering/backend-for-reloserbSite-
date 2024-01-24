@@ -1,2 +1,6 @@
 @import "../../consts/consts.scss";
 @import "../../consts/mixins.scss";
+
+.news-container {
+  @include to-center_row();
+}
