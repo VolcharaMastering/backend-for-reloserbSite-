@@ -1,13 +1,16 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import "./PhotoContainer.scss";
 import PopupState from "../../../stores/PopupState";
+import generateRandomKey from "../../../utils/keyGenerator";
 
 function PhotoContainer({ index, photoLink, size, containerType, caption, title }) {
+  const singleIndex = generateRandomKey();
   const handleOpenPopup = () => {
     const data = {
-      id: index,
+      id: index || singleIndex,
       photoLink: photoLink,
       title: title,
       caption: caption,
