@@ -1,25 +1,24 @@
-@import './consts/consts.scss';
-@import './consts/mixins.scss';
-
+@import "./consts/consts.scss";
+@import "./consts/mixins.scss";
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: $light-background-color;
+  width: 100vw;
+  height: 100vh;
+  background-color: $light-background-color;
 }
 #root {
-    width: 94%;
-    overflow: hidden;
-    margin: 0 auto;
-    @include font-style();
-    @include to-center_column(center, space-between);
-    h1 {
-        @include font-style($font-family: $main-font-family, $font-size: 30px, $font-weight: 700);
-    }
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  @include font-style();
+  @include to-center_column(center, space-between);
+  h1 {
+    @include font-style($font-family: $yanone-font, $font-size: 30px, $font-weight: 400);
+  }
 }

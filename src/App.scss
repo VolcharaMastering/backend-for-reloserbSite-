@@ -1,8 +1,8 @@
-@import './consts/consts.scss';
-@import './consts/mixins.scss';
+@import "./consts/consts.scss";
+@import "./consts/mixins.scss";
 
 .main {
-    @include to-center_column($align: center, $justify: flex-start);
-    height: 100vh;
-    width: 80%;
+  @include to-center_column($align: center, $justify: flex-start);
+  height: auto;
+  width: 100%;
 }

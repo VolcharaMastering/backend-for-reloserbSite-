@@ -1,26 +1,17 @@
-import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
+import { menu } from "../../content/labelsRu.json";
 
-const useLocationHook = () => {
-    const location = useLocation()
-    const [myLocation, setMyLocation] = useState({ path: '', name: '' })
+const useLocationHook = (location) => {
+  const [myLocation, setMyLocation] = useState("");
+  const checkLink = location.pathname;
 
-    switch (location.pathname) {
-        case '/about':
-            setMyLocation({ path: location.pathname, name: 'О нас' })
-            break
-
-        case '/blog':
-            setMyLocation({ path: location.pathname, name: 'Блог' })
-            break
-
-        case '/contacts':
-            setMyLocation({ path: location.pathname, name: 'Контакты' })
-            break
-        default:
-            setMyLocation({ path: location.pathname, name: 'Main Page' })
-            break
+  useEffect(() => {
+    setMyLocation(menu[checkLink.substring(1)]);
+    if (checkLink === "/") {
+      setMyLocation(menu.main);
     }
-    return myLocation
-}
-export default useLocationHook
+  }, [location]);
+  return myLocation;
+};
+export default useLocationHook;

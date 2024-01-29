@@ -1,0 +1,15 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.text-block {
+  width: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+  .text-block__title {
+    @include font-style($font-size: 24px);
+  }
+  .text-block__text {
+    @include font-style($font-size: 14px);
+    text-align: left;
+  }
+}

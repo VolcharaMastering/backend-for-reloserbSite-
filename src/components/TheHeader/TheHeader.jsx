@@ -1,56 +1,45 @@
-import { NavLink } from 'react-router-dom'
-import {useEffect} from 'react'
-import Logo from '../Logo/Logo'
-import logo from '../../assets/logo.svg'
-import './TheHeader.scss'
-import useLocationHook from '../../utils/hooks/useLocationHook'
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Spin as Hamburger } from "hamburger-react";
+import useLocationHook from "../../utils/hooks/useLocationHook";
+import { useResize } from "../../utils/hooks/useResize";
+import "./TheHeader.scss";
+import Logo from "../Logo/Logo";
+import logo from "../../assets/logo.svg";
+import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import SwipeMenu from "../SwipeMenu/SwipeMenu";
 
 function TheHeader() {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  const screenSize = useResize();
 
-useEffect(() => {
-    
- const location = useLocationHook();
-}, []);
-    console.log(location)
-    return (
-        <header className="header">
-            <section className="header__main">
-                <Logo src={logo} />
-                <nav className="header__menu">
-                    <ul className="header__menu-block">
-                        <li className="header__menu-link">
-                            <NavLink
-                                to="/"
-                                className={` header__NavLink  ${location.path}==='/' && header__NavLink_active`}
-                            />
-                            Главная
-                        </li>
-                        <li className="header__menu-link">
-                            <NavLink
-                                to="/about"
-                                className={` header__NavLink  ${location.path}==='/about' && header__NavLink_active`}
-                            />
-                            О нас{' '}
-                        </li>
-                        <li className="header__menu-link">
-                            <NavLink
-                                to="/blog"
-                                className={` header__NavLink  ${location.path}==='/blog' && header__NavLink_active`}
-                            />
-                            Блог
-                        </li>
-                        <li className="header__menu-link">
-                            <NavLink
-                                to="/contacts"
-                                className={` header__NavLink  ${location.path}==='/contacts' && header__NavLink_active`}
-                            />
-                            Контакты
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-        </header>
-    )
+  const tempLocation = useLocationHook(location);
+
+  return (
+    <header className="header">
+      <section className="header__main">
+        <Logo src={logo} />
+        {!(
+          screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
+        ) && <HeaderMenu size={screenSize.trakResolutionValue} />}
+
+        <h1 className="header__page-name">{tempLocation}</h1>
+        {(screenSize.trakResolutionValue === "tablet" ||
+          screenSize.trakResolutionValue === "mobile") && (
+          <Hamburger
+            toggled={isOpen}
+            label="Show menu"
+            toggle={setIsOpen}
+            size={30}
+            direction="right"
+            color="#979797"
+          />
+        )}
+        {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
+      </section>
+    </header>
+  );
 }
 
-export default TheHeader
+export default TheHeader;

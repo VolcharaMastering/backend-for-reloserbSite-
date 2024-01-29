@@ -1,0 +1,17 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.footer__menu {
+  .footer__menu-block {
+    @include list-without-dots();
+    width: 35vw;
+    &.tablet {
+      @include to-center_column();
+    }
+    &.mobile {
+      @include to-center_column();
+    }
+    .footer__menu-link {
+    }
+  }
+}

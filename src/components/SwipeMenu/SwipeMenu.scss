@@ -1,0 +1,22 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.swipe-menu {
+  position: fixed;
+  width: 60vw;
+  border: $borders-default;
+  top: 0;
+  right: 0;
+  background-color: $dark-background-color;
+  @include to-center_column();
+  overflow-y: scroll;
+  z-index: 1;
+  transition: $transition;
+  padding: 30px;
+  &.mobile {
+    width: 100vw;
+  }
+}
+.hamburger-react {
+  z-index: 2;
+}

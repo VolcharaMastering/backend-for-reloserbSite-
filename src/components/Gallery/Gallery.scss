@@ -1,0 +1,18 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.gallery {
+  width: 100%;
+  border: $borders-default;
+}
+
+.gallery_blocked {
+  @include gridAutoFill();
+}
+.gallery_stringed {
+  // @include to-center_row();
+  // height: 350px;
+}
+.react-multi-carousel-list {
+  width: 100%;
+}
