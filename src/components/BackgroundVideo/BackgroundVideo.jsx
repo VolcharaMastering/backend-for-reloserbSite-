@@ -20,18 +20,18 @@ function BackgroundVideo({ size, videoLink }) {
     //   allowfullscreen
     //   controls="0"
     // ></iframe>
-      <div className="background-video__shadow">
-    <video
-      autoPlay
-      muted
-      disablePictureInPicture
-      loop
-      poster={photoLink}
-      className="background-video"
-    >
-      <source src={videoLink} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div className="background-video__shadow">
+      <video
+        autoPlay
+        muted
+        disablePictureInPicture
+        loop
+        poster={photoLink}
+        className="background-video"
+      >
+        <source src={videoLink} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }

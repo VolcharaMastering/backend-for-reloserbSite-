@@ -2,7 +2,7 @@ import { useResize } from "../../utils/hooks/useResize";
 import galleryArray from "../../utils/folderApi/getPhotos";
 import "./Main.scss";
 
-import videoFile from "../../assets/videos/video.mp4"
+import videoFile from "../../assets/videos/video.mp4";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
 import Gallery from "../../components/Gallery/Gallery";
 import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
