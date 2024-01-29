@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Spin as Hamburger } from "hamburger-react";
 import useLocationHook from "../../utils/hooks/useLocationHook";
+import { useResize } from "../../utils/hooks/useResize";
 import "./TheHeader.scss";
 import Logo from "../Logo/Logo";
 import logo from "../../assets/logo.svg";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
-import { useResize } from "../../utils/hooks/useResize";
-import { Spin as Hamburger } from "hamburger-react";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
 
 function TheHeader() {
@@ -22,7 +22,7 @@ function TheHeader() {
         <Logo src={logo} />
         {!(
           screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
-        ) && <HeaderMenu />}
+        ) && <HeaderMenu size={screenSize.trakResolutionValue} />}
 
         <h1 className="header__page-name">{tempLocation}</h1>
         {(screenSize.trakResolutionValue === "tablet" ||

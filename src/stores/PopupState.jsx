@@ -11,12 +11,8 @@ class PopupState {
     this.popups = {};
   };
 
-  isOpen = (index) => {
-    if (!this.popups[index]) {
-      this.popups[index] = false;
-    }
-    this.popups[index] = true;
-    console.log("this", this.popups[index]);
+  setOpened = (data) => {
+    this.popups = data;
   };
 }
 export default new PopupState();

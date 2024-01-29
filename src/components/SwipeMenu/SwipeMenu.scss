@@ -5,17 +5,18 @@
   position: fixed;
   width: 60vw;
   border: $borders-default;
-  height: 100vh;
   top: 0;
   right: 0;
   background-color: $dark-background-color;
+  @include to-center_column();
   overflow-y: scroll;
-  z-index: 0;
+  z-index: 1;
   transition: $transition;
+  padding: 30px;
   &.mobile {
     width: 100vw;
   }
 }
 .hamburger-react {
-  z-index: 1;
+  z-index: 2;
 }

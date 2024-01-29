@@ -4,7 +4,7 @@
 /* eslint-disable spaced-comment */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect } from "react";
-import PopupState from "../../stores/popupStore";
+import PopupState from "../../stores/PopupState";
 import "./Popup.scss";
 
 function Popup({ popupType, popupContent, size }) {
@@ -37,9 +37,13 @@ function Popup({ popupType, popupContent, size }) {
         />
         {popupContent.title && <h2 className="popup__title">{popupContent.title}</h2>}
         {popupType === "photo" ? (
-          <img src={popupContent} alt="Coworking photo" className="popup__image" />
+          <img
+            src={popupContent.photoLink}
+            alt={popupContent.description}
+            className="popup__image"
+          />
         ) : (
-          <div className={`popup__content ${size}`}></div>
+          <div className={`popup__content ${size}`}>ddd</div>
         )}
       </section>
     </div>

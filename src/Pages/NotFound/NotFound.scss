@@ -1,0 +1,22 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.not-found {
+  @include to-center_column();
+  height: 80vh;
+}
+.not-found__caption {
+  @include font-style($font-size: 25px);
+  text-align: center;
+  padding: 20px;
+}
+.not-found__404 {
+  @include font-style($font-size: 45px);
+  text-align: center;
+  padding: 40px 0;
+}
+.not-found_button {
+  @include button();
+  @include font-style($font-size: 25px);
+  text-align: center;
+}

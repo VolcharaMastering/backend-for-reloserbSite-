@@ -4,8 +4,14 @@ import "./BlockWithPhotoAndDesc.scss";
 
 function BlockWithPhotoAndDesc({ photoLink, size, caption, newsTitle, newsText }) {
   return (
-    <section className="news-container">
-      <PhotoContainer photoLink={photoLink} size={size} caption={caption} containerType="news" />
+    <section className={`news-container ${size}`}>
+      <PhotoContainer
+        photoLink={photoLink}
+        size={size}
+        caption={caption}
+        containerType="news"
+        title={newsTitle}
+      />
       <TextBlock newsTitle={newsTitle} newsText={newsText} size={size} />
     </section>
   );

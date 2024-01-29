@@ -28,9 +28,6 @@
     right: -30px;
   }
 
-  .popup__title {
-  }
-
   .popup__image {
     max-width: 80vw;
     max-height: 80vh;
@@ -46,5 +43,5 @@
   height: 100vh;
   @include to-center_column($justify: center);
   background-color: #6a5d5d50;
-  z-index: 3;
+  z-index: 4;
 }

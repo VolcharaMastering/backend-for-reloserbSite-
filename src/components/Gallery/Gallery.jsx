@@ -17,7 +17,6 @@ function Gallery({ galleryType, content, size }) {
       {content.map((image, index) => (
         <PhotoContainer
           key={index}
-          index={index}
           photoLink={image.name.default}
           size={size}
           containerType="gallery"
@@ -31,6 +30,7 @@ function Gallery({ galleryType, content, size }) {
         {galleryArray.map((image, index) => (
           <PhotoContainer
             key={index}
+            index={index}
             photoLink={image.name.default}
             size={size}
             containerType="gallery"

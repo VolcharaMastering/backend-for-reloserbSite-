@@ -16,6 +16,12 @@
   .photo-container__title {
     @include font-style($font-size: 25px, $font-weight: 600);
   }
+  &.tablet {
+    width: 100%;
+  }
+  &.mobile {
+    width: 100%;
+  }
 }
 .photo-container__image {
   width: 100%;
@@ -29,4 +35,10 @@
 .photo-container__caption {
   @include font-style($font-size: 12px);
   padding-bottom: 20px;
+}
+.photo-popup {
+  position: relative;
+  // height: 100vh;
+  // width: 100vw;
+  z-index: 4;
 }

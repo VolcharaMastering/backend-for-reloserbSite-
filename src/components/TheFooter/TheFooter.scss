@@ -1,0 +1,27 @@
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.footer {
+  width: 100%;
+  @include to-center_column();
+  border: $borders-default;
+  margin-top: 30px;
+  padding: 30px;
+  .footer__designed {
+    @include to-center_row($justify: center);
+    padding: 10px;
+    &.tablet {
+      @include to-center_column();
+    }
+    &.mobile {
+      @include to-center_column();
+    }
+  }
+  .footer__label {
+    @include font-style($font-size: 14px);
+    text-align: center;
+  }
+  .footer__company {
+    @include font-style();
+  }
+}

@@ -34,6 +34,12 @@
 .link {
   // position: fixed;
   @include link-list();
+  &.tablet {
+    color: $light-text-color;
+  }
+  &.mobile {
+    color: $light-text-color;
+  }
 }
 .link:hover {
   color: $light-text-color;

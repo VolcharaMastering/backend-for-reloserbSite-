@@ -4,7 +4,14 @@
   .header__menu-block {
     @include list-without-dots();
     width: 35vw;
-
+    &.tablet {
+      @include to-center_column();
+      color: $light-text-color;
+    }
+    &.mobile {
+      @include to-center_column();
+      color: $light-text-color;
+    }
     .header__menu-link {
     }
   }

@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import "./Blog.scss";
-import PopupState from "../../stores/popupStore";
+import PopupState from "../../stores/PopupState";
 
 const Blog = observer(() => {
   const { opened, setClosed, setOpened } = PopupState;
