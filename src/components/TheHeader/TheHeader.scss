@@ -12,13 +12,13 @@
   background-color: $light-background-color;
   padding: 2%;
   z-index: 10;
-  
+
   .header__main {
     @include to-center_row($justify: space-between);
     flex: 1;
   }
-  .header__page-name{
-   @include font-style($font-size: 70px, $font-family: $yanone-font);
-   margin:auto;
+  .header__page-name {
+    @include font-style($font-size: 70px, $font-family: $yanone-font);
+    margin: auto;
   }
 }

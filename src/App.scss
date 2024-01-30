@@ -2,7 +2,6 @@
 @import "./consts/mixins.scss";
 
 .main {
-  
   position: relative;
   @include to-center_column($align: center, $justify: flex-start);
   height: auto;
