@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
   @include font-style();
   @include to-center_column(center, space-between);
-  h1 {
-    @include font-style($font-family: $yanone-font, $font-size: 30px, $font-weight: 400);
-  }
+  // h1 {
+  //   @include font-style($font-family: $yanone-font, $font-size: 30px, $font-weight: 400);
+  // }
 }

@@ -1,9 +1,10 @@
 @import "../../consts/consts.scss";
 @import "../../consts/mixins.scss";
 .header__menu {
+  padding: 0 30px;
   .header__menu-block {
     @include list-without-dots();
-    width: 35vw;
+    width: auto;
     &.tablet {
       @include to-center_column();
       color: $light-text-color;

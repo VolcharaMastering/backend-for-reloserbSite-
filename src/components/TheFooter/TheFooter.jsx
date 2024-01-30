@@ -1,6 +1,6 @@
 import FooterMenu from "../FooterMenu/FooterMenu";
 import "./TheFooter.scss";
-import Logo from "../Logo/Logo";
+import Logo from "../UI/Logo/Logo";
 import { useResize } from "../../utils/hooks/useResize";
 
 function TheFooter() {

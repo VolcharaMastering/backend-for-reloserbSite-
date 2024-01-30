@@ -34,14 +34,14 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
         </figure>
       ) : (
         <figure className={`photo-container__news ${size} ${containerType}`}>
-          {containerType && <h2 className="photo-container__title">{title}</h2>}
           <img
             src={photoLink}
             alt={caption}
             className="photo-container__image"
             onClick={handleOpenPopup}
           />
-          {caption && <figcaption className="photo-container__caption">{caption}</figcaption>}
+          {containerType && <p className="photo-container__title">{title}</p>}
+          {/* {caption && <figcaption className="photo-container__caption">{caption}</figcaption>} */}
         </figure>
       )}
       {/* {popups[index] && containerType != "gallery" && (

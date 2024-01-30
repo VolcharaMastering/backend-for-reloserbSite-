@@ -22,6 +22,7 @@
     "dependencies": {
         "@fontsource/fira-sans-extra-condensed": "^5.0.8",
         "@fontsource/sofia-sans-extra-condensed": "^5.0.8",
+        "@fontsource/vollkorn": "^5.0.18",
         "@fontsource/yanone-kaffeesatz": "^5.0.18",
         "husky": "^8.0.3",
         "mobx": "^6.12.0",

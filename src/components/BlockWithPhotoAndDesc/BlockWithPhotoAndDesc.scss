@@ -4,7 +4,7 @@
 .news-container {
   @include to-center_row();
   width: 100%;
-  border: $borders-default;
+  border-top: $borders-default;
   &.tablet {
     @include to-center_column();
   }

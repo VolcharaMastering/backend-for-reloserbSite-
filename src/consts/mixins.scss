@@ -13,17 +13,24 @@
 }
 @mixin font-style(
   $font-family: $main-font-family,
-  $font-size: 20px,
+  $font-size: 18px,
   $font-weight: 400,
+  $line-height: 1.24,
+  $font-style: normal,
   $color: $dark-text-color
 ) {
   font-family: $font-family;
   font-size: $font-size;
+  font-style: $font-style;
   font-weight: $font-weight;
   color: $color;
 }
 @mixin menu-style() {
   width: 100%;
+}
+@mixin title-text($text-color: $light-text-color){
+  @include font-style($font-size: 6.5vw, $font-family: $yanone-font, $color: $text-color);
+  font-stretch: 50%;
 }
 @mixin list-without-dots {
   @include to-center_row();
@@ -56,6 +63,7 @@
 @mixin link-list($color: $dark-text-color) {
   text-decoration: none;
   color: $dark-text-color;
+  padding: 16px;
 }
 @mixin gridAutoFill(
   $justify: center,

@@ -2,14 +2,23 @@
 @import "../../consts/mixins.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   @include to-center_row();
-  height: 70px;
-  border: $borders-default;
+  height: 80px;
+  border-bottom: $borders-default;
+  background-color: $light-background-color;
   padding: 2%;
-}
-
-.header__main {
-  @include to-center_row;
-  flex: 1;
+  z-index: 10;
+  
+  .header__main {
+    @include to-center_row($justify: space-between);
+    flex: 1;
+  }
+  .header__page-name{
+   @include font-style($font-size: 70px, $font-family: $yanone-font);
+   margin:auto;
+  }
 }
