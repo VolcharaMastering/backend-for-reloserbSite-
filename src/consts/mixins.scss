@@ -28,10 +28,14 @@
 @mixin menu-style() {
   width: 100%;
 }
-@mixin title-text($text-color: $light-text-color) {
+@mixin title-text($text-color: $dark-text-color) {
   @include font-style($font-size: 6.5vw, $font-family: $yanone-font, $color: $text-color);
   font-stretch: 50%;
 }
+@mixin block-text($text-color: $dark-text-color) {
+  @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 18px);
+}
+
 @mixin list-without-dots {
   @include to-center_row();
   list-style-type: none;

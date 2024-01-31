@@ -11,13 +11,22 @@ function HeaderMenu({ size }) {
           <TextLink location={location} linkTo="/" size={size} />
         </li>
         <li className="header__menu-link">
+          <TextLink location={location} linkTo="/coworking" size={size} />
+        </li>
+        <li className="header__menu-link">
+          <TextLink location={location} linkTo="/real-estate" size={size} />
+        </li>
+        <li className="header__menu-link">
+          <TextLink location={location} linkTo="/cargo" size={size} />
+        </li>
+        <li className="header__menu-link">
+          <TextLink location={location} linkTo="/visarun" size={size} />
+        </li>
+        <li className="header__menu-link">
           <TextLink location={location} linkTo="/about" size={size} />
         </li>
         <li className="header__menu-link">
           <TextLink location={location} linkTo="/blog" size={size} />
-        </li>
-        <li className="header__menu-link">
-          <TextLink location={location} linkTo="/contacts" size={size} />
         </li>
       </ul>
     </nav>

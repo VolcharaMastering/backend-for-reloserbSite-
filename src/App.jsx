@@ -18,6 +18,10 @@ import popupState from "./stores/PopupState";
 import Popup from "./components/Popup/Popup";
 import { useResize } from "./utils/hooks/useResize";
 import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
+import Coworking from "./Pages/Coworking/Coworking";
+import RealEstate from "./Pages/RealEstate/RealEstate";
+import Cargo from "./Pages/Cargo/Cargo";
+import VisaRun from "./Pages/VisaRun/VisaRun";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -35,6 +39,10 @@ const App = observer(() => {
       <main className="main">
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/coworking" element={<Coworking />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/cargo" element={<Cargo />} />
+          <Route path="/visarun" element={<VisaRun />} />
           <Route path="/about" element={<AbouotUs />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/blog" element={<Blog />} />
