@@ -8,7 +8,7 @@ import { prices } from "../../content/prices.json";
 import { promo } from "../../content/coworkingInfo.json";
 
 function Coworking() {
-  console.log(promo, promo.src,promo.title,promo.caption,promo.text);
+  console.log(promo, promo.src, promo.title, promo.caption, promo.text);
   const screenSize = useResize();
   return (
     <section className="coworking">
