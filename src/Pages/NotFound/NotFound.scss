@@ -11,7 +11,7 @@
   padding: 20px;
 }
 .not-found__404 {
-  @include font-style($font-size: 45px);
+  @include title-text();
   text-align: center;
   padding: 40px 0;
 }

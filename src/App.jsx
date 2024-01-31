@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "@fontsource/sofia-sans-extra-condensed";
 import "@fontsource/fira-sans-extra-condensed";
 import "@fontsource/yanone-kaffeesatz";
+import "@fontsource/vollkorn";
 import { observer } from "mobx-react-lite";
 import "./App.scss";
 import Main from "./Pages/Main/Main";
@@ -16,6 +17,11 @@ import NotFound from "./Pages/NotFound/NotFound";
 import popupState from "./stores/PopupState";
 import Popup from "./components/Popup/Popup";
 import { useResize } from "./utils/hooks/useResize";
+import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
+import Coworking from "./Pages/Coworking/Coworking";
+import RealEstate from "./Pages/RealEstate/RealEstate";
+import Cargo from "./Pages/Cargo/Cargo";
+import VisaRun from "./Pages/VisaRun/VisaRun";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -28,10 +34,15 @@ const App = observer(() => {
           size={screenSize.trakResolutionValue}
         />
       )}
+      <PaddingFromHeader />
       <TheHeader />
       <main className="main">
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/coworking" element={<Coworking />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/cargo" element={<Cargo />} />
+          <Route path="/visarun" element={<VisaRun />} />
           <Route path="/about" element={<AbouotUs />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/blog" element={<Blog />} />

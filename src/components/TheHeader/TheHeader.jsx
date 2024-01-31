@@ -4,10 +4,11 @@ import { Spin as Hamburger } from "hamburger-react";
 import useLocationHook from "../../utils/hooks/useLocationHook";
 import { useResize } from "../../utils/hooks/useResize";
 import "./TheHeader.scss";
-import Logo from "../Logo/Logo";
+import Logo from "../UI/Logo/Logo";
 import logo from "../../assets/logo.svg";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
+import TextLink from "../UI/TextLink/TextLink";
 
 function TheHeader() {
   const location = useLocation();
@@ -18,15 +19,21 @@ function TheHeader() {
 
   return (
     <header className="header">
-      <section className="header__main">
-        <Logo src={logo} />
-        {!(
-          screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
-        ) && <HeaderMenu size={screenSize.trakResolutionValue} />}
+      <Logo src={logo} />
+      {!(
+        screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
+      ) && (
+        <section className="header__main">
+          <HeaderMenu size={screenSize.trakResolutionValue} />
+          <h1 className="header__page-name">{tempLocation}</h1>
+          <TextLink location={location} linkTo="/contacts" size={screenSize.trakResolutionValue} />
+        </section>
+      )}
 
-        <h1 className="header__page-name">{tempLocation}</h1>
-        {(screenSize.trakResolutionValue === "tablet" ||
-          screenSize.trakResolutionValue === "mobile") && (
+      {(screenSize.trakResolutionValue === "tablet" ||
+        screenSize.trakResolutionValue === "mobile") && (
+        <section className="header__main">
+          <h1 className="header__page-name">{tempLocation}</h1>
           <Hamburger
             toggled={isOpen}
             label="Show menu"
@@ -35,9 +42,10 @@ function TheHeader() {
             direction="right"
             color="#979797"
           />
-        )}
-        {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
-      </section>
+        </section>
+      )}
+      {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
+      {/* </section> */}
     </header>
   );
 }

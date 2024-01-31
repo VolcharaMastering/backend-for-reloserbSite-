@@ -1,3 +1,26 @@
-.background-video {
+@import "../../consts/consts.scss";
+@import "../../consts/mixins.scss";
+
+.background-video__shadow {
+  position: relative;
+  overflow: hidden;
+  height: 40vw;
   width: 100%;
+  object-fit: cover;
+  z-index: 3;
+  pointer-events: none;
+  .background-video {
+    position: absolute;
+    width: 100%;
+    height: 40vw;
+    z-index: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    object-position: center;
+    padding: 3%;
+  }
 }

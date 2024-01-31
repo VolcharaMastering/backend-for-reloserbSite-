@@ -4,11 +4,14 @@
 .news-container {
   @include to-center_row();
   width: 100%;
-  border: $borders-default;
+  border-top: $borders-default;
   &.tablet {
     @include to-center_column();
   }
   &.mobile {
     @include to-center_column();
   }
+}
+.news-container:last-of-type {
+  border-bottom: $borders-default;
 }
