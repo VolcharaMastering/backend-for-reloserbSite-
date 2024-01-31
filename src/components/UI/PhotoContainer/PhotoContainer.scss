@@ -12,6 +12,7 @@
   width: 65vw;
   height: 600px;
   border-right: $borders-default;
+  border-left: $borders-default;
   @include to-center_column($align: flex-start);
   .photo-container__title {
     position: absolute;
@@ -26,9 +27,13 @@
   }
   &.tablet {
     width: 100%;
+    border-right: none;
+    border-left: none;
   }
   &.mobile {
     width: 100%;
+    border-right: none;
+    border-left: none;
   }
 }
 .photo-container__image {
@@ -49,3 +54,4 @@
   position: relative;
   z-index: 4;
 }
+

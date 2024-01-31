@@ -3,6 +3,10 @@
     "main": "Main",
     "about": "О нас",
     "blog": "Блог",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "coworking": "Коворкинг",
+    "real-estate": "Недвижимость",
+    "cargo": "Грузоперевозки",
+    "visarun": "Визаран"
   }
 }
