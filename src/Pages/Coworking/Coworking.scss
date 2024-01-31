@@ -1,2 +1,28 @@
 @import "../../consts/consts.scss";
 @import "../../consts/mixins.scss";
+
+.coworking {
+    @include to-center_column();
+    width: 100%;
+    .coworking__promo-block {
+        width: 100%;
+        @include title-text();
+        text-align: center;
+        padding: 2%;
+        border-bottom: $borders-default;
+    }
+    .coworking__info {
+        @include to-center_row();
+        width: 50%;
+    padding: 2%;
+    }
+    .coworking__price {
+        @include gridAutoFill($template-cols: repeat(2, minmax(100px, 1fr)), $gap: 1px);
+        background-color: $border-color;
+        padding: 1px;
+        .coworking__price-label {
+            background-color: $light-background-color;
+            @include block-text();
+        }
+    }
+}

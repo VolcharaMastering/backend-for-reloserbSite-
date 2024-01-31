@@ -3,15 +3,15 @@
 
 .gallery {
   width: 100%;
-  border: $borders-default;
 }
 
 .gallery_blocked {
   @include gridAutoFill();
+  border-bottom: $borders-default;
 }
 .gallery_stringed {
-  // @include to-center_row();
-  // height: 350px;
+  padding: 3% 0;
+  border-bottom: $borders-default;
 }
 .react-multi-carousel-list {
   width: 100%;
