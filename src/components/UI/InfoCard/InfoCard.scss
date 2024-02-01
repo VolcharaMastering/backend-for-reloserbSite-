@@ -1,0 +1,19 @@
+@import "../../../consts/consts.scss";
+@import "../../../consts/mixins.scss";
+
+.info-card {
+  @include to-center_column($justify: center);
+  background-color: $light-background-color;
+
+  width: 100%;
+
+  height: 50vh;
+  padding: 5%;
+}
+.info-card__title {
+  @include subtitle-text();
+  margin-bottom: 20px;
+}
+.info-card__description {
+  @include block-text();
+}

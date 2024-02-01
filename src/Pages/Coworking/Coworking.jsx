@@ -5,7 +5,8 @@ import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockW
 import generateRandomKey from "../../utils/keyGenerator";
 import "./Coworking.scss";
 import { prices } from "../../content/prices.json";
-import { promo } from "../../content/coworkingInfo.json";
+import { promo, oppotunities } from "../../content/coworkingInfo.json";
+import InfoCard from "../../components/UI/InfoCard/InfoCard";
 
 function Coworking() {
   console.log(promo, promo.src, promo.title, promo.caption, promo.text);
@@ -17,8 +18,9 @@ function Coworking() {
         content={galleryArray}
         size={screenSize.trakResolutionValue}
       />
-      {promo && <h2 className="coworking__promo-block">АКЦИЯ!</h2>}
+      {promo && <h2 className="coworking__titles">АКЦИЯ!</h2>}
       <article className="coworking__info">
+        <h2 className="coworking__titles">Прайс-лист</h2>
         <ul className="coworking__price">
           {prices.map((item) => (
             <>
@@ -42,6 +44,13 @@ function Coworking() {
             position={index % 2 === 0}
           />
         ))}
+      <div className="coworking__grid-block">
+        <div className="coworking__grid">
+          {oppotunities.map((item) => (
+            <InfoCard key={generateRandomKey} title={item.title} description={item.description} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
