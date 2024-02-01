@@ -25,7 +25,7 @@ function TheHeader() {
       ) && (
         <section className="header__main">
           <HeaderMenu size={screenSize.trakResolutionValue} />
-          <h1 className="header__page-name">{tempLocation}</h1>
+          <h1 className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</h1>
           <TextLink location={location} linkTo="/contacts" size={screenSize.trakResolutionValue} />
         </section>
       )}
@@ -33,7 +33,7 @@ function TheHeader() {
       {(screenSize.trakResolutionValue === "tablet" ||
         screenSize.trakResolutionValue === "mobile") && (
         <section className="header__main">
-          <h1 className="header__page-name">{tempLocation}</h1>
+          <h1 className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</h1>
           <Hamburger
             toggled={isOpen}
             label="Show menu"

@@ -1,0 +1,42 @@
+@import "./consts.scss";
+
+// -------fonts decoration----
+@mixin font-style(
+  $font-family: $main-font-family,
+  $font-size: 18px,
+  $font-weight: 400,
+  $line-height: 1.24,
+  $font-style: normal,
+  $color: $dark-text-color
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin title-text($text-color: $dark-text-color) {
+  @include font-style($font-size: 6.5vw, $font-family: $yanone-font, $color: $text-color);
+  font-stretch: 50%;
+}
+@mixin block-text($text-color: $dark-text-color) {
+  @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 18px);
+}
+@mixin subtitle-text($text-color: $dark-text-color) {
+  @include font-style($font-size: 30px, $font-family: $yanone-font, $color: $text-color);
+}
+@mixin transition-for-links($transition: $transition) {
+  position: relative;
+  width: 0;
+  transition: $transition;
+}
+@mixin text-link-hover($opacity: 90%, $text-decoration: underline) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: $opacity;
+  background-color: $dark-background-color;
+  border: $border-color;
+  width: 100%;
+}

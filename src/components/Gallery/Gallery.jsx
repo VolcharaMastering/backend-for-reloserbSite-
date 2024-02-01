@@ -8,37 +8,44 @@ import swipeSettings from "../../utils/swipeConfig";
 import generateRandomKey from "../../utils/keyGenerator";
 
 function Gallery({ galleryType, content, size }) {
-  const [galleryArray, setGalleryArray] = useState(content);
+  const [galleryArray, setGalleryArray] = useState([]);
+
   useEffect(() => {
-    setGalleryArray(content);
+    const contentWithIndex = content.map((item) => {
+      const randomKey = generateRandomKey();
+      return { ...item, index: randomKey };
+    });
+    setGalleryArray(contentWithIndex);
   }, [content]);
-  const index = generateRandomKey();
 
   return galleryType === "block" ? (
     <section className="gallery gallery_blocked">
-      {content.map((image) => (
-        <PhotoContainer
-          key={index}
-          photoLink={image.name.default}
-          size={size}
-          containerType="gallery"
-          caption={image.caption}
-        />
-      ))}
+      {galleryArray &&
+        galleryArray.map((image) => (
+          <PhotoContainer
+            key={image.index}
+            index={image.index}
+            photoLink={image.name.default}
+            size={size}
+            containerType="gallery"
+            caption={image.caption}
+          />
+        ))}
     </section>
   ) : (
     <section className="gallery gallery_stringed">
       <Carousel {...swipeSettings}>
-        {galleryArray.map((image) => (
-          <PhotoContainer
-            key={index}
-            index={index}
-            photoLink={image.name.default}
-            size={size}
-            containerType="gallery"
-            caption="Some description"
-          />
-        ))}
+        {galleryArray &&
+          galleryArray.map((image) => (
+            <PhotoContainer
+              key={image.index}
+              index={image.index}
+              photoLink={image.name.default}
+              size={size}
+              containerType="gallery"
+              caption="Some description"
+            />
+          ))}
       </Carousel>
     </section>
   );

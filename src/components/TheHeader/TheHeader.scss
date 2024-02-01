@@ -1,5 +1,4 @@
-@import "../../consts/consts.scss";
-@import "../../consts/mixins.scss";
+@import "../../consts/block-mixins.scss";
 
 .header {
   position: fixed;
@@ -20,5 +19,14 @@
   .header__page-name {
     @include font-style($font-size: 70px, $font-family: $yanone-font);
     margin: auto;
+    &.desktopHD {
+      @include font-style($font-size: 40px, $font-family: $yanone-font);
+    }
+    &.desktop {
+      @include font-style($font-size: 24px, $font-family: $yanone-font);
+    }
+    &.mobile {
+      @include font-style($font-size: 40px, $font-family: $yanone-font);
+    }
   }
 }

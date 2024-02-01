@@ -12,7 +12,7 @@ function TextBlock({ newsTitle, newsText, size }) {
           </p>
         ))
       ) : (
-        <textarea className="text-block__text">{newsText}</textarea>
+        <p className="text-block__text">{newsText}</p>
       )}
     </article>
   );
