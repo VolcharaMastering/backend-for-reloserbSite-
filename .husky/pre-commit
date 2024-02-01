@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npm run "fix & format" && git add -A
-./node_modules/.bin/npm-run-all --serial fix format
+./pushAll.sh

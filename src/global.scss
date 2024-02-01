@@ -1,5 +1,7 @@
 @import "./consts/consts.scss";
-@import "./consts/mixins.scss";
+@import "./consts/text-mixins.scss";
+@import "./consts/block-mixins.scss";
+
 * {
   box-sizing: border-box;
   padding: 0;

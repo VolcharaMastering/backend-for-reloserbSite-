@@ -1,0 +1,24 @@
+{
+  "prices": [
+    {
+      "service": "1 час",
+      "price": "500 RSD"
+    },
+    {
+      "service": "4 часа",
+      "price": "1000 RSD"
+    },
+    {
+      "service": "1 день",
+      "price": "1500 RSD"
+    },
+    {
+      "service": "1 месяц",
+      "price": "25000 RSD"
+    },
+    {
+      "service": "5+ рабочих мест/месяц",
+      "price": "21000 RSD"
+    }
+  ]
+}
