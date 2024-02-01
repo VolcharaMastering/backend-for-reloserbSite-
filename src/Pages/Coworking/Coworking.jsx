@@ -19,15 +19,20 @@ function Coworking() {
         size={screenSize.trakResolutionValue}
       />
       {promo && <h2 className="coworking__titles">АКЦИЯ!</h2>}
-      <article className="coworking__info">
+      <article className={`coworking__info ${screenSize.trakResolutionValue}`}>
         <h2 className="coworking__titles">Прайс-лист</h2>
         <ul className="coworking__price">
           {prices.map((item) => (
             <>
-              <li key={generateRandomKey} className="coworking__price-label">
+              <li
+                key={generateRandomKey}
+                className={`coworking__price-label ${screenSize.trakResolutionValue}`}
+              >
                 {item.service}
               </li>
-              <li className="coworking__price-label">{item.price}</li>
+              <li className={`coworking__price-label ${screenSize.trakResolutionValue}`}>
+                {item.price}
+              </li>
             </>
           ))}
         </ul>
