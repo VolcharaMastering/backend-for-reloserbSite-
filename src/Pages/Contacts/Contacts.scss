@@ -1,0 +1,8 @@
+@import "../../consts/block-mixins.scss";
+
+@import "../../consts/block-mixins.scss";
+
+.contacts {
+  width: 100%;
+  @include to-center_column();
+}

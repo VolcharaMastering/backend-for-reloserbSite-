@@ -1,0 +1,16 @@
+@import "../../consts/block-mixins.scss";
+
+.contacts-container {
+  @include to-center_row();
+  width: 100%;
+  border-top: $borders-default;
+  &.tablet {
+    @include to-center_column();
+  }
+  &.mobile {
+    @include to-center_column();
+  }
+}
+.contacts-container:last-of-type {
+  border-bottom: $borders-default;
+}

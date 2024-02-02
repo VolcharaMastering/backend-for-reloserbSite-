@@ -4,3 +4,4 @@ npm run format
 wait
 git add -A
 wait
+sleep 5
