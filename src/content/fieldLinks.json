@@ -1,0 +1,164 @@
+{
+  "fieldLinks": {
+    "main": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372700",
+        "showName": false,
+        "linkTo": "tel:+381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instant.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @our_channal",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instantcoworking.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ],
+    "coworking": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372701",
+        "showName": false,
+        "linkTo": "tel:+381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @coworking_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@coworking_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantcoworking.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @our_coworking",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instantcoworking.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ],
+    "realEstate": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372702",
+        "showName": false,
+        "linkTo": "tel:+381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantrealEstate.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @our_realEstate",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instant-realestate.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ],
+    "cargo": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372703",
+        "showName": false,
+        "linkTo": "tel:+381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @cargo_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantcargo.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @our_cargo",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instantcargo.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ],
+    "visarun": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372704",
+        "showName": false,
+        "linkTo": "tel:+381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @visarun_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@visarun_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantvisarun.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @our_visarun",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instantvisarun.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ]
+  }
+}
