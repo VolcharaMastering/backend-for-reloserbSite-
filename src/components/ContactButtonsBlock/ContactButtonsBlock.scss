@@ -11,13 +11,13 @@
     margin-bottom: 2%;
   }
   .contact-buttons__block {
-    @include gridAutoFill($template-cols: repeat(4, 1fr));
+    @include gridAutoFill($template-cols: repeat(6, 1fr));
     align-items: center;
     justify-content: center;
     margin: 2% auto;
 
     &.tablet {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     &.mobile {
       grid-template-columns: repeat(2, 1fr);
