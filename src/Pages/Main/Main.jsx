@@ -10,6 +10,8 @@ import { main } from "../../content/mainTextBlock.json";
 import { attantion } from "../../content/blackBlockText.json";
 import generateRandomKey from "../../utils/keyGenerator";
 import { titles } from "../../content/titles.json";
+import { title, description } from "../../content/metaInfo.json";
+import Layout from "../../components/Layout/Layout";
 
 function Main() {
   const screenSize = useResize();
@@ -18,7 +20,7 @@ function Main() {
     return index;
   };
   return (
-    <>
+    <Layout title={title.main} description={description.main}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         // videoLink="https://drive.google.com/file/d/1NuX2QWlMwbh-lUWxmNmOOQoa-PMlttfL/preview"
@@ -41,7 +43,7 @@ function Main() {
           position={index % 2 === 0}
         />
       ))}
-    </>
+    </Layout>
   );
 }
 
