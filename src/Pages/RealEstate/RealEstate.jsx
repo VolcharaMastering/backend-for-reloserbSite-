@@ -1,7 +1,12 @@
 import "./RealEstate.scss";
+import { titles } from "../../content/titles.json";
 
 function RealEstate() {
-  return <div>RealEstate</div>;
+  return (
+    <section>
+      <h1 className="title">{titles.realEstateTItle}</h1>
+    </section>
+  );
 }
 
 export default RealEstate;

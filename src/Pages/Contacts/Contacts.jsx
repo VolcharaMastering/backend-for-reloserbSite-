@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./Contacts.scss";
 import ContactButtonsBlock from "../../components/ContactButtonsBlock/ContactButtonsBlock";
 import { useResize } from "../../utils/hooks/useResize";

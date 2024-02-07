@@ -7,12 +7,17 @@ import "./Coworking.scss";
 import { prices } from "../../content/prices.json";
 import { promo, oppotunities } from "../../content/coworkingInfo.json";
 import InfoCard from "../../components/UI/InfoCard/InfoCard";
+import { titles } from "../../content/titles.json";
 
 function Coworking() {
-  console.log(promo, promo.src, promo.title, promo.caption, promo.text);
+  const getRandomKey = () => {
+    const index = generateRandomKey();
+    return index;
+  };
   const screenSize = useResize();
   return (
     <section className="coworking">
+      <h1 className="title coworking__title">{titles.coworkTitle}</h1>
       <Gallery
         galleryType="stringed"
         content={galleryArray}
@@ -25,7 +30,7 @@ function Coworking() {
           {prices.map((item) => (
             <>
               <li
-                key={generateRandomKey}
+                key={getRandomKey()}
                 className={`coworking__price-label ${screenSize.trakResolutionValue}`}
               >
                 {item.service}
@@ -40,7 +45,7 @@ function Coworking() {
       {promo.length &&
         promo.map((item, index) => (
           <BlockWithPhotoAndDesc
-            key={generateRandomKey}
+            key={getRandomKey()}
             size={screenSize.trakResolutionValue}
             photoLink={item.src}
             newsTitle={item.title}
@@ -52,7 +57,7 @@ function Coworking() {
       <div className="coworking__grid-block">
         <div className="coworking__grid">
           {oppotunities.map((item) => (
-            <InfoCard key={generateRandomKey} title={item.title} description={item.description} />
+            <InfoCard key={getRandomKey()} title={item.title} description={item.description} />
           ))}
         </div>
       </div>

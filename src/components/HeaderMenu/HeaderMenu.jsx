@@ -11,6 +11,9 @@ function HeaderMenu({ size }) {
           <TextLink location={location} linkTo="/" size={size} />
         </li>
         <li className="header__menu-link">
+          <TextLink location={location} linkTo="/consult" size={size} />
+        </li>
+        <li className="header__menu-link">
           <TextLink location={location} linkTo="/coworking" size={size} />
         </li>
         <li className="header__menu-link">
@@ -22,12 +25,12 @@ function HeaderMenu({ size }) {
         <li className="header__menu-link">
           <TextLink location={location} linkTo="/visarun" size={size} />
         </li>
-        <li className="header__menu-link">
+        {/* <li className="header__menu-link">
           <TextLink location={location} linkTo="/about" size={size} />
         </li>
         <li className="header__menu-link">
           <TextLink location={location} linkTo="/blog" size={size} />
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

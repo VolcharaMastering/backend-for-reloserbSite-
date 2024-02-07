@@ -9,15 +9,21 @@ import BlockWithBlackBackground from "../../components/BlockWithBlackBackground/
 import { main } from "../../content/mainTextBlock.json";
 import { attantion } from "../../content/blackBlockText.json";
 import generateRandomKey from "../../utils/keyGenerator";
+import { titles } from "../../content/titles.json";
 
 function Main() {
   const screenSize = useResize();
+  const getRandomKey = () => {
+    const index = generateRandomKey();
+    return index;
+  };
   return (
     <>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         // videoLink="https://drive.google.com/file/d/1NuX2QWlMwbh-lUWxmNmOOQoa-PMlttfL/preview"
         videoLink={videoFile}
+        videoTitle={titles.mainTitle}
       />
       <BlockWithBlackBackground
         title={attantion.title}
@@ -26,7 +32,7 @@ function Main() {
       />
       {main.map((item, index) => (
         <BlockWithPhotoAndDesc
-          key={generateRandomKey}
+          key={getRandomKey}
           photoLink={photoLink}
           size={screenSize.trakResolutionValue}
           caption={item.newsCaption}
