@@ -1,5 +1,13 @@
 {
-  "fieldLinks": {
+  "buttons": [
+    { "buttonName": "Instant", "buttonAction": "main" },
+    { "buttonName": "Косалтинг", "buttonAction": "consult" },
+    { "buttonName": "Коворкинг", "buttonAction": "coworking" },
+    { "buttonName": "Недвижимость", "buttonAction": "realEstate" },
+    { "buttonName": "Грузоперевозки", "buttonAction": "cargo" },
+    { "buttonName": "Визаран", "buttonAction": "visarun" }
+  ],
+  "contacts": {
     "main": [
       {
         "icon": "phoneIcon",

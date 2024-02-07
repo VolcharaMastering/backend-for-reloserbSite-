@@ -1,26 +1,25 @@
 import { makeAutoObservable } from "mobx";
-import { contacts } from "../content/contacts.json";
 
-class ContactsStore {
+class FormStore {
   contactsToShow = [];
 
   constructor() {
-    this.contacts = contacts;
+    this.fieldLinks = fieldLinks;
     makeAutoObservable(this);
   }
 
   getContacts = (contact) => {
     switch (contact) {
       case "coworking":
-        return this.contacts.coworking;
+        return this.fieldLinks.coworking;
       case "realEstate":
-        return this.contacts.realEstate;
+        return this.fieldLinks.realEstate;
       case "cargo":
-        return this.contacts.cargo;
+        return this.fieldLinks.cargo;
       case "visarun":
-        return this.contacts.visarun;
+        return this.fieldLinks.visarun;
       default:
-        return this.contacts.main;
+        return this.fieldLinks.main;
     }
   };
 
@@ -28,4 +27,4 @@ class ContactsStore {
     this.contactsToShow = this.getContacts(chosenContact);
   };
 }
-export default new ContactsStore();
+export default new FormStore();

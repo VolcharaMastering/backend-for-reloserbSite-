@@ -7,9 +7,9 @@ import "@fontsource/vollkorn";
 import { observer } from "mobx-react-lite";
 import "./App.scss";
 import Main from "./Pages/Main/Main";
-import AbouotUs from "./Pages/AboutUs/AboutUs";
-import Reviews from "./Pages/Reviews/Reviews";
-import Blog from "./Pages/Blog/Blog";
+// import AbouotUs from "./Pages/AboutUs/AboutUs";
+// import Reviews from "./Pages/Reviews/Reviews";
+// import Blog from "./Pages/Blog/Blog";
 import Contacts from "./Pages/Contacts/Contacts";
 import TheHeader from "./components/TheHeader/TheHeader";
 import TheFooter from "./components/TheFooter/TheFooter";
@@ -22,6 +22,7 @@ import Coworking from "./Pages/Coworking/Coworking";
 import RealEstate from "./Pages/RealEstate/RealEstate";
 import Cargo from "./Pages/Cargo/Cargo";
 import VisaRun from "./Pages/VisaRun/VisaRun";
+import Consult from "./Pages/Consult/Consult";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -39,13 +40,14 @@ const App = observer(() => {
       <main className="main">
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/consult" element={<Consult />} />
           <Route path="/coworking" element={<Coworking />} />
           <Route path="/real-estate" element={<RealEstate />} />
           <Route path="/cargo" element={<Cargo />} />
           <Route path="/visarun" element={<VisaRun />} />
-          <Route path="/about" element={<AbouotUs />} />
+          {/* <Route path="/about" element={<AbouotUs />} />
           <Route path="/reviews" element={<Reviews />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} /> */}
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" Component={NotFound} />
         </Routes>

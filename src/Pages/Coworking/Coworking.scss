@@ -10,6 +10,9 @@
     padding: 2%;
     border-bottom: $borders-default;
   }
+  .coworking__title {
+    width: 80%;
+  }
   .coworking__info {
     @include to-center_column($justify: center);
     width: 50%;
