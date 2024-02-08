@@ -19,11 +19,15 @@ function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) 
             key={getRandomKey()}
             className={`black-block__info-block ${size}`}
           >
-            <InfoCard title={singleBlock.blockTitle} description={singleBlock.blockText} />
+            <InfoCard
+              title={singleBlock.blockTitle}
+              description={singleBlock.blockText}
+              type="black"
+            />
           </NavLink>
         ))}
       </nav>
-      <NavLink to={linkTo} className="black - block__description">
+      <NavLink to={linkTo} className={`black-block__description ${size}`}>
         {description}
       </NavLink>
     </article>

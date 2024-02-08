@@ -15,6 +15,13 @@
   .header__main {
     @include to-center_row($justify: space-between);
     flex: 1;
+
+    &.tablet {
+      @include to-center_row($justify: flex-end);
+    }
+    &.mobile {
+      @include to-center_row($justify: flex-end);
+    }
   }
   .header__page-name {
     @include font-style($font-size: 70px, $font-family: $yanone-font);

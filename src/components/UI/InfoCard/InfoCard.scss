@@ -3,16 +3,26 @@
 .info-card {
   @include to-center_column($justify: center);
   background-color: $light-background-color;
-
   width: 100%;
-
   height: 50vh;
   padding: 5%;
+
+  &.black {
+    background-color: unset;
+    border: $borders-default;
+    // height: 100%;
+  }
 }
 .info-card__title {
   @include subtitle-text();
   margin-bottom: 20px;
+  &.black {
+    @include subtitle-text($text-color: $light-text-color);
+  }
 }
 .info-card__description {
   @include block-text();
+  &.black {
+    color: $light-text-color;
+  }
 }
