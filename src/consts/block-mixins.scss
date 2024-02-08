@@ -47,6 +47,6 @@
 }
 @mixin link-list($color: $dark-text-color) {
   text-decoration: none;
-  color: $dark-text-color;
+  color: $color;
   padding: 16px;
 }

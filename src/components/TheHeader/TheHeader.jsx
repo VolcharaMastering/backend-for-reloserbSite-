@@ -32,7 +32,7 @@ function TheHeader() {
 
       {(screenSize.trakResolutionValue === "tablet" ||
         screenSize.trakResolutionValue === "mobile") && (
-        <section className="header__main">
+        <section className={`header__name ${screenSize.trakResolutionValue}`}>
           {/* <p className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</p> */}
           <Hamburger
             toggled={isOpen}
