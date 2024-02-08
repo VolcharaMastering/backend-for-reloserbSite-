@@ -1,5 +1,3 @@
-@import "../../consts/consts.scss";
-@import "../../consts/text-mixins.scss";
 @import "../../consts/block-mixins.scss";
 
 .coworking {
@@ -12,33 +10,51 @@
     padding: 2%;
     border-bottom: $borders-default;
   }
+  .coworking__title {
+    width: 80%;
+  }
   .coworking__info {
     @include to-center_column($justify: center);
     width: 50%;
 
     padding: 2%;
+    &.tablet {
+      width: 80%;
+    }
+    &.mobile {
+      width: 100%;
+    }
   }
   .coworking__price {
     @include gridAutoFill($template-cols: repeat(2, minmax(100px, 1fr)), $gap: 1px);
     background-color: $border-color;
     padding: 1px;
+    overflow: hidden;
+
     .coworking__price-label {
       background-color: $light-background-color;
       @include block-text();
 
       @include list-without-dots();
       @include to-center_row($justify: center);
+
+      &.mobile {
+        font-size: 14px;
+      }
     }
   }
   .coworking__grid-block {
     width: 100%;
     border-bottom: $borders-default;
+
     @include to-center_row($justify: center);
     padding: 3%;
     .coworking__grid {
       max-width: 1200px;
       @include gridAutoFill($gap: 1px);
       background-color: $border-color;
+      box-sizing: border-box;
+      overflow: hidden;
       box-sizing: border-box;
       padding: 1px;
     }

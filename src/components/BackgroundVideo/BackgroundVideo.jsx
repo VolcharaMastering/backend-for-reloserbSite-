@@ -1,7 +1,7 @@
 import "./BackgroundVideo.scss";
 import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
 
-function BackgroundVideo({ size, videoLink }) {
+function BackgroundVideo({ videoTitle, size, videoLink }) {
   // const VIDEO_WIDTH = 1920;
   // const VIDEO_HEIGHT = 1080;
   return (
@@ -32,6 +32,8 @@ function BackgroundVideo({ size, videoLink }) {
         <source src={videoLink} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      {videoTitle && <h1 className="background-video__title">{videoTitle}</h1>}
     </div>
   );
 }

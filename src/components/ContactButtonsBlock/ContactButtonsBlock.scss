@@ -1,0 +1,30 @@
+@import "../../consts/block-mixins.scss";
+
+.contact-buttons {
+  @include to-center_column($justify: center);
+  width: 100%;
+  padding: 2%;
+  .contact-buttons__title {
+    @include subtitle-text();
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  .contact-buttons__block {
+    @include gridAutoFill($template-cols: repeat(6, 1fr));
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto;
+
+    &.tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-buttons__button {
+      @include list-without-dots();
+      @include to-center_row($justify: center);
+    }
+  }
+}

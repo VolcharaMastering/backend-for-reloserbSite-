@@ -1,8 +1,9 @@
 {
   "menu": {
-    "main": "Main",
+    "main": "Instant",
     "about": "О нас",
     "blog": "Блог",
+    "consult": "Консалтинг",
     "contacts": "Контакты",
     "coworking": "Коворкинг",
     "real-estate": "Недвижимость",

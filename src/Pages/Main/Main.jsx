@@ -1,32 +1,41 @@
 import { useResize } from "../../utils/hooks/useResize";
 import "./Main.scss";
 
-import videoFile from "../../assets/videos/video.mp4";
+import Layout from "../../components/Layout/Layout";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
-import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
 import BackgroundVideo from "../../components/BackgroundVideo/BackgroundVideo";
 import BlockWithBlackBackground from "../../components/BlockWithBlackBackground/BlockWithBlackBackground";
 import { main } from "../../content/mainTextBlock.json";
-import { attantion } from "../../content/blackBlockText.json";
+import { about } from "../../content/blackBlockText.json";
+import { title, description } from "../../content/metaInfo.json";
+import { titles } from "../../content/titles.json";
 import generateRandomKey from "../../utils/keyGenerator";
+import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
+import videoFile from "../../assets/videos/video.mp4";
 
 function Main() {
   const screenSize = useResize();
+  const getRandomKey = () => {
+    const index = generateRandomKey();
+    return index;
+  };
   return (
-    <>
+    <Layout title={title.main} description={description.main}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         // videoLink="https://drive.google.com/file/d/1NuX2QWlMwbh-lUWxmNmOOQoa-PMlttfL/preview"
         videoLink={videoFile}
+        videoTitle={titles.mainTitle}
       />
       <BlockWithBlackBackground
-        title={attantion.title}
-        description={attantion.description}
-        text={attantion.textFeed}
+        title={about.aboutTitle}
+        blocks={about.aboutBlocks}
+        description={about.aboutDescription}
+        linkTo={about.aboutLink}
       />
       {main.map((item, index) => (
         <BlockWithPhotoAndDesc
-          key={generateRandomKey}
+          key={getRandomKey}
           photoLink={photoLink}
           size={screenSize.trakResolutionValue}
           caption={item.newsCaption}
@@ -35,7 +44,7 @@ function Main() {
           position={index % 2 === 0}
         />
       ))}
-    </>
+    </Layout>
   );
 }
 

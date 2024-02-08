@@ -1,7 +1,27 @@
+// import { useState } from "react";
 import "./Contacts.scss";
+import ContactButtonsBlock from "../../components/ContactButtonsBlock/ContactButtonsBlock";
+import { useResize } from "../../utils/hooks/useResize";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
+import Layout from "../../components/Layout/Layout";
+import { title, description } from "../../content/metaInfo.json";
 
 function Contacts() {
-  return <div>Contacts</div>;
+  // const [ setContact] = useState("main");
+  const screenSize = useResize();
+
+  // const handleSetContact = (gotContact) => {
+  //   setContact(gotContact);
+  // };
+
+  return (
+    <Layout title={title.contacts} description={description.contacts}>
+      <section className="contacts">
+        <ContactButtonsBlock size={screenSize.trakResolutionValue} />
+        <BlockWithContacts size={screenSize.trakResolutionValue} />
+      </section>
+    </Layout>
+  );
 }
 
 export default Contacts;

@@ -1,5 +1,3 @@
-@import "../../consts/consts.scss";
-@import "../../consts/text-mixins.scss";
 @import "../../consts/block-mixins.scss";
 
 .background-video__shadow {
@@ -23,5 +21,18 @@
     pointer-events: none;
     object-position: center;
     padding: 3%;
+  }
+  .background-video__title {
+    @include title-text($text-color: $light-text-color);
+    width: 30%;
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    z-index: 10;
+    text-shadow:
+      -2px -2px 2px $dark-text-color,
+      2px -2px 2px $dark-text-color,
+      -2px 2px 2px $dark-text-color,
+      2px 2px 2px $dark-text-color;
   }
 }
