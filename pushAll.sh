@@ -5,3 +5,4 @@ wait
 git add -A
 wait
 git add -A
+wait

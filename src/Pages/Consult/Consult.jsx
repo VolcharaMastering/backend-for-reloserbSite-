@@ -1,11 +1,15 @@
 import "./Consult.scss";
 import { titles } from "../../content/titles.json";
+import { title, description } from "../../content/metaInfo.json";
+import Layout from "../../components/Layout/Layout";
 
 function Consult() {
   return (
-    <div>
-      <h1 className="title">{titles.consultTitle}</h1>
-    </div>
+    <Layout title={title.consult} description={description.consult}>
+      <section className="consult">
+        <h1 className="title">{titles.consultTitle}</h1>
+      </section>
+    </Layout>
   );
 }
 
