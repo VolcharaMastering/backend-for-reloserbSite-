@@ -1,0 +1,16 @@
+@import "../../consts/block-mixins.scss";
+
+.double-block {
+  @include gridAutoFill($template-cols: repeat(auto-fit, minmax(350px, 1fr)));
+  width: 100%;
+  border-top: $borders-default;
+  &.tablet {
+    @include to-center_column();
+  }
+  &.mobile {
+    @include to-center_column();
+  }
+}
+// .double-block:last-of-type {
+//   border-bottom: $borders-default;
+// }

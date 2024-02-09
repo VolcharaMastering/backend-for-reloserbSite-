@@ -5,21 +5,6 @@ function BackgroundVideo({ videoTitle, size, videoLink }) {
   // const VIDEO_WIDTH = 1920;
   // const VIDEO_HEIGHT = 1080;
   return (
-    // <iframe
-    //   width={VIDEO_WIDTH}
-    //   height={VIDEO_HEIGHT}
-    //   src={videoLink}
-    //   title="YouTube video player"
-    //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    // />
-    // <iframe
-    //   src={videoLink}
-    //   width="1280"
-    //   height="720"
-    //   frameborder="0"
-    //   allowfullscreen
-    //   controls="0"
-    // ></iframe>
     <div className="background-video__shadow">
       <video
         autoPlay
