@@ -1,0 +1,37 @@
+@import "../../consts/block-mixins.scss";
+
+.photo-block {
+  width: 100%;
+  @include to-center_column($justify: center);
+  background-color: $dark-background-color;
+  box-sizing: border-box;
+  // height: 80vh;
+  .photo-block__title {
+    @include subtitle-text($text-color: $light-text-color);
+    margin: 2%;
+  }
+  .photo-block__navigation {
+    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(220px, 1fr)), $gap: 0);
+    padding: 2%;
+
+    .photo-block__info-block {
+      @include link-list();
+    }
+  }
+
+  .photo-block__description {
+    @include block-text($text-color: $light-text-color);
+    @include link-list($color: $light-text-color);
+    width: 70%;
+    text-align: center;
+    margin: 20px;
+    box-sizing: border-box;
+
+    &.mobile {
+      width: 100%;
+    }
+  }
+  // .photo-block__description:hover {
+  //   @include text-link-hover();
+  // }
+}
