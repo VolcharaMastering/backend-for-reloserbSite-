@@ -16,8 +16,8 @@ function VideoMapBlock({ size }) {
       <BackgroundVideo size={size} videoLink={videoFile} videoTitle="" />
       <div className="double-block__maps">
         <SwipeButton
-          leftTitle="Yandex"
-          rightTitle="Google"
+          leftTitle="Google"
+          rightTitle="Yandex"
           changeMap={handleTolggeYandex}
           mapState={yandexMap}
         />

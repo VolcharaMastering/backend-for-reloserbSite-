@@ -11,6 +11,7 @@
     @include to-center_column();
   }
 }
-// .double-block:last-of-type {
-//   border-bottom: $borders-default;
-// }
+.double-block__maps {
+  border-left: $borders-default;
+  padding: 4%;
+}
