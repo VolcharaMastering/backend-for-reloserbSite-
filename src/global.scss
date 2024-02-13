@@ -29,4 +29,7 @@ body {
   &.mobile {
     font-size: 40px;
   }
+  .subtitle {
+    @include subtitle-text();
+  }
 }

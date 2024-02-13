@@ -40,6 +40,38 @@
         "linkTo": "https://instantcoworking.com"
       }
     ],
+    "consult": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381637372790",
+        "showName": false,
+        "linkTo": "tel:+381637372790"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @consulting_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/@consulting_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantconsulting.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantconsulting.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @consulting",
+        "showName": true,
+        "linkTo": "https://t.me/+3PzsdQjeQmo3N2Q0"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://instantconsulting.com",
+        "showName": true,
+        "linkTo": "https://instantcoworking.com"
+      }
+    ],
     "coworking": [
       {
         "icon": "phoneIcon",

@@ -12,9 +12,9 @@ function VideoMapBlock({ size }) {
     setYandexMap(!yandexMap);
   };
   return (
-    <div className={`double-block ${size}`}>
+    <div className={`video-map ${size}`}>
       <BackgroundVideo size={size} videoLink={videoFile} videoTitle="" />
-      <div className="double-block__maps">
+      <div className="video-map__maps">
         <SwipeButton
           leftTitle="Google"
           rightTitle="Yandex"
