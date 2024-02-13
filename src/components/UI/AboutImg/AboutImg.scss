@@ -6,6 +6,7 @@
   $width: 340px;
   width: $width;
   height: $width * 1.32;
+  justify-self: center;
   .about-img__picture {
     position: absolute;
     top: 50%;
@@ -48,7 +49,8 @@
     }
     .about-img__text {
       @include block-text($text-color: $light-text-color);
-      padding: 2%;
+      padding: 2% 5%;
+      text-align: center;
     }
   }
   @keyframes showDescription {
