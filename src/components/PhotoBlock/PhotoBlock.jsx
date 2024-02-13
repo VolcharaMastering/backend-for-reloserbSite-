@@ -9,7 +9,7 @@ function PhotoBlock({ images, title, description, size, blockTitle }) {
   };
   return (
     <figure className="photo-block">
-      <h2 className="photo-block__title">{blockTitle}</h2>
+      <h2 className="subtitle photo-block__title">{blockTitle}</h2>
       <nav className={`photo-block__navigation ${size}`}>
         {images.map((photo) => (
           <AboutImg key={getRandomKey} linkToImg={photo} imgCaption={title} imgInfo={description} />

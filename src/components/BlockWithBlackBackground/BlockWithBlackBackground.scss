@@ -6,16 +6,17 @@
   background-color: $dark-background-color;
   box-sizing: border-box;
   // height: 80vh;
-  .black-block__title {
-    @include subtitle-text($text-color: $light-text-color);
-    margin: 2%;
-  }
+  // .black-block__title {
+  //   @include subtitle-text($text-color: $light-text-color);
+  //   margin: 2%;
+  // }
   .black-block__navigation {
-    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(220px, 1fr)), $gap: 0);
+    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(280px, 1fr)), $gap: 0);
     padding: 2%;
 
     .black-block__info-block {
       @include link-list();
+      height: 100%;
     }
   }
 

@@ -9,11 +9,6 @@
   text-align: center;
   padding: 20px;
 }
-.not-found__404 {
-  @include title-text();
-  text-align: center;
-  padding: 40px 0;
-}
 .not-found_button {
   @include button();
   @include font-style($font-size: 25px);

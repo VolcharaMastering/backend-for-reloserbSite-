@@ -6,9 +6,7 @@
   background-color: $dark-background-color;
   box-sizing: border-box;
   .photo-block__title {
-    @include subtitle-text($text-color: $light-text-color);
     text-align: center;
-    margin: 2%;
   }
   .photo-block__navigation {
     @include gridAutoFill(
