@@ -9,7 +9,7 @@ function TextBlock({ newsTitle, newsText, size }) {
   };
   return (
     <article className={`text-block ${size}`}>
-      <h2 className="text-block__title">{newsTitle}</h2>
+      <h2 className="subtitle">{newsTitle}</h2>
       {typeof newsText === "object" ? (
         newsText.map((string) => (
           <p key={getRandomKey()} className="text-block__text">

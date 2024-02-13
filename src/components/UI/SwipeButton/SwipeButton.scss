@@ -1,0 +1,7 @@
+@import "../../../consts/block-mixins.scss";
+
+.slider {
+  @include to-center_row($justify: flex-start);
+  width: 167px;
+  margin: 0;
+}

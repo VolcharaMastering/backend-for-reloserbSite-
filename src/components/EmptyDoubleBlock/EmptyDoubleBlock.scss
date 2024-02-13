@@ -1,0 +1,44 @@
+@import "../../consts/block-mixins.scss";
+
+.empty-double-block {
+  @include to-center_row();
+  border-bottom: $borders-default;
+  &.tablet {
+    @include to-center_column();
+  }
+  &.mobile {
+    @include to-center_column();
+  }
+
+  .empty-double-block:last-of-type {
+    border-bottom: $borders-default;
+  }
+  .empty-double-block__container:first-of-type {
+    border-right: $borders-default;
+    &.tablet {
+      width: 100%;
+      border-right: none;
+      border-bottom: $borders-default;
+    }
+    &.mobile {
+      width: 100%;
+      border-right: none;
+      border-bottom: $borders-default;
+    }
+  }
+}
+.empty-double-block__container {
+  @include to-center_column();
+  padding: 3%;
+  height: 100%;
+  justify-content: center;
+  &.half {
+    width: 50vw;
+  }
+  &.small {
+    width: 40vw;
+  }
+  &.big {
+    width: 60vw;
+  }
+}

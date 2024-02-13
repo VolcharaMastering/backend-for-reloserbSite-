@@ -1,0 +1,17 @@
+@import "../../consts/block-mixins.scss";
+
+.video-map {
+  @include gridAutoFill($template-cols: repeat(auto-fit, minmax(350px, 1fr)));
+  width: 100%;
+  border-top: $borders-default;
+  &.tablet {
+    @include to-center_column();
+  }
+  &.mobile {
+    @include to-center_column();
+  }
+}
+.video-map__maps {
+  border-left: $borders-default;
+  padding: 4%;
+}

@@ -30,7 +30,7 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
             onClick={handleOpenPopup}
           />
 
-          {caption && <figcaption className="photo-container__caption">{caption}</figcaption>}
+          {/* {caption && <figcaption className="photo-container__caption">{caption}</figcaption>} */}
         </figure>
       ) : (
         <figure className={`photo-container__news ${size} ${containerType}`}>
@@ -40,7 +40,7 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
             className="photo-container__image"
             onClick={handleOpenPopup}
           />
-          {containerType && <p className="photo-container__title">{title}</p>}
+          {/* {containerType && <p className="photo-container__title">{title}</p>} */}
           {/* {caption && <figcaption className="photo-container__caption">{caption}</figcaption>} */}
         </figure>
       )}

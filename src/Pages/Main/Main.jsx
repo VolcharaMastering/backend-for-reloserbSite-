@@ -11,7 +11,7 @@ import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import generateRandomKey from "../../utils/keyGenerator";
 import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
-import videoFile from "../../assets/videos/video.mp4";
+import videoFile from "../../assets/videos/main.mp4";
 
 function Main() {
   const screenSize = useResize();
@@ -23,7 +23,7 @@ function Main() {
     <Layout title={title.main} description={description.main}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
-        // videoLink="https://drive.google.com/file/d/1NuX2QWlMwbh-lUWxmNmOOQoa-PMlttfL/preview"
+        // videoLink={video}
         videoLink={videoFile}
         videoTitle={titles.mainTitle}
       />

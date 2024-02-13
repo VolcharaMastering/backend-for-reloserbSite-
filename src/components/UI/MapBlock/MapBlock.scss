@@ -1,0 +1,10 @@
+@import "../../../consts/block-mixins.scss";
+
+.map-block {
+  width: 100%;
+  height: 100%;
+}
+.map-block__google {
+  width: 100%;
+  height: 50vh;
+}

@@ -1,0 +1,72 @@
+@import "../../../consts/block-mixins.scss";
+
+.about-img {
+  position: relative;
+  overflow: hidden;
+  $width: 340px;
+  width: $width;
+  height: $width * 1.32;
+  justify-self: center;
+  .about-img__picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    animation: fadeIn 2s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+  }
+  .about-img__info {
+    position: absolute;
+    @include to-center_column($justify: center);
+    background-color: #6a5d5d80;
+    color: $light-text-color;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    z-index: 2;
+    .subtitle {
+      color: $light-text-color;
+    }
+    .about-img__text {
+      @include block-text($text-color: $light-text-color);
+      padding: 2% 5%;
+      text-align: center;
+    }
+  }
+  @keyframes showDescription {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+}
+.about-img:hover .about-img__info {
+  cursor: pointer;
+  animation: showDescription 0.7s ease-out forwards;
+  opacity: 1;
+  height: 100%;
+}

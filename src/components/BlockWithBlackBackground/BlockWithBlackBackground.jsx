@@ -11,7 +11,7 @@ function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) 
   };
   return (
     <article className="black-block">
-      <h2 className="black-block__title">{title}</h2>
+      <h2 className="subtitle">{title}</h2>
       <nav className={`black-block__navigation ${size}`}>
         {blocks.map((singleBlock) => (
           <NavLink
@@ -19,11 +19,15 @@ function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) 
             key={getRandomKey()}
             className={`black-block__info-block ${size}`}
           >
-            <InfoCard title={singleBlock.blockTitle} description={singleBlock.blockText} />
+            <InfoCard
+              title={singleBlock.blockTitle}
+              description={singleBlock.blockText}
+              type="black"
+            />
           </NavLink>
         ))}
       </nav>
-      <NavLink to={linkTo} className="black - block__description">
+      <NavLink to={linkTo} className={`black-block__description ${size}`}>
         {description}
       </NavLink>
     </article>
