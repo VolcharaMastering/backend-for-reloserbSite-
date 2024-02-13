@@ -1,1 +1,31 @@
 @import "../../consts/block-mixins.scss";
+
+.consult {
+  .consult__grid-block {
+    width: 100%;
+    border-bottom: $borders-default;
+
+    @include to-center_column($justify: center);
+    padding: 3%;
+  }
+  .consult__grid {
+    max-width: 1200px;
+    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(240px, 1fr)), $gap: 1px);
+    background-color: $border-color;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1px;
+  }
+  @media screen and (max-width: 1030px) {
+    .consult__grid {
+      @include gridAutoFill($template-cols: repeat(2, minmax(240px, 1fr)), $gap: 1px);
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .consult__grid {
+      @include gridAutoFill($template-cols: repeat(1, minmax(240px, 1fr)), $gap: 1px);
+    }
+  }
+}

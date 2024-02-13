@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "@fontsource/sofia-sans-extra-condensed";
 import "@fontsource/fira-sans-extra-condensed";
 import "@fontsource/yanone-kaffeesatz";
+import "@fontsource/rubik-lines";
 import "@fontsource/vollkorn";
 import { observer } from "mobx-react-lite";
 import "./App.scss";

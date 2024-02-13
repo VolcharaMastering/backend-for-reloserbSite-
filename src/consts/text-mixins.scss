@@ -16,7 +16,7 @@
   color: $color;
 }
 @mixin title-text($text-color: $dark-text-color) {
-  @include font-style($font-size: 6.5vw, $font-family: $yanone-font, $color: $text-color);
+  @include font-style($font-size: 5.5vw, $font-family: $yanone-font, $color: $text-color);
   font-stretch: 50%;
 }
 @mixin block-text($text-color: $dark-text-color) {

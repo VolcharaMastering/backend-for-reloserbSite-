@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@fontsource/fira-sans-extra-condensed": "^5.0.8",
+        "@fontsource/rubik-lines": "^5.0.1",
         "@fontsource/sofia-sans-extra-condensed": "^5.0.8",
         "@fontsource/vollkorn": "^5.0.18",
         "@fontsource/yanone-kaffeesatz": "^5.0.18",

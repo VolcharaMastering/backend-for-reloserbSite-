@@ -5,13 +5,17 @@
   @include to-center_column($justify: center);
   background-color: $dark-background-color;
   box-sizing: border-box;
-  // height: 80vh;
   .photo-block__title {
     @include subtitle-text($text-color: $light-text-color);
+    text-align: center;
     margin: 2%;
   }
   .photo-block__navigation {
-    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(220px, 1fr)), $gap: 0);
+    @include gridAutoFill(
+      $template-cols: repeat(auto-fit, 220px),
+      $gap: 20px,
+      $justify: space-around
+    );
     padding: 2%;
 
     .photo-block__info-block {
