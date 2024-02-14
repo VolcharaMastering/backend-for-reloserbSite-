@@ -5,7 +5,8 @@
   @include to-center_column($justify: center);
   background-color: $dark-background-color;
   box-sizing: border-box;
-  height: 80vh;
+  padding: 1%;
+  height: fit-content;
 }
 .black-text-block__title {
   //   @include title-text($text-color: $light-text-color);
