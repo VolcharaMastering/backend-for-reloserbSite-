@@ -41,3 +41,13 @@ body {
     font-size: 28px;
   }
 }
+.subtitle_white {
+  @include subtitle-text($text-color: $light-text-color);
+  padding: 2%;
+  &.tablet {
+    font-size: 30px;
+  }
+  &.mobile {
+    font-size: 28px;
+  }
+}

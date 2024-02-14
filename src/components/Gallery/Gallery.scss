@@ -3,15 +3,19 @@
 .gallery {
   width: 100%;
 }
-
 .gallery_blocked {
   @include gridAutoFill();
   border-bottom: $borders-default;
 }
 .gallery_stringed {
+  height: fit-content;
   padding: 3% 0;
+  border-top: $borders-default;
   border-bottom: $borders-default;
 }
 .react-multi-carousel-list {
   width: 100%;
+}
+.react-multi-carousel-track {
+  margin-bottom: 10px;
 }
