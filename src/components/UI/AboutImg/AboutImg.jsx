@@ -11,8 +11,7 @@ function AboutImg({ linkToImg, imgCaption, imgInfo }) {
     <figure className="about-img">
       <img src={linkToImg} className="about-img__picture" alt={imgCaption} />
       <figcaption className="about-img__info">
-        <h2 className="about-img__caption">{imgCaption}</h2>
-        {/* <p className="about-img__text">{imgInfo}</p> */}
+        <h2 className="subtitle">{imgCaption}</h2>
         {imgInfo.map((item) => (
           <p key={getRandomKey} className="about-img__text">
             {item}

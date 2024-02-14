@@ -1,6 +1,6 @@
 @import "../../consts/block-mixins.scss";
 
-.double-block {
+.video-map {
   @include gridAutoFill($template-cols: repeat(auto-fit, minmax(350px, 1fr)));
   width: 100%;
   border-top: $borders-default;
@@ -11,7 +11,7 @@
     @include to-center_column();
   }
 }
-.double-block__maps {
+.video-map__maps {
   border-left: $borders-default;
   padding: 4%;
 }

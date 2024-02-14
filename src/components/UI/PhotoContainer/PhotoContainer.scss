@@ -12,7 +12,7 @@
   height: 600px;
   border-right: $borders-default;
   border-left: $borders-default;
-  @include to-center_column($align: flex-start);
+  @include to-center_column();
   .photo-container__title {
     position: absolute;
     bottom: 10px;
@@ -35,12 +35,28 @@
     border-left: none;
   }
 }
+@media screen and (max-width: 1600px) {
+  .photo-container__news {
+    align-items: inherit;
+  }
+}
 .photo-container__image {
-  width: 100%;
+  max-width: 1100px;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
   padding: 3%;
+  &.tablet {
+    width: 100%;
+  }
+  &.mobile {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .photo-container__image {
+    width: 100%;
+  }
 }
 .photo-container__image:hover {
   cursor: pointer;

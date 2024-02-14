@@ -8,7 +8,7 @@ function SwipeButton({ leftTitle, rightTitle, changeMap, mapState }) {
 
   return (
     <div className="slider">
-      <h2 className="slider__title">{leftTitle}</h2>
+      <h2 className="subtitle">{leftTitle}</h2>
       <ToggleButton
         inactiveLabel="G"
         activeLabel="Я"
@@ -29,7 +29,7 @@ function SwipeButton({ leftTitle, rightTitle, changeMap, mapState }) {
           },
         }}
       />
-      <h2 className="slider__title">{rightTitle}</h2>
+      <h2 className="subtitle">{rightTitle}</h2>
     </div>
   );
 }

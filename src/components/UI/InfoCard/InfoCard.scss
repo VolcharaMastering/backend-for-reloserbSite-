@@ -1,23 +1,25 @@
 @import "../../../consts/block-mixins.scss";
 
 .info-card {
-  @include to-center_column($justify: center);
+  @include to-center_column($justify: flex-start);
   background-color: $light-background-color;
   width: 100%;
-  height: 50vh;
+  box-sizing: border-box;
+  height: 100%;
   padding: 5%;
 
   &.black {
     background-color: unset;
+    box-sizing: border-box;
     border: $borders-default;
-    // height: 100%;
+    min-height: fit-content;
+    // max-height: 50vh;
   }
 }
 .info-card__title {
-  @include subtitle-text();
   margin-bottom: 20px;
   &.black {
-    @include subtitle-text($text-color: $light-text-color);
+    color: $light-text-color;
   }
 }
 .info-card__description {

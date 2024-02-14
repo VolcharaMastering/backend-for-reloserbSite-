@@ -23,7 +23,8 @@
   @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 18px);
 }
 @mixin subtitle-text($text-color: $dark-text-color) {
-  @include font-style($font-size: 30px, $font-family: $yanone-font, $color: $text-color);
+  @include font-style($font-size: 36px, $font-family: $fira-font, $color: $text-color);
+  font-weight: 700;
 }
 @mixin transition-for-links($transition: $transition) {
   position: relative;

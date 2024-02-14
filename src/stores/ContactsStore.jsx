@@ -13,6 +13,8 @@ class ContactsStore {
     switch (contact) {
       case "coworking":
         return this.contacts.coworking;
+      case "consult":
+        return this.contacts.consult;
       case "realEstate":
         return this.contacts.realEstate;
       case "cargo":

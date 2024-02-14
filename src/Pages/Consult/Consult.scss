@@ -4,7 +4,7 @@
   .consult__grid-block {
     width: 100%;
     border-bottom: $borders-default;
-
+    border-top: $borders-default;
     @include to-center_column($justify: center);
     padding: 3%;
   }
@@ -14,7 +14,6 @@
     background-color: $border-color;
     box-sizing: border-box;
     overflow: hidden;
-    box-sizing: border-box;
     padding: 1px;
   }
   @media screen and (max-width: 1030px) {
@@ -28,4 +27,7 @@
       @include gridAutoFill($template-cols: repeat(1, minmax(240px, 1fr)), $gap: 1px);
     }
   }
+}
+.subtitle_link {
+  @include link-list();
 }
