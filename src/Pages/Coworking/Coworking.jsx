@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { useResize } from "../../utils/hooks/useResize";
 import Gallery from "../../components/Gallery/Gallery";
-import galleryArray from "../../utils/folderApi/getPhotos";
+import galleryArray from "../../utils/folderApi/getCoworkingPhotos";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
 import InfoCard from "../../components/UI/InfoCard/InfoCard";
 import Layout from "../../components/Layout/Layout";

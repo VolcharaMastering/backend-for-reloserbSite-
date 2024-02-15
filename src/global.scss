@@ -67,3 +67,19 @@ body {
     width: 100%;
   }
 }
+.grid-block {
+  width: 100%;
+  @include to-center_column($justify: center);
+  padding: 3%;
+  .block-cards__grid {
+    max-width: 600px;
+    @include gridAutoFill($template-cols: repeat(2, minmax(200px, 1fr)), $gap: 1px);
+    background-color: $border-color;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 1px;
+    &.mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -22,9 +22,9 @@ function RealEstate() {
   // const videoLink ="https://relocationsrb.com/public_html/video/estate-video.mp4";
   const cardsComponent = () => {
     return (
-      <div className="restate__grid-block">
+      <div className="grid-block">
         <h2 className="subtitle">{offers.title}</h2>
-        <div className={`restate__grid ${screenSize.trakResolutionValue}`}>
+        <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
           {whyWe.description.map((item) => (
             <InfoCard key={getRandomKey()} title="" description={item} />
           ))}
