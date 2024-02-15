@@ -12,6 +12,7 @@ function EmptyDoubleBlock({
       <div className={`empty-double-block__container ${firstBlockSize} ${size}`}>
         {firstComponent()}
       </div>
+      <div className={`divide-line ${size}`} />
       <div className={`empty-double-block__container ${secondBlockSize} ${size}`}>
         {secondComponent()}
       </div>
