@@ -51,3 +51,19 @@ body {
     font-size: 28px;
   }
 }
+.divide-line {
+  display: block;
+  width: 1px;
+  flex: 1;
+  align-self: stretch;
+  border-left: $borders-default;
+  border-bottom: $borders-default;
+  &.tablet {
+    height: 1px;
+    width: 100%;
+  }
+  &.mobile {
+    height: 1px;
+    width: 100%;
+  }
+}

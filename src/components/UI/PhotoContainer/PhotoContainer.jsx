@@ -26,7 +26,7 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
           <img
             src={photoLink}
             alt={caption}
-            className="photo-container__image"
+            className="photo-container__image_gallery"
             onClick={handleOpenPopup}
           />
 
