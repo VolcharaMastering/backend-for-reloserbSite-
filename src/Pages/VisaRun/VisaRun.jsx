@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useResize } from "../../utils/hooks/useResize";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
@@ -17,7 +18,6 @@ import generateRandomKey from "../../utils/keyGenerator";
 import InfoCard from "../../components/UI/InfoCard/InfoCard";
 import SwipeButton from "../../components/UI/SwipeButton/SwipeButton";
 import MapBlock from "../../components/UI/MapBlock/MapBlock";
-import { useState } from "react";
 
 function VisaRun() {
   const screenSize = useResize();

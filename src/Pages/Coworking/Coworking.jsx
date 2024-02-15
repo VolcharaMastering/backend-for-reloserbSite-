@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import ContactsStore from "../../stores/ContactsStore";
 import { useResize } from "../../utils/hooks/useResize";
 import Gallery from "../../components/Gallery/Gallery";
 import galleryArray from "../../utils/folderApi/getCoworkingPhotos";
@@ -8,6 +9,7 @@ import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockW
 import InfoCard from "../../components/UI/InfoCard/InfoCard";
 import Layout from "../../components/Layout/Layout";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import generateRandomKey from "../../utils/keyGenerator";
 import "./Coworking.scss";
 import { prices } from "../../content/prices.json";
@@ -24,6 +26,10 @@ function Coworking() {
     const index = generateRandomKey();
     return index;
   };
+
+  useEffect(() => {
+    ContactsStore.setContacts("coworking");
+  }, []);
   const handleScrollToPromo = () => {
     if (scrollToPromo.current) {
       scrollToPromo.current.scrollIntoView({ behavior: "smooth" });
@@ -104,6 +110,7 @@ function Coworking() {
             ))}
           </div>
         </div>
+        <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>
   );

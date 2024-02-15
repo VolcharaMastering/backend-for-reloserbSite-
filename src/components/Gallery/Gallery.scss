@@ -6,6 +6,7 @@
 .gallery_blocked {
   @include gridAutoFill();
   border-bottom: $borders-default;
+  padding: 2%;
 }
 .gallery_stringed {
   height: fit-content;

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import ContactsStore from "../../stores/ContactsStore";
 import Layout from "../../components/Layout/Layout";
 import { useResize } from "../../utils/hooks/useResize";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
@@ -11,10 +13,14 @@ import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageC
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 
 function RealEstate() {
   const screenSize = useResize();
 
+  useEffect(() => {
+    ContactsStore.setContacts("realEstate");
+  }, []);
   const getRandomKey = () => {
     const index = generateRandomKey();
     return index;
@@ -67,6 +73,8 @@ function RealEstate() {
           secondBlockSize="half"
           size={screenSize.trakResolutionValue}
         />
+
+        <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>
   );
