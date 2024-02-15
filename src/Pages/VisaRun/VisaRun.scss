@@ -1,5 +1,9 @@
 @import "../../consts/block-mixins.scss";
 
-.visarun__title {
-  width: 70%;
+.visarun {
+  width: 100%;
+  @include to-center_column();
+  .visarun__title {
+    width: 70%;
+  }
 }
