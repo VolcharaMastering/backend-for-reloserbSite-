@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import ContactsStore from "../../stores/ContactsStore";
 import Layout from "../../components/Layout/Layout";
 import { useResize } from "../../utils/hooks/useResize";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
@@ -11,10 +13,14 @@ import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageC
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 
 function RealEstate() {
   const screenSize = useResize();
 
+  useEffect(() => {
+    ContactsStore.setContacts("realEstate");
+  }, []);
   const getRandomKey = () => {
     const index = generateRandomKey();
     return index;
@@ -22,9 +28,9 @@ function RealEstate() {
   // const videoLink ="https://relocationsrb.com/public_html/video/estate-video.mp4";
   const cardsComponent = () => {
     return (
-      <div className="restate__grid-block">
+      <div className="grid-block">
         <h2 className="subtitle">{offers.title}</h2>
-        <div className={`restate__grid ${screenSize.trakResolutionValue}`}>
+        <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
           {whyWe.description.map((item) => (
             <InfoCard key={getRandomKey()} title="" description={item} />
           ))}
@@ -67,6 +73,8 @@ function RealEstate() {
           secondBlockSize="half"
           size={screenSize.trakResolutionValue}
         />
+
+        <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>
   );

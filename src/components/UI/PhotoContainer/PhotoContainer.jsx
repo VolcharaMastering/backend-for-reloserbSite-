@@ -20,7 +20,7 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
   };
 
   return (
-    <div>
+    <>
       {containerType === "gallery" ? (
         <figure className={`photo-container ${size} ${containerType}`}>
           <img
@@ -47,7 +47,7 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
       {/* {popups[index] && containerType != "gallery" && (
         <Popup popupType="photo" popupContent={photoLink} size={size} />
       )} */}
-    </div>
+    </>
   );
 }
 

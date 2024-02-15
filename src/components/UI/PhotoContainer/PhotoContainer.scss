@@ -5,6 +5,7 @@
   max-width: $width;
   height: $width * 1.3;
   @include to-center_column();
+  margin: auto;
 }
 .photo-container__news {
   position: relative;
