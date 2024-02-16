@@ -2,4 +2,5 @@
 
 .cargo {
   width: 100%;
+  @include to-center_column($justify: center);
 }

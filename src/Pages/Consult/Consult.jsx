@@ -62,14 +62,11 @@ function Consult() {
           newsText={about.description}
         />
         <div className="consult__grid-block">
-          <h2 className="subtitle">{offers.title}</h2>
+          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
           <div className={`consult__grid ${screenSize.trakResolutionValue}`}>
             {offers.description.map((item) => (
               <InfoCard key={getRandomKey()} title={item.title} description={item.description} />
             ))}
-            {offers.description.length % 2 && (
-              <InfoCard key={getRandomKey()} title="" description="" />
-            )}
           </div>
         </div>
         <EmptyDoubleBlock

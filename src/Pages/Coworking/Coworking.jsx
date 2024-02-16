@@ -38,7 +38,9 @@ function Coworking() {
   return (
     <Layout title={title.coworking} description={description.coworking}>
       <section className="coworking">
-        <h1 className="title coworking__title">{titles.coworkTitle}</h1>
+        <h1 className={`title coworking__title ${screenSize.trakResolutionValue}`}>
+          {titles.coworkTitle}
+        </h1>
         <Gallery
           galleryType="stringed"
           content={galleryArray}
@@ -90,7 +92,7 @@ function Coworking() {
           </div>
         )}
         <div className="coworking__grid-block">
-          <h2 className="subtitle">{offers.title}</h2>
+          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
           <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
             {offers.description.map((item) => (
               <InfoCard key={getRandomKey} title="" description={item} />

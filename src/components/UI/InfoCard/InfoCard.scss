@@ -5,6 +5,7 @@
   background-color: $light-background-color;
   width: 100%;
   box-sizing: border-box;
+  border: $borders-default;
   height: 100%;
   padding: 5%;
 
@@ -24,6 +25,7 @@
 }
 .info-card__description {
   @include block-text();
+  text-align: center;
   &.black {
     color: $light-text-color;
   }

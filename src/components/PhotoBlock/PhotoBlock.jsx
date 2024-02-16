@@ -10,7 +10,7 @@ function PhotoBlock({ images, description, size, blockTitle }) {
   // console.log(images, description);
   return (
     <figure className="photo-block">
-      {blockTitle && <h2 className="subtitle photo-block__title">{blockTitle}</h2>}
+      {blockTitle && <h2 className={`subtitle photo-block__title ${size}`}>{blockTitle}</h2>}
       <nav className={`photo-block__navigation ${size}`}>
         {images.length &&
           images.map((photo, index) => (

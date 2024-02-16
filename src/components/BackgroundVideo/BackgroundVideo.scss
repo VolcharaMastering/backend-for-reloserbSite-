@@ -8,10 +8,18 @@
   object-fit: cover;
   z-index: 3;
   pointer-events: none;
+
+  &.tablet {
+    height: 50vw;
+  }
+  &.mobile {
+    height: 60vw;
+  }
+
   .background-video {
     position: absolute;
     width: 100%;
-    height: 40vw;
+    height: 100%;
     z-index: 0;
     box-sizing: border-box;
     object-fit: cover;
@@ -34,5 +42,12 @@
       2px -2px 2px $dark-text-color,
       -2px 2px 2px $dark-text-color,
       2px 2px 2px $dark-text-color;
+
+    &.tablet {
+      font-size: 6vw;
+    }
+    &.mobile {
+      font-size: 8vw;
+    }
   }
 }

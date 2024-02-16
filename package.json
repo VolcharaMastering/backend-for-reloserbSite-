@@ -1,5 +1,6 @@
 {
-    "name": "instantcoworking",
+    "name": "instant",
+    "homepage": "https://InstantDevelop.github.io/Coworking/",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -11,7 +12,9 @@
         "format": "prettier --write src/**/*.{js,jsx,scss,css,json}",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
         "lint-staged": "lint-staged",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "predeploy" : "npm run build",
+        "deploy" : "gh-pages -d dist"
     },
     "eslintConfig": {
         "extends": [
@@ -35,6 +38,7 @@
         "react-hook-form": "^7.50.0",
         "react-multi-carousel": "^2.8.4",
         "react-router-dom": "^6.21.2",
+        "react-router-sitemap-maker": "^1.1.0",
         "react-toggle-button": "^2.2.0",
         "sass": "^1.69.7",
         "uuid": "^9.0.1",
@@ -53,6 +57,7 @@
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
+        "gh-pages": "^6.1.1",
         "hamburger-react": "^2.5.0",
         "prettier": "^3.2.4",
         "react-responsive": "^9.0.2",

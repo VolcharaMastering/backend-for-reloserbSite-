@@ -15,25 +15,18 @@ function TheHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const screenSize = useResize();
 
-  // const tempLocation = useLocationHook(location);
-
   return (
     <header className="header">
       <Logo src={logo} />
       {!(
         screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
-      ) && (
+      ) ? (
         <section className="header__main">
           <HeaderMenu size={screenSize.trakResolutionValue} />
-          {/* <p className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</p> */}
           <TextLink location={location} linkTo="/contacts" size={screenSize.trakResolutionValue} />
         </section>
-      )}
-
-      {(screenSize.trakResolutionValue === "tablet" ||
-        screenSize.trakResolutionValue === "mobile") && (
+      ) : (
         <section className={`header__name ${screenSize.trakResolutionValue}`}>
-          {/* <p className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</p> */}
           <Hamburger
             toggled={isOpen}
             label="Show menu"
@@ -45,7 +38,6 @@ function TheHeader() {
         </section>
       )}
       {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
-      {/* </section> */}
     </header>
   );
 }

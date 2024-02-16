@@ -36,14 +36,11 @@ function VisaRun() {
   const cardsComponent = () => {
     return (
       <div className="grid-block">
-        <h2 className="subtitle">{whyWe.title}</h2>
+        <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
         <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
           {whyWe.description.map((item) => (
             <InfoCard key={getRandomKey()} title="" description={item} />
           ))}
-          {whyWe.description.length % 2 && (
-            <InfoCard key={getRandomKey()} title="" description="" />
-          )}
         </div>
       </div>
     );
@@ -72,7 +69,9 @@ function VisaRun() {
   };
   return (
     <section className="visarun">
-      <h1 className="title visarun__title">{titles.visarunTitle}</h1>
+      <h1 className={`title visarun__title ${screenSize.trakResolutionValue}`}>
+        {titles.visarunTitle}
+      </h1>
       <BlackBlockWithText
         title={about.title}
         description=""

@@ -10,21 +10,20 @@
   }
   .consult__grid {
     max-width: 1200px;
-    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(240px, 1fr)), $gap: 1px);
-    background-color: $border-color;
+    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(240px, 1fr)), $gap: 15px);
     box-sizing: border-box;
     overflow: hidden;
     padding: 1px;
   }
   @media screen and (max-width: 1030px) {
     .consult__grid {
-      @include gridAutoFill($template-cols: repeat(2, minmax(240px, 1fr)), $gap: 1px);
+      @include gridAutoFill($template-cols: repeat(2, minmax(240px, 1fr)), $gap: 10px);
     }
   }
 
   @media screen and (max-width: 520px) {
     .consult__grid {
-      @include gridAutoFill($template-cols: repeat(1, minmax(240px, 1fr)), $gap: 1px);
+      @include gridAutoFill($template-cols: repeat(1, minmax(240px, 1fr)), $gap: 10px);
     }
   }
 }

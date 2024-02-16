@@ -5,7 +5,7 @@ function BackgroundVideo({ videoTitle, size, videoLink }) {
   // const VIDEO_WIDTH = 1920;
   // const VIDEO_HEIGHT = 1080;
   return (
-    <div className="background-video__shadow">
+    <div className={`background-video__shadow ${size}`}>
       <video
         autoPlay
         muted
@@ -18,7 +18,7 @@ function BackgroundVideo({ videoTitle, size, videoLink }) {
         Your browser does not support the video tag.
       </video>
 
-      {videoTitle && <h1 className="background-video__title">{videoTitle}</h1>}
+      {videoTitle && <h1 className={`background-video__title ${size}`}>{videoTitle}</h1>}
     </div>
   );
 }
