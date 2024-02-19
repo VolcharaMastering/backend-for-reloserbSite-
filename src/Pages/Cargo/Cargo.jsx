@@ -21,7 +21,7 @@ function Cargo() {
   return (
     <Layout title={title.cargo} description={description.cargo}>
       <section className="cargo">
-        <h1 className="title">{titles.cargoTitle}</h1>
+        <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.cargoTitle}</h1>
         <BlackBlockWithText
           title={about.title}
           description=""

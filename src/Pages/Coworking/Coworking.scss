@@ -54,14 +54,13 @@
     padding: 3%;
     .coworking__grid {
       max-width: 1200px;
-      @include gridAutoFill($template-cols: repeat(3, minmax(250px, 1fr)), $gap: 1px);
-      background-color: $border-color;
+      @include gridAutoFill($template-cols: repeat(3, minmax(250px, 1fr)), $gap: 15px);
       box-sizing: border-box;
       overflow: hidden;
       box-sizing: border-box;
       padding: 1px;
       &.tablet {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, minmax(250px, 10fr));
       }
       &.mobile {
         grid-template-columns: repeat(1, 1fr);

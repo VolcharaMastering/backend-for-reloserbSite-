@@ -29,14 +29,11 @@ function RealEstate() {
   const cardsComponent = () => {
     return (
       <div className="grid-block">
-        <h2 className="subtitle">{offers.title}</h2>
+        <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
         <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
           {whyWe.description.map((item) => (
             <InfoCard key={getRandomKey()} title="" description={item} />
           ))}
-          {offers.description.length % 2 && (
-            <InfoCard key={getRandomKey()} title="" description="" />
-          )}
         </div>
       </div>
     );
@@ -52,7 +49,7 @@ function RealEstate() {
   return (
     <Layout title={title.realEstate} description={description.realEstate}>
       <section>
-        <h1 className="title">{titles.realEstateTItle}</h1>
+        <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.realEstateTItle}</h1>
         <BlackBlockWithText
           title={about.title}
           description=""

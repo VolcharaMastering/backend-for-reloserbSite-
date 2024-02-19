@@ -12,7 +12,7 @@ function ContactButtonsBlock({ size }) {
   };
   return (
     <div className="contact-buttons">
-      <h1 className="title">{titles.contactTitle}</h1>
+      <h1 className={`title ${size}`}>{titles.contactTitle}</h1>
       <ul className={`contact-buttons__block ${size}`}>
         {buttons.length > 0 &&
           buttons.map((buttonData) => (

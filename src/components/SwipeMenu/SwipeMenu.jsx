@@ -7,7 +7,7 @@ function SwipeMenu({ setIsOpen, screenSize }) {
   };
   return (
     <section className={`swipe-menu ${screenSize}`} onClick={handleCloseMenu}>
-      <HeaderMenu size={screenSize} />
+      <HeaderMenu size={screenSize} mobile={true} />
     </section>
   );
 }

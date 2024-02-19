@@ -8,7 +8,8 @@
 
 html,
 body {
-  width: 100%;
+  max-width: 3000px;
+  margin: auto;
   height: 100vh;
   background-color: $light-background-color;
 }
@@ -73,13 +74,13 @@ body {
   padding: 3%;
   .block-cards__grid {
     max-width: 600px;
-    @include gridAutoFill($template-cols: repeat(2, minmax(200px, 1fr)), $gap: 1px);
-    background-color: $border-color;
+    @include gridAutoFill($template-cols: repeat(2, minmax(200px, 1fr)), $gap: 15px);
     box-sizing: border-box;
     overflow: hidden;
     padding: 1px;
     &.mobile {
       grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
     }
   }
 }
