@@ -1,15 +1,17 @@
 @import "../../consts/block-mixins.scss";
 .footer__menu {
   .footer__menu-block {
+    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(200px, 1fr)));
     @include list-without-dots();
-    width: 35vw;
+    width: 100%;
     &.tablet {
-      @include to-center_column();
+      @include gridAutoFill($template-cols: repeat(3, minmax(150px, 1fr)));
     }
     &.mobile {
-      @include to-center_column();
+      @include gridAutoFill($template-cols: repeat(2, minmax(100px, 1fr)));
     }
-    .footer__menu-link {
-    }
+    // .footer__menu-link {
+    //   color: $dark-text-color;
+    // }
   }
 }

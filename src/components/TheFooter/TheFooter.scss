@@ -2,10 +2,10 @@
 
 .footer {
   width: 100%;
-  @include to-center_column();
-  border: $borders-default;
+  @include to-center_column($justify: center);
+  border-top: $borders-default;
   margin-top: 30px;
-  padding: 30px;
+  padding: 30px 20px;
   .footer__designed {
     @include to-center_row($justify: center);
     padding: 10px;

@@ -2,7 +2,7 @@
 import { observer } from "mobx-react-lite";
 import "./Form.scss";
 import Button from "../UI/Button/Button";
-import contacts from "../../content/contacts.json";
+import { contacts } from "../../content/pagesContent/contactsPageContent.json";
 
 const Form = observer(({ size }) => {
   return (

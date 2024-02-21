@@ -1,6 +1,7 @@
 import FooterMenu from "../FooterMenu/FooterMenu";
 import "./TheFooter.scss";
 import Logo from "../UI/Logo/Logo";
+import logo from "../../assets/logo.svg";
 import { useResize } from "../../utils/hooks/useResize";
 
 function TheFooter() {
@@ -10,7 +11,7 @@ function TheFooter() {
       <FooterMenu size={screenSize.trakResolutionValue} />
       <div className={`footer__designed ${screenSize.trakResolutionValue}`}>
         <p className="footer__label">Designed and developed by:</p>
-        <Logo />
+        <Logo src={logo} />
       </div>
       <p className="footer__company">Instant.DeVeLoP</p>
       <p className="footer__label">© {new Date().getFullYear()}</p>

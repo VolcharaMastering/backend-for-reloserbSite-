@@ -40,10 +40,10 @@ function Popup({ popupType, popupContent, size }) {
           <img
             src={popupContent.photoLink}
             alt={popupContent.description}
-            className="popup__image"
+            className={`popup__image ${size}`}
           />
         ) : (
-          <div className={`popup__content ${size}`}>ddd</div>
+          <div className={`popup__content ${size}`}>no_content</div>
         )}
       </section>
     </div>

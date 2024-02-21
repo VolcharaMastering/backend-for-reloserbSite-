@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./VideoMapBlock.scss";
 import BackgroundVideo from "../BackgroundVideo/BackgroundVideo";
-import videoFile from "../../assets/videos/enter.mp4";
 import MapBlock from "../UI/MapBlock/MapBlock";
 import SwipeButton from "../UI/SwipeButton/SwipeButton";
+import { adress } from "../../content/pagesContent/contactsPageContent.json";
+import videoFile from "../../assets/videos/enter.mp4";
 
 function VideoMapBlock({ size }) {
   const [yandexMap, setYandexMap] = useState(true);
@@ -15,7 +16,8 @@ function VideoMapBlock({ size }) {
   return (
     <div className={`video-map ${size}`}>
       <BackgroundVideo size={size} videoLink={videoFile} videoTitle="" />
-      <div className="video-map__maps">
+      <div className={`video-map__maps ${size}`}>
+        <h2 className={`video-map__subtitle ${size}`}>{adress}</h2>
         <SwipeButton
           leftTitle="Google"
           rightTitle="Yandex"

@@ -12,11 +12,15 @@ import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWi
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import generateRandomKey from "../../utils/keyGenerator";
 import "./Coworking.scss";
-import { prices } from "../../content/prices.json";
-import { promo } from "../../content/coworkingInfo.json";
 import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
-import { about, offers, whyWe } from "../../content/pagesContent/coworkingPageContent.json";
+import {
+  about,
+  offers,
+  whyWe,
+  promo,
+  prices,
+} from "../../content/pagesContent/coworkingPageContent.json";
 import promoImage from "../../assets/promo.png";
 
 function Coworking() {
@@ -80,7 +84,7 @@ function Coworking() {
           <div ref={scrollToPromo}>
             {promo.map((item, index) => (
               <BlockWithPhotoAndDesc
-                key={getRandomKey}
+                key={getRandomKey()}
                 size={screenSize.trakResolutionValue}
                 photoLink={promoImage}
                 newsTitle={item.title}
@@ -95,7 +99,7 @@ function Coworking() {
           <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
           <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
             {offers.description.map((item) => (
-              <InfoCard key={getRandomKey} title="" description={item} />
+              <InfoCard key={getRandomKey()} title="" description={item} />
             ))}
           </div>
         </div>
@@ -104,7 +108,7 @@ function Coworking() {
           <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
             {whyWe.description.map((item) => (
               <InfoCard
-                key={getRandomKey}
+                key={getRandomKey()}
                 title=""
                 description={item}
                 size={screenSize.trakResolutionValue}

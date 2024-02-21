@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { useResize } from "../../utils/hooks/useResize";
+import "./VisaRun.scss";
+import generateRandomKey from "../../utils/keyGenerator";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
 import galleryArray from "../../utils/folderApi/getVisarunPhotos";
-import "./VisaRun.scss";
-import photoLink from "../../assets/visaRun/passport.jpg";
+import PhotoBlock from "../../components/PhotoBlock/PhotoBlock";
+import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
+import InfoCard from "../../components/UI/InfoCard/InfoCard";
+import SwipeButton from "../../components/UI/SwipeButton/SwipeButton";
+import MapBlock from "../../components/UI/MapBlock/MapBlock";
 import { titles } from "../../content/titles.json";
 import {
   about,
@@ -12,12 +17,7 @@ import {
   whyWe,
   photoDescription,
 } from "../../content/pagesContent/visarunPageContent.json";
-import PhotoBlock from "../../components/PhotoBlock/PhotoBlock";
-import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
-import generateRandomKey from "../../utils/keyGenerator";
-import InfoCard from "../../components/UI/InfoCard/InfoCard";
-import SwipeButton from "../../components/UI/SwipeButton/SwipeButton";
-import MapBlock from "../../components/UI/MapBlock/MapBlock";
+import photoLink from "../../assets/visaRun/passport.jpg";
 
 function VisaRun() {
   const screenSize = useResize();
@@ -49,7 +49,7 @@ function VisaRun() {
     return (
       <>
         <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.adress}</h2>
-        <div className="visarun-map__maps">
+        <div className={`visarun-map__maps  ${screenSize.trakResolutionValue}`}>
           <SwipeButton
             leftTitle="Google"
             rightTitle="Yandex"
