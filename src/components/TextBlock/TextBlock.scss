@@ -3,11 +3,13 @@
 .text-block {
   width: 100%;
   padding: 2%;
-  // .text-block__title {
-  //   @include title-text();
-  // }
   .text-block__text {
     @include block-text();
     text-align: left;
+  }
+  .text-block__text_bold {
+    @include block-text();
+    font-weight: 700;
+    font-style: italic;
   }
 }

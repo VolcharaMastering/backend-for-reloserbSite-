@@ -11,11 +11,17 @@ function TextBlock({ newsTitle, newsText, size }) {
     <article className={`text-block ${size}`}>
       <h2 className={`subtitle ${size}`}>{newsTitle}</h2>
       {typeof newsText === "object" ? (
-        newsText.map((string) => (
-          <p key={getRandomKey()} className="text-block__text">
-            {string}
-          </p>
-        ))
+        newsText.map((string) =>
+          typeof string === "object" ? (
+            <p key={getRandomKey()} className="text-block__text_bold">
+              {string.bold}
+            </p>
+          ) : (
+            <p key={getRandomKey()} className="text-block__text">
+              {string}
+            </p>
+          )
+        )
       ) : (
         <p className="text-block__text">{newsText}</p>
       )}

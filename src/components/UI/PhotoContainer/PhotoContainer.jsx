@@ -19,35 +19,24 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
     PopupState.setOpened(data);
   };
 
-  return (
-    <>
-      {containerType === "gallery" ? (
-        <figure className={`photo-container ${size} ${containerType}`}>
-          <img
-            src={photoLink}
-            alt={caption}
-            className="photo-container__image_gallery"
-            onClick={handleOpenPopup}
-          />
-
-          {/* {caption && <figcaption className="photo-container__caption">{caption}</figcaption>} */}
-        </figure>
-      ) : (
-        <figure className={`photo-container__news ${size} ${containerType}`}>
-          <img
-            src={photoLink}
-            alt={caption}
-            className="photo-container__image"
-            onClick={handleOpenPopup}
-          />
-          {/* {containerType && <p className="photo-container__title">{title}</p>} */}
-          {/* {caption && <figcaption className="photo-container__caption">{caption}</figcaption>} */}
-        </figure>
-      )}
-      {/* {popups[index] && containerType != "gallery" && (
-        <Popup popupType="photo" popupContent={photoLink} size={size} />
-      )} */}
-    </>
+  return containerType === "gallery" ? (
+    <figure className={`photo-container ${size} ${containerType}`}>
+      <img
+        src={photoLink}
+        alt={caption}
+        className="photo-container__image_gallery"
+        onClick={handleOpenPopup}
+      />
+    </figure>
+  ) : (
+    <figure className={`photo-container__news ${size} ${containerType}`}>
+      <img
+        src={photoLink}
+        alt={caption}
+        className="photo-container__image"
+        onClick={handleOpenPopup}
+      />
+    </figure>
   );
 }
 

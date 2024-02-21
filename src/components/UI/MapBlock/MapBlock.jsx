@@ -8,7 +8,7 @@ function MapBlock({ yandexMap, coordinate1, coordinate2, gmapsSrc }) {
       <YMaps>
         <Map
           defaultState={{ center: [coordinate1, coordinate2], zoom: 19 }}
-          style={{ width: "100%", height: "40vw" }}
+          style={{ width: "100%", height: "100%" }}
         >
           <Placemark geometry={[coordinate1, coordinate2]} />
         </Map>

@@ -2,8 +2,6 @@ import "./BackgroundVideo.scss";
 import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
 
 function BackgroundVideo({ videoTitle, size, videoLink }) {
-  // const VIDEO_WIDTH = 1920;
-  // const VIDEO_HEIGHT = 1080;
   return (
     <div className={`background-video__shadow ${size}`}>
       <video
@@ -12,6 +10,7 @@ function BackgroundVideo({ videoTitle, size, videoLink }) {
         disablePictureInPicture
         loop
         poster={photoLink}
+        playsinline
         className="background-video"
       >
         <source src={videoLink} type="video/mp4" />

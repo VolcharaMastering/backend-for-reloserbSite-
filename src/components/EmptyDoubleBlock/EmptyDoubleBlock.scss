@@ -5,9 +5,11 @@
   border-bottom: $borders-default;
   &.tablet {
     @include to-center_column();
+    width: 100%;
   }
   &.mobile {
     @include to-center_column();
+    width: 100%;
   }
 
   .empty-double-block:last-of-type {

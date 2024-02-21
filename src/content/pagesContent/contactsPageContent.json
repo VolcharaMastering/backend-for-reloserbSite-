@@ -1,0 +1,169 @@
+{
+  "buttons": [
+    { "buttonName": "Instant", "buttonAction": "main" },
+    { "buttonName": "Косалтинг", "buttonAction": "consult" },
+    { "buttonName": "Коворкинг", "buttonAction": "coworking" },
+    { "buttonName": "Недвижимость", "buttonAction": "realEstate" },
+    { "buttonName": "Грузоперевозки", "buttonAction": "cargo" },
+    { "buttonName": "Визаран", "buttonAction": "visarun" }
+  ],
+  "contacts": {
+    "main": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381 63 737 2704",
+        "showName": false,
+        "linkTo": "tel: +381637372704"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@Instant-office.com",
+        "showName": false,
+        "linkTo": "mailto:support@Instant-office.com"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com",
+        "showName": true,
+        "linkTo": "/"
+      }
+    ],
+    "consult": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@instant-consulting.com",
+        "showName": false,
+        "linkTo": "mailto:support@instant-consulting.com"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com/consult",
+        "showName": true,
+        "linkTo": "/consult"
+      }
+    ],
+    "coworking": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381 63 737 2704",
+        "showName": false,
+        "linkTo": "tel: +381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@instantcoworking.com",
+        "showName": false,
+        "linkTo": "mailto:support@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @InstantOfficeBG",
+        "showName": true,
+        "linkTo": "https://t.me/InstantOfficeBG"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com/coworking",
+        "showName": true,
+        "linkTo": "/coworking"
+      }
+    ],
+    "realEstate": [
+      {
+        "icon": "phoneIcon",
+        "name": "Номер телефона: +381 63 737 2704",
+        "showName": false,
+        "linkTo": "tel: +381637372704"
+      },
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "showName": true,
+        "linkTo": "https://t.me/RealEstate_InstantOffice"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@instant-realt.com",
+        "showName": false,
+        "linkTo": "mailto:support@instant-realt.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @kvartiraSerbia2",
+        "showName": true,
+        "linkTo": "https://t.me/kvartiraSerbia2"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com/real-estate",
+        "showName": true,
+        "linkTo": "/real-estate"
+      }
+    ],
+    "cargo": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @Rusrb_logistic",
+        "showName": true,
+        "linkTo": "https://t.me/Rusrb_logistic"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@instant-logistic.com",
+        "showName": false,
+        "linkTo": "mailto:support@instant-logistic.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @RussSerbLogistics",
+        "showName": true,
+        "linkTo": "https://t.me/RussSerbLogistics"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com/cargo",
+        "showName": true,
+        "linkTo": "/cargo"
+      }
+    ],
+    "visarun": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @Viktoriya373",
+        "showName": true,
+        "linkTo": "https://t.me/Viktoriya373"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: info@instantvisarun.com",
+        "showName": false,
+        "linkTo": "mailto:info@instantcoworking.com"
+      },
+      {
+        "icon": "channelIcon",
+        "name": "Телеграм канал: @VisaRunBg",
+        "showName": true,
+        "linkTo": "https://t.me/VisaRunBg"
+      },
+      {
+        "icon": "webIcon",
+        "name": "Наш сайт: https://relocationsrb.com/visarun",
+        "showName": true,
+        "linkTo": "/visarun"
+      }
+    ]
+  },
+  "adress": "Наш адрес: Вишњичка 30, Белград."
+}

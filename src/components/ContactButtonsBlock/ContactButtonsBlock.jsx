@@ -1,7 +1,7 @@
 import Button from "../UI/Button/Button";
 import "./ContactButtonsBlock.scss";
-import { buttons } from "../../content/contacts.json";
 import generateRandomKey from "../../utils/keyGenerator";
+import { buttons } from "../../content/pagesContent/contactsPageContent.json";
 import { titles } from "../../content/titles.json";
 
 function ContactButtonsBlock({ size }) {
