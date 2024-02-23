@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 .drop-down-block {
-  @include to-center_row($justify: center);
+  @include to-center_column($justify: flex-start, $align: start);
   border: $borders-default;
   border-end-start-radius: 20px;
   border-end-end-radius: 20px;

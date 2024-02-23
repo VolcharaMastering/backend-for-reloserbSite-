@@ -1,9 +1,10 @@
-import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 import { useResize } from "../../utils/hooks/useResize";
-import "./AboutUs.scss";
-import teamPhoto from "../../assets/about/team.jpg";
-import { about } from "../../content/pagesContent/aboutPageContent.json";
+import Layout from "../../components/Layout/Layout";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
+import "./AboutUs.scss";
+import { about } from "../../content/pagesContent/aboutPageContent.json";
+import { title, description } from "../../content/metaInfo.json";
+import teamPhoto from "../../assets/about/team.jpg";
 
 function AboutUs() {
   const screenSize = useResize();
@@ -19,17 +20,19 @@ function AboutUs() {
   // };
 
   return (
-    <section className="about">
-      <h1 className={`title ${screenSize.trakResolutionValue}`}>О нас</h1>
-      <BlockWithPhotoAndDesc
-        photoLink={teamPhoto}
-        size={screenSize.trakResolutionValue}
-        caption=""
-        newsTitle={about.title}
-        newsText={about.description}
-        position={true}
-      />
-    </section>
+    <Layout title={title.about} description={description.about}>
+      <section className="about">
+        <h1 className={`title ${screenSize.trakResolutionValue}`}>О нас</h1>
+        <BlockWithPhotoAndDesc
+          photoLink={teamPhoto}
+          size={screenSize.trakResolutionValue}
+          caption=""
+          newsTitle={about.title}
+          newsText={about.description}
+          position
+        />
+      </section>
+    </Layout>
   );
 }
 

@@ -6,6 +6,8 @@ function DropDownListItem({ listItem, size }) {
     <li className={`drop-list-item ${size} `}>
       {listItem.text ? (
         <p className={`drop-list-item__text ${size}`}>{listItem.text}</p>
+      ) : listItem.subText ? (
+        <p className={`drop-list-item__sub-text ${size}`}>{listItem.subText}</p>
       ) : (
         <NavLink
           to={listItem.href.src}

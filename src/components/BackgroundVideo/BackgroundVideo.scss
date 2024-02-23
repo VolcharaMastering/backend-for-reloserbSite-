@@ -31,7 +31,8 @@
     padding: 3%;
   }
   .background-video__title {
-    @include font-style($font-family: $rubik-font, $font-size: 5vw, $color: $light-text-color);
+    @include media-font();
+    text-transform: uppercase;
     width: 30%;
     position: absolute;
     top: 33%;

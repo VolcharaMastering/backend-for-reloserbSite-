@@ -17,6 +17,7 @@ import {
   whyWe,
   photoDescription,
 } from "../../content/pagesContent/visarunPageContent.json";
+import { title, description } from "../../content/metaInfo.json";
 import photoLink from "../../assets/visaRun/passport.jpg";
 
 function VisaRun() {
@@ -68,38 +69,40 @@ function VisaRun() {
     );
   };
   return (
-    <section className="visarun">
-      <h1 className={`title visarun__title ${screenSize.trakResolutionValue}`}>
-        {titles.visarunTitle}
-      </h1>
-      <BlackBlockWithText
-        title={about.title}
-        description=""
-        text={about.description}
-        size={screenSize.trakResolutionValue}
-      />
-      <BlockWithPhotoAndDesc
-        photoLink={photoLink}
-        size={screenSize.trakResolutionValue}
-        caption=""
-        newsTitle={offers.title}
-        newsText={offers.description}
-        position={false}
-      />
-      <PhotoBlock
-        images={galleryArray}
-        description={photoDescription}
-        size={screenSize.trakResolutionValue}
-        blockTitle=""
-      />
-      <EmptyDoubleBlock
-        firstComponent={cardsComponent}
-        secondComponent={mapsComponent}
-        firstBlockSize="half"
-        secondBlockSize="half"
-        size={screenSize.trakResolutionValue}
-      />
-    </section>
+    <Layout title={title.visarun} description={description.visarun}>
+      <section className="visarun">
+        <h1 className={`title visarun__title ${screenSize.trakResolutionValue}`}>
+          {titles.visarunTitle}
+        </h1>
+        <BlackBlockWithText
+          title={about.title}
+          description=""
+          text={about.description}
+          size={screenSize.trakResolutionValue}
+        />
+        <BlockWithPhotoAndDesc
+          photoLink={photoLink}
+          size={screenSize.trakResolutionValue}
+          caption=""
+          newsTitle={offers.title}
+          newsText={offers.description}
+          position={false}
+        />
+        <PhotoBlock
+          images={galleryArray}
+          description={photoDescription}
+          size={screenSize.trakResolutionValue}
+          blockTitle=""
+        />
+        <EmptyDoubleBlock
+          firstComponent={cardsComponent}
+          secondComponent={mapsComponent}
+          firstBlockSize="half"
+          secondBlockSize="half"
+          size={screenSize.trakResolutionValue}
+        />
+      </section>
+    </Layout>
   );
 }
 
