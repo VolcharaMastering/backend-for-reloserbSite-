@@ -1,0 +1,8 @@
+@import "../../consts/block-mixins.scss";
+
+.drop-container {
+  @include to-center_column();
+  width: 100%;
+  height: fit-content;
+  padding: 2%;
+}

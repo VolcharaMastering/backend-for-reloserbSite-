@@ -10,6 +10,27 @@
   &.mobile {
     @include to-center_column();
   }
+  .news-container__caption {
+    @include to-center_row($align: center, $justify: center);
+    width: 36%;
+    padding: 2%;
+    &.tablet {
+      width: 100%;
+    }
+    &.mobile {
+      width: 100%;
+    }
+  }
+  .news-container__photo {
+    @include to-center_row($align: center, $justify: center);
+    width: 60vw;
+    &.tablet {
+      width: 100%;
+    }
+    &.mobile {
+      width: 100%;
+    }
+  }
 }
 .news-container:last-of-type {
   border-bottom: $borders-default;

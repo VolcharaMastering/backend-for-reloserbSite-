@@ -2,12 +2,12 @@
   "menu": {
     "main": "Instant",
     "about": "О нас",
-    "blog": "Блог",
     "consult": "Консалтинг",
     "contacts": "Контакты",
     "coworking": "Коворкинг",
     "real-estate": "Недвижимость",
     "cargo": "Грузоперевозки",
-    "visarun": "Визаран"
+    "visarun": "Визаран",
+    "faq": "F.A.Q."
   }
 }

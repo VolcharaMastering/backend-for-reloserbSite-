@@ -1,16 +1,23 @@
+@import "./fonts.scss";
+
 $light-background-color: #f2eeea;
 $sofia-font: "Sofia Sans Extra Condensed";
+$mettla-font: "Mettlach";
 $fira-font: "Fira Sans Extra Condensed";
 $rubik-font: "Rubik Lines";
 $yanone-font: "Yanone Kaffeesatz";
+$narrow-font: "PT Sans Narrow";
+$alumni-font: "Alumni Sans";
+$yeseva-font: "Yeseva One";
 $vollkorn-font: "Vollkorn";
+
 $dark-background-color: #000;
 $dark-text-color: #000;
 $light-text-color: #fff;
 $hover-color: #e4e4e0;
 $border-color: #979797;
 $separator-color: #999;
-$main-font-family: $fira-font, Arial, sans-serif;
+$main-font-family: $fira-font, $mettla-font, Arial, sans-serif;
 $body-width: 90vw;
 $borders-default: 1px solid $border-color;
 

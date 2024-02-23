@@ -21,6 +21,7 @@
       @include to-center-row($justify: center);
     }
     &.mobile {
+      font-size: 14px;
       @include to-center-row($justify: center);
     }
   }
@@ -29,5 +30,10 @@
     height: 60px;
     padding: 1%;
   }
-  // }
+  @media screen and (max-width: 550px) {
+    .field-links__icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

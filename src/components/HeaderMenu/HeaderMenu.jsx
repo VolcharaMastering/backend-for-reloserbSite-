@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import "./HeaderMenu.scss";
 import TextLink from "../UI/TextLink/TextLink";
 
-function HeaderMenu({ size }) {
+function HeaderMenu({ size, mobile }) {
   const location = useLocation();
   return (
     <nav className="header__menu">
@@ -25,12 +25,14 @@ function HeaderMenu({ size }) {
         <li className="header__menu-link">
           <TextLink location={location} linkTo="/visarun" size={size} />
         </li>
-        {/* <li className="header__menu-link">
-          <TextLink location={location} linkTo="/about" size={size} />
-        </li>
         <li className="header__menu-link">
-          <TextLink location={location} linkTo="/blog" size={size} />
-        </li> */}
+          <TextLink location={location} linkTo="/faq" size={size} />
+        </li>
+        {mobile && (
+          <li className="header__menu-link">
+            <TextLink location={location} linkTo="/contacts" size={size} />
+          </li>
+        )}
       </ul>
     </nav>
   );

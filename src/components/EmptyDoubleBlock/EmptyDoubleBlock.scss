@@ -5,26 +5,16 @@
   border-bottom: $borders-default;
   &.tablet {
     @include to-center_column();
+    width: 100%;
   }
   &.mobile {
     @include to-center_column();
+    width: 100%;
   }
 
   .empty-double-block:last-of-type {
+    flex-grow: 1;
     border-bottom: $borders-default;
-  }
-  .empty-double-block__container:first-of-type {
-    border-right: $borders-default;
-    &.tablet {
-      width: 100%;
-      border-right: none;
-      border-bottom: $borders-default;
-    }
-    &.mobile {
-      width: 100%;
-      border-right: none;
-      border-bottom: $borders-default;
-    }
   }
 }
 .empty-double-block__container {
@@ -40,5 +30,11 @@
   }
   &.big {
     width: 60vw;
+  }
+  &.tablet {
+    width: 100%;
+  }
+  &.mobile {
+    width: 100%;
   }
 }

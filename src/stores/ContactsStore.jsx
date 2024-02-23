@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { contacts } from "../content/contacts.json";
+import { contacts } from "../content/pagesContent/contactsPageContent.json";
 
 class ContactsStore {
   contactsToShow = [];

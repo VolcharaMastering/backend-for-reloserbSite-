@@ -2,15 +2,13 @@
 
 .about-img {
   position: relative;
+  @include to-center_row($justify: center, $align: center);
   overflow: hidden;
   $width: 340px;
   width: $width;
   height: $width * 1.32;
   justify-self: center;
   .about-img__picture {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     object-fit: contain;
     opacity: 0;
     width: 0;
@@ -19,17 +17,13 @@
   }
   @keyframes fadeIn {
     from {
-      top: 50%;
-      left: 50%;
       width: 0;
       height: 0;
       opacity: 0;
     }
     to {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
       opacity: 1;
     }
   }

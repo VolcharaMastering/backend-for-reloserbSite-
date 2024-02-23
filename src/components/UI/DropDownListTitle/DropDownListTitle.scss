@@ -1,0 +1,26 @@
+@import "../../../consts/block-mixins.scss";
+
+.drop-down-title {
+  @include subtitle-text($text-color: $light-text-color);
+  background-color: $dark-background-color;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-top: 10px;
+}
+.drop-down-title:first-of-type {
+  margin-top: 0;
+}
+.drop-down-title:hover {
+  cursor: pointer;
+}
+.drop-down-block {
+  @include to-center_column($justify: flex-start, $align: start);
+  border: $borders-default;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  border-top: none;
+  padding: 1% 2%;
+  width: 96%;
+  margin-bottom: 10px;
+}

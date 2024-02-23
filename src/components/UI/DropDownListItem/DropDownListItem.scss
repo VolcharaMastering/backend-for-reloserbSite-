@@ -1,0 +1,25 @@
+@import "../../../consts/block-mixins.scss";
+
+.drop-list-item {
+  @include list-without-dots();
+  .drop-list-item__text {
+    @include drop-list-text();
+    text-align: start;
+    &.tablet {
+      font-size: 22px;
+    }
+    &.mobile {
+      font-size: 22px;
+    }
+  }
+  .drop-list-item__sub-text {
+    text-align: start;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .drop-list-item__link {
+    @include link-list();
+    font-style: italic;
+    font-weight: 700;
+  }
+}

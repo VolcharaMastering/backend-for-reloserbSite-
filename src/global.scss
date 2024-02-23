@@ -8,7 +8,8 @@
 
 html,
 body {
-  width: 100%;
+  max-width: 3000px;
+  margin: auto;
   height: 100vh;
   background-color: $light-background-color;
 }
@@ -39,5 +40,47 @@ body {
   }
   &.mobile {
     font-size: 28px;
+  }
+}
+.subtitle_white {
+  @include subtitle-text($text-color: $light-text-color);
+  padding: 2%;
+  &.tablet {
+    font-size: 30px;
+  }
+  &.mobile {
+    font-size: 28px;
+  }
+}
+.divide-line {
+  display: block;
+  width: 1px;
+  flex: 1;
+  align-self: stretch;
+  border-left: $borders-default;
+  border-bottom: $borders-default;
+  &.tablet {
+    height: 1px;
+    width: 100%;
+  }
+  &.mobile {
+    height: 1px;
+    width: 100%;
+  }
+}
+.grid-block {
+  width: 100%;
+  @include to-center_column($justify: center);
+  padding: 3%;
+  .block-cards__grid {
+    max-width: 600px;
+    @include gridAutoFill($template-cols: repeat(2, minmax(200px, 1fr)), $gap: 15px);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 1px;
+    &.mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
   }
 }

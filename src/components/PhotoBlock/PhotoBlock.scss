@@ -10,11 +10,12 @@
   }
   .photo-block__navigation {
     @include gridAutoFill(
-      $template-cols: repeat(auto-fit, 220px),
-      $gap: 20px,
+      $template-cols: repeat(auto-fit, 340px),
+      $gap: 5px,
       $justify: space-around
     );
     padding: 2%;
+    object-fit: cover;
 
     .photo-block__info-block {
       @include link-list();
@@ -33,7 +34,4 @@
       width: 100%;
     }
   }
-  // .photo-block__description:hover {
-  //   @include text-link-hover();
-  // }
 }

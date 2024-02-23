@@ -1,16 +1,20 @@
 @import "../../consts/block-mixins.scss";
 
 .not-found {
-  @include to-center_column();
-  height: 80vh;
+  @include to-center_column($justify: center);
+  height: 74vh;
 }
 .not-found__caption {
   @include font-style($font-size: 25px);
   text-align: center;
   padding: 20px;
 }
+.not-found__caption:hover {
+  cursor: pointer;
+}
 .not-found_button {
   @include button();
   @include font-style($font-size: 25px);
+  @include link-list();
   text-align: center;
 }

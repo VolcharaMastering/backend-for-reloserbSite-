@@ -12,10 +12,25 @@ function FooterMenu({ size }) {
           <TextLink location="" linkTo="/about" />
         </li>
         <li className="footer__menu-link">
-          <TextLink location="" linkTo="/blog" />
+          <TextLink location="" linkTo="/contacts" />
         </li>
         <li className="footer__menu-link">
-          <TextLink location="" linkTo="/contacts" />
+          <TextLink location="" linkTo="/consult" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/coworking" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/real-estate" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/cargo" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/visarun" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/faq" />
         </li>
       </ul>
     </nav>

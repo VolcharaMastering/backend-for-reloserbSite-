@@ -1,39 +1,31 @@
 import { useState } from "react";
+import { useResize } from "../../utils/hooks/useResize";
 import { useLocation } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
-import useLocationHook from "../../utils/hooks/useLocationHook";
-import { useResize } from "../../utils/hooks/useResize";
-import "./TheHeader.scss";
 import Logo from "../UI/Logo/Logo";
-import logo from "../../assets/logo.svg";
+import "./TheHeader.scss";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
 import TextLink from "../UI/TextLink/TextLink";
+import logo from "../../assets/logos/black-logo.svg";
 
 function TheHeader() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const screenSize = useResize();
 
-  // const tempLocation = useLocationHook(location);
-
   return (
     <header className="header">
       <Logo src={logo} />
       {!(
         screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
-      ) && (
+      ) ? (
         <section className="header__main">
           <HeaderMenu size={screenSize.trakResolutionValue} />
-          {/* <p className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</p> */}
           <TextLink location={location} linkTo="/contacts" size={screenSize.trakResolutionValue} />
         </section>
-      )}
-
-      {(screenSize.trakResolutionValue === "tablet" ||
-        screenSize.trakResolutionValue === "mobile") && (
+      ) : (
         <section className={`header__name ${screenSize.trakResolutionValue}`}>
-          {/* <p className={`header__page-name ${screenSize.trakResolutionValue}`}>{tempLocation}</p> */}
           <Hamburger
             toggled={isOpen}
             label="Show menu"
@@ -45,7 +37,6 @@ function TheHeader() {
         </section>
       )}
       {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
-      {/* </section> */}
     </header>
   );
 }
