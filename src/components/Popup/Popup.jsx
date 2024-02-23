@@ -12,7 +12,6 @@ function Popup({ popupType, popupContent, size }) {
   const { setClosed } = PopupState;
   const handleClosePopup = () => {
     setClosed();
-    console.log("Closed");
   };
   useEffect(() => {
     function onKeyDown(evt) {

@@ -7,7 +7,6 @@ import { titles } from "../../content/titles.json";
 function ContactButtonsBlock({ size }) {
   const getRandomKey = () => {
     const index = generateRandomKey();
-    console.log("INDEX", index);
     return index;
   };
   return (
