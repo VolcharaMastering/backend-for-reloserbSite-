@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useResize } from "../../utils/hooks/useResize";
+import Layout from "../../components/Layout/Layout";
 import "./VisaRun.scss";
 import generateRandomKey from "../../utils/keyGenerator";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";

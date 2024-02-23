@@ -6,7 +6,6 @@ function AboutImg({ linkToImg, imgCaption, imgInfo }) {
     const index = generateRandomKey();
     return index;
   };
-  console.log(imgInfo);
   return (
     <figure className="about-img">
       <img src={linkToImg} className="about-img__picture" alt={imgCaption} />

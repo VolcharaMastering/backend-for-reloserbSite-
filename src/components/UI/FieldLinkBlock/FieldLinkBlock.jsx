@@ -17,7 +17,6 @@ const FieldLinkBlock = observer(({ size }) => {
   const [contactsArray, setcontactsArray] = useState([]);
 
   const setIcon = (data) => {
-    console.log(data);
     switch (data) {
       case "phoneIcon":
         return phoneIcon;
