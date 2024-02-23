@@ -21,7 +21,7 @@
   font-stretch: 50%;
 }
 @mixin block-text($text-color: $dark-text-color) {
-  @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 18px);
+  @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 20px);
 }
 @mixin drop-list-text($text-color: $dark-text-color) {
   @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 24px);

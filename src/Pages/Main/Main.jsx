@@ -11,6 +11,7 @@ import { titles } from "../../content/titles.json";
 import generateRandomKey from "../../utils/keyGenerator";
 // import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
 import videoFile from "../../assets/videos/main.mp4";
+import pechat from "../../assets/pechat.png";
 
 function Main() {
   const screenSize = useResize();
@@ -22,7 +23,6 @@ function Main() {
     <Layout title={title.main} description={description.main}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
-        // videoLink={video}
         videoLink={videoFile}
         videoTitle={titles.mainTitle}
       />
@@ -35,7 +35,7 @@ function Main() {
       {main.map((item, index) => (
         <BlockWithPhotoAndDesc
           key={getRandomKey()}
-          photoLink={item.photoLink}
+          photoLink={pechat}
           size={screenSize.trakResolutionValue}
           caption={item.newsCaption}
           newsTitle={item.newsTitle}

@@ -22,6 +22,7 @@ import {
   prices,
 } from "../../content/pagesContent/coworkingPageContent.json";
 import promoImage from "../../assets/promo.png";
+import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 
 function Coworking() {
   const screenSize = useResize();
@@ -95,14 +96,15 @@ function Coworking() {
             ))}
           </div>
         )}
-        <div className="coworking__grid-block">
+        {/* <div className="coworking__grid-block">
           <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
           <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
             {offers.description.map((item) => (
               <InfoCard key={getRandomKey()} title="" description={item} />
             ))}
           </div>
-        </div>
+        </div> */}
+        <DropDownContainer containerData={offers} size={screenSize.trakResolutionValue} />
         <div className="coworking__grid-block">
           <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
           <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
