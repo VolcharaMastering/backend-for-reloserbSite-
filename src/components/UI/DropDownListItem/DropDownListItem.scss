@@ -4,6 +4,7 @@
   @include list-without-dots();
   .drop-list-item__text {
     @include drop-list-text();
+    text-align: center;
     &.tablet {
       font-size: 22px;
     }

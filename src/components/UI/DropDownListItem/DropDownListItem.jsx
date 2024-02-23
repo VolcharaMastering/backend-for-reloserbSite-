@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./DropDownList.scss";
+import "./DropDownListItem.scss";
 
 function DropDownListItem({ listItem, size }) {
   return (

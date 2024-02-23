@@ -1,14 +1,13 @@
 import { useState } from "react";
+import { useResize } from "../../utils/hooks/useResize";
 import { useLocation } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
-import useLocationHook from "../../utils/hooks/useLocationHook";
-import { useResize } from "../../utils/hooks/useResize";
-import "./TheHeader.scss";
 import Logo from "../UI/Logo/Logo";
-import logo from "../../assets/logo.svg";
+import "./TheHeader.scss";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
 import TextLink from "../UI/TextLink/TextLink";
+import logo from "../../assets/logos/black-logo.svg";
 
 function TheHeader() {
   const location = useLocation();
