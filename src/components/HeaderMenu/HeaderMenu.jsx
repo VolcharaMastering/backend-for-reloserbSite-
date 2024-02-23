@@ -25,6 +25,9 @@ function HeaderMenu({ size, mobile }) {
         <li className="header__menu-link">
           <TextLink location={location} linkTo="/visarun" size={size} />
         </li>
+        <li className="header__menu-link">
+          <TextLink location={location} linkTo="/faq" size={size} />
+        </li>
         {mobile && (
           <li className="header__menu-link">
             <TextLink location={location} linkTo="/contacts" size={size} />

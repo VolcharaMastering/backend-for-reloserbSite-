@@ -6,7 +6,7 @@ import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockW
 import BackgroundVideo from "../../components/BackgroundVideo/BackgroundVideo";
 import BlockWithBlackBackground from "../../components/BlockWithBlackBackground/BlockWithBlackBackground";
 import { main, about } from "../../content/pagesContent/mainPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, seo } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import generateRandomKey from "../../utils/keyGenerator";
 // import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
@@ -20,7 +20,12 @@ function Main() {
     return index;
   };
   return (
-    <Layout title={title.main} description={description.main}>
+    <Layout
+      title={title.main}
+      description={description.main}
+      seoName={seo.name}
+      seoContent={seo.content}
+    >
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         videoLink={videoFile}

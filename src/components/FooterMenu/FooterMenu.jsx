@@ -29,6 +29,9 @@ function FooterMenu({ size }) {
         <li className="footer__menu-link">
           <TextLink location="" linkTo="/visarun" />
         </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/faq" />
+        </li>
       </ul>
     </nav>
   );

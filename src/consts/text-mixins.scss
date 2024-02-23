@@ -15,6 +15,11 @@
   font-weight: $font-weight;
   color: $color;
 }
+@mixin media-font($font-size: 5vw, $color: $light-text-color) {
+  font-family: $mettla-font;
+  font-size: $font-size;
+  color: $color;
+}
 @mixin title-text($text-color: $dark-text-color) {
   @include font-style($font-size: 5.5vw, $font-family: $narrow-font, $color: $text-color);
   font-weight: 700;
