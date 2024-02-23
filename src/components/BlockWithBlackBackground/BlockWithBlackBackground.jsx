@@ -6,7 +6,6 @@ import InfoCard from "../UI/InfoCard/InfoCard";
 function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) {
   const getRandomKey = () => {
     const index = generateRandomKey();
-    console.log(index);
     return index;
   };
   return (

@@ -7,7 +7,6 @@ function PhotoBlock({ images, description, size, blockTitle }) {
     const index = generateRandomKey();
     return index;
   };
-  // console.log(images, description);
   return (
     <figure className="photo-block">
       {blockTitle && <h2 className={`subtitle photo-block__title ${size}`}>{blockTitle}</h2>}

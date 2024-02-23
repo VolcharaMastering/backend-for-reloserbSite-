@@ -1,3 +1,4 @@
+/* eslint-disable lines-between-class-members */
 import { makeAutoObservable } from "mobx";
 
 class DropDownList {
@@ -9,11 +10,9 @@ class DropDownList {
 
   setToggled = (id) => {
     this.lists[id] = !this.lists[id];
-    console.log(this.lists);
   };
   setItem = (id) => {
     this.lists = { ...this.lists, [id]: false };
-    console.log(this.lists);
   };
 }
 export default new DropDownList();
