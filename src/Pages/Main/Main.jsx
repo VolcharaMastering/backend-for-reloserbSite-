@@ -13,12 +13,7 @@ import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWi
 function Main() {
   const screenSize = useResize();
   return (
-    <Layout
-      title={title.main}
-      description={description.main}
-      // seoName={seo.name}
-      // seoContent={seo.content}
-    >
+    <Layout title={title.main} description={description.main}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         videoLink={videoFile}

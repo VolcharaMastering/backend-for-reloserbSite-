@@ -1,0 +1,17 @@
+@import "../../consts/block-mixins.scss";
+
+.ok-block {
+  @include to-center_column();
+  width: 100%;
+  .ok-block__item {
+    @include list-without-dots();
+    width: 60%;
+    &.tablet {
+      width: 90%;
+    }
+
+    &.mobile {
+      width: 96%;
+    }
+  }
+}

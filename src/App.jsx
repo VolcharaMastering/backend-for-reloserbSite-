@@ -28,6 +28,7 @@ import Cargo from "./Pages/Cargo/Cargo";
 import VisaRun from "./Pages/VisaRun/VisaRun";
 import Consult from "./Pages/Consult/Consult";
 import Faq from "./Pages/Faq/Faq";
+import LangPage from "./Pages/LangPage/LangPage";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -52,6 +53,7 @@ const App = observer(() => {
           <Route path="/visarun" element={<VisaRun />} />
           <Route path="/about" element={<AbouotUs />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/lang" element={<LangPage />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" Component={NotFound} />
           {/* <Route path="/reviews" element={<Reviews />} />
