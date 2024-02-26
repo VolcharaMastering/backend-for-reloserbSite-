@@ -8,7 +8,7 @@ function BlackBlockWithText({ title, description, text, size }) {
   };
   return (
     <article className="black-text-block">
-      <h2 className={`subtitle_white black-text-block__title ${size}`}>{title}</h2>
+      {title && <h2 className={`subtitle_white black-text-block__title ${size}`}>{title}</h2>}
       {description && <p className="black-text-block__description">{description}</p>}
       {text.map((item) => (
         <p key={getRandomKey} className={`black-text-block__text ${size}`}>
