@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useResize } from "../../utils/hooks/useResize";
 import Layout from "../../components/Layout/Layout";
 import "./VisaRun.scss";
@@ -20,6 +20,8 @@ import {
 } from "../../content/pagesContent/visarunPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import photoLink from "../../assets/visaRun/passport.jpg";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
+import ContactsStore from "../../stores/ContactsStore";
 
 function VisaRun() {
   const screenSize = useResize();
@@ -34,6 +36,9 @@ function VisaRun() {
   const handleTolggeYandex = () => {
     setYandexMap(!yandexMap);
   };
+  useEffect(() => {
+    ContactsStore.setContacts("visarun");
+  }, []);
 
   const cardsComponent = () => {
     return (
@@ -103,6 +108,7 @@ function VisaRun() {
           size={screenSize.trakResolutionValue}
         />
       </section>
+      <BlockWithContacts size={screenSize.trakResolutionValue} />
     </Layout>
   );
 }
