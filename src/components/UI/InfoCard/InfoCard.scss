@@ -14,7 +14,7 @@
     box-sizing: border-box;
     border: $borders-default;
     min-height: fit-content;
-    // max-height: 50vh;
+    max-height: max-content;
   }
 }
 .info-card__title {

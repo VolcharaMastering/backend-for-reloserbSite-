@@ -4,6 +4,12 @@
     @include gridAutoFill($template-cols: repeat(auto-fit, minmax(200px, 1fr)));
     @include list-without-dots();
     width: 100%;
+    &.desktopHD {
+      @include gridAutoFill($template-cols: repeat(4, minmax(150px, 1fr)));
+    }
+    &.desktop {
+      @include gridAutoFill($template-cols: repeat(4, minmax(150px, 1fr)));
+    }
     &.tablet {
       @include gridAutoFill($template-cols: repeat(3, minmax(150px, 1fr)));
     }

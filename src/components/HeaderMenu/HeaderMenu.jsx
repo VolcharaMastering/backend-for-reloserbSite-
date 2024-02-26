@@ -7,29 +7,32 @@ function HeaderMenu({ size, mobile }) {
   return (
     <nav className="header__menu">
       <ul className={`header__menu-block ${size}`}>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/consult" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/coworking" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/real-estate" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/cargo" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/visarun" size={size} />
         </li>
-        <li className="header__menu-link">
+        <li className={`header__menu-link ${size}`}>
+          <TextLink location={location} linkTo="/lang" size={size} />
+        </li>
+        <li className={`header__menu-link ${size}`}>
           <TextLink location={location} linkTo="/faq" size={size} />
         </li>
         {mobile && (
-          <li className="header__menu-link">
+          <li className={`header__menu-link ${size}`}>
             <TextLink location={location} linkTo="/contacts" size={size} />
           </li>
         )}
