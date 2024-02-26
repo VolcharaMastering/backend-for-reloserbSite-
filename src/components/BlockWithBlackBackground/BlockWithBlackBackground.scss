@@ -11,8 +11,13 @@
   //   margin: 2%;
   // }
   .black-block__navigation {
-    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(280px, 1fr)), $gap: 0);
+    @include gridAutoFill(
+      $template-cols: repeat(auto-fit, minmax(280px, 1fr)),
+      $gap: 0,
+      $align: auto
+    );
     padding: 2%;
+    height: 100%;
 
     .black-block__info-block {
       @include link-list();
@@ -23,13 +28,14 @@
   .black-block__description {
     @include block-text($text-color: $light-text-color);
     @include link-list($color: $light-text-color);
-    width: 70%;
+    // width: 70%;
     text-align: center;
-    margin: 20px;
+    margin-bottom: 50px;
     box-sizing: border-box;
+    border: $borders-default;
 
     &.mobile {
-      width: 100%;
+      margin: 50px 6%;
     }
   }
   // .black-block__description:hover {

@@ -15,40 +15,54 @@
   &.mobile {
     height: 60vw;
   }
-
-  .background-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    box-sizing: border-box;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    pointer-events: none;
-    object-position: center;
-    padding: 3%;
+}
+.background-video__safari {
+  position: relative;
+  overflow: hidden;
+  height: 40vw;
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  &.tablet {
+    height: 50vw;
   }
-  .background-video__title {
-    @include media-font();
-    text-transform: uppercase;
-    width: 30%;
-    position: absolute;
-    top: 33%;
-    left: 5%;
-    z-index: 10;
-    text-shadow:
-      -2px -2px 2px $dark-text-color,
-      2px -2px 2px $dark-text-color,
-      -2px 2px 2px $dark-text-color,
-      2px 2px 2px $dark-text-color;
+  &.mobile {
+    height: 60vw;
+  }
+}
 
-    &.tablet {
-      font-size: 6vw;
-    }
-    &.mobile {
-      font-size: 8vw;
-    }
+.background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  object-position: center;
+  padding: 3%;
+}
+.background-video__title {
+  @include media-font();
+  text-transform: uppercase;
+  width: 30%;
+  position: absolute;
+  top: 33%;
+  left: 5%;
+  // z-index: 10;
+  text-shadow:
+    -2px -2px 2px $dark-text-color,
+    2px -2px 2px $dark-text-color,
+    -2px 2px 2px $dark-text-color,
+    2px 2px 2px $dark-text-color;
+
+  &.tablet {
+    font-size: 6vw;
+  }
+  &.mobile {
+    font-size: 8vw;
   }
 }
