@@ -45,7 +45,7 @@ function Consult() {
       <>
         <FieldLinkBlock {...props} />{" "}
         <NavLink to="/contacts" target="blank" className="subtitle subtitle_link">
-          Все контакты
+          Все контактики
         </NavLink>
       </>
     );
