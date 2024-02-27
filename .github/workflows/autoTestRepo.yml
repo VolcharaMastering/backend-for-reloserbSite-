@@ -28,8 +28,10 @@ jobs:
     # - name: Deploy
     #   uses: easingthemes/ssh-deploy@v2.1.5    
       env:
+        
         SSH_PRIVATE_KEY: ${{ secrets.RELOCATE_SSH }}
         SOURCE: '/opt/instantRelocate/dist/'
         REMOTE_HOST: ${{ secrets.TEST_HOST }}
         REMOTE_USER: ${{ secrets.SERVER_USER }}
         TARGET: '/opt/instantRelocate'
+        GITHUB_WORKSPACE: "/opt/instantRelocate"
