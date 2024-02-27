@@ -18,7 +18,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   @include font-style();
-  @include to-center_column(center, space-between);
+  @include to-center_column(center, center);
 }
 .title {
   @include title-text();
