@@ -5,18 +5,38 @@
   &.dark {
     color: $light-text-color;
   }
-  &.mobile {
-    width: 300px;
-  }
-  &.tablet {
-    font-size: 12px;
-    width: 150px;
-  }
-  &.desktop {
-    width: 200px;
-  }
+
   &.button {
-    width: 150px;
+    width: 14vw;
+    height: 4vw;
+    max-width: 430px;
+    max-height: 120px;
+    font-size: 2vw;
+  }
+
+  &.tablet {
+    font-size: 3vw;
+    width: 25vw;
+    height: 6vw;
+  }
+
+  &.mobile {
+    font-size: 3vw;
+    width: 40vw;
+    height: 10vw;
+  }
+
+  &.desktop {
+    width: 14vw;
+    height: 4vw;
+  }
+}
+@media screen and (min-width: 3000px) {
+  .button {
+    font-size: 50px;
+    &.button {
+      font-size: 50px;
+    }
   }
 }
 .button:hover {
