@@ -29,6 +29,6 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.RELOCATE_SSH }}
         REMOTE_HOST: ${{ secrets.TEST_HOST }}
         REMOTE_USER: ${{ secrets.SERVER_USER }}
-        TARGET: '/opt/instantRelocate/'
+        TARGET: '/opt/instantRelocate/Coworking/dist/'
         SOURCE: 'dist/'
         
