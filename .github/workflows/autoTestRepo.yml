@@ -20,8 +20,8 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Deploy
-      uses: easingthemes/ssh-deploy@v2.1.5    
+    # - name: Deploy
+    #   uses: easingthemes/ssh-deploy@v2.1.5    
       env:
         SSH_PRIVATE_KEY: ${{ secrets.RELOCATE_SSH }}
         SOURCE: '/opt/instantRelocate/dist/'
