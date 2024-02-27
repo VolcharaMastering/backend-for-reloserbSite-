@@ -18,16 +18,16 @@ jobs:
 
     - name: pullRepo
       run: git pull
-      working-directory: /opt/instantRelocat
+      working-directory: /opt/instantRelocate/
 
     - name: Install dependencies
       run: npm ci
-      working-directory: /opt/instantRelocat
+      working-directory: /opt/instantRelocate/
 
     - name: Build
       run: npm run build
-      working-directory: /opt/instantRelocat
-
+      working-directory: /opt/instantRelocate/
+      
     # - name: Deploy
     #   uses: easingthemes/ssh-deploy@v2.1.5    
       env:
