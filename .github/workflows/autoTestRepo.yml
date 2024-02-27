@@ -30,7 +30,7 @@ jobs:
       # working-directory: /opt/instantRelocate/Coworking/
 
     - name: Deploy
-      uses: instadmin/autoTestRepo@v1.0.0
+      uses: easingthemes/ssh-deploy@v2.1.5
       env: 
 
         SSH_PRIVATE_KEY: ${{ secrets.RELOCATE_SSH }}
