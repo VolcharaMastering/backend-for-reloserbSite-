@@ -11,7 +11,7 @@ import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock
 import FieldLinkBlock from "../../components/UI/FieldLinkBlock/FieldLinkBlock";
 import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
-import { about, offers, staff } from "../../content/pagesContent/consultPageContent.json";
+import { about, offers, staff, label } from "../../content/pagesContent/consultPageContent.json";
 import buisnessPhoto from "../../assets/consult-temp-buisness.jpg";
 import workPhoto from "../../assets/consult-temp-work.jpg";
 import AboutImg from "../../components/UI/AboutImg/AboutImg";
@@ -45,7 +45,7 @@ function Consult() {
       <>
         <FieldLinkBlock {...props} />{" "}
         <NavLink to="/contacts" target="blank" className="subtitle subtitle_link">
-          Все контактики
+          {label}
         </NavLink>
       </>
     );
