@@ -42,14 +42,16 @@ function VisaRun() {
 
   const cardsComponent = () => {
     return (
-      <div className="grid-block">
-        <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
-        <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
-          {whyWe.description.map((item) => (
-            <InfoCard key={getRandomKey()} title="" description={item} />
-          ))}
+      <Layout title={title.visarun} description={description.visarun}>
+        <div className="grid-block">
+          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
+          <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
+            {whyWe.description.map((item) => (
+              <InfoCard key={getRandomKey()} title="" description={item} />
+            ))}
+          </div>
         </div>
-      </div>
+      </Layout>
     );
   };
   const mapsComponent = () => {

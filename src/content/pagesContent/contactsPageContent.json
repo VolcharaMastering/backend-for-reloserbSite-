@@ -5,7 +5,9 @@
     { "buttonName": "Коворкинг", "buttonAction": "coworking" },
     { "buttonName": "Недвижимость", "buttonAction": "realEstate" },
     { "buttonName": "Грузоперевозки", "buttonAction": "cargo" },
-    { "buttonName": "Визаран", "buttonAction": "visarun" }
+    { "buttonName": "Визаран", "buttonAction": "visarun" },
+    { "buttonName": "Курсы сербского", "buttonAction": "lang" },
+    { "buttonName": "Виртуальный офис", "buttonAction": "voffice" }
   ],
   "contacts": {
     "main": [
@@ -78,6 +80,22 @@
         "name": "Наш сайт: https://relocationsrb.com/coworking",
         "showName": true,
         "linkTo": "/coworking"
+      }
+    ],
+    "voffice": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @InstantConsulting",
+        "showName": true,
+        "linkTo": "https://t.me/InstantConsulting"
+      }
+    ],
+    "lang": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @soncorp ",
+        "showName": true,
+        "linkTo": "https://t.me/soncorp "
       }
     ],
     "realEstate": [

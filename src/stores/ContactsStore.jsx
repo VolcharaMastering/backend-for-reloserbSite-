@@ -21,6 +21,10 @@ class ContactsStore {
         return this.contacts.cargo;
       case "visarun":
         return this.contacts.visarun;
+      case "voffice":
+        return this.contacts.voffice;
+      case "lang":
+        return this.contacts.lang;
       default:
         return this.contacts.main;
     }

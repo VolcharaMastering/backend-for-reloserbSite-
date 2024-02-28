@@ -12,7 +12,6 @@
   width: 65vw;
   height: 600px;
   border-right: $borders-default;
-  border-left: $borders-default;
   @include to-center_column();
   .photo-container__title {
     position: absolute;
