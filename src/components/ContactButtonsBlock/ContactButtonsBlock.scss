@@ -11,7 +11,7 @@
     margin-bottom: 2%;
   }
   .contact-buttons__block {
-    @include gridAutoFill($template-cols: repeat(6, 1fr));
+    @include gridAutoFill();
     align-items: center;
     justify-content: center;
     margin: 2% auto;
