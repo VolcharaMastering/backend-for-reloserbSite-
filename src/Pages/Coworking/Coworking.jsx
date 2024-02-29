@@ -6,11 +6,12 @@ import { useResize } from "../../utils/hooks/useResize";
 import Gallery from "../../components/Gallery/Gallery";
 import galleryArray from "../../utils/folderApi/getCoworkingPhotos";
 import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
-import InfoCard from "../../components/UI/InfoCard/InfoCard";
 import Layout from "../../components/Layout/Layout";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import generateRandomKey from "../../utils/keyGenerator";
+import PriceBlock from "../../components/PriceBlock/PriceBlock";
+import OkBlock from "../../components/OkBlock/OkBlock";
 import "./Coworking.scss";
 import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
@@ -21,8 +22,7 @@ import {
   promo,
   prices,
 } from "../../content/pagesContent/coworkingPageContent.json";
-import promoImage from "../../assets/promo.png";
-import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
+import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
 
 function Coworking() {
   const screenSize = useResize();
@@ -62,25 +62,7 @@ function Coworking() {
           text={about.description}
           size={screenSize.trakResolutionValue}
         />
-        <article className={`coworking__info ${screenSize.trakResolutionValue}`}>
-          <h2 className="coworking__titles">Прайс-лист</h2>
-          <ul className="coworking__price">
-            {prices.map((item) => (
-              <>
-                <li
-                  key={getRandomKey}
-                  className={`coworking__price-label ${screenSize.trakResolutionValue}`}
-                >
-                  {item.service}
-                </li>
-                <li className={`coworking__price-label ${screenSize.trakResolutionValue}`}>
-                  {item.price}
-                </li>
-              </>
-            ))}
-          </ul>
-        </article>
-
+        <PriceBlock prices={prices} size={screenSize.trakResolutionValue} />
         {promo.length && (
           <div ref={scrollToPromo}>
             {promo.map((item, index) => (
@@ -96,20 +78,8 @@ function Coworking() {
             ))}
           </div>
         )}
-        <DropDownContainer containerData={offers} size={screenSize.trakResolutionValue} />
-        <div className="coworking__grid-block">
-          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
-          <div className={`coworking__grid ${screenSize.trakResolutionValue}`}>
-            {whyWe.description.map((item) => (
-              <InfoCard
-                key={getRandomKey()}
-                title=""
-                description={item}
-                size={screenSize.trakResolutionValue}
-              />
-            ))}
-          </div>
-        </div>
+        <OkBlock data={offers} size={screenSize.trakResolutionValue} />
+        <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>

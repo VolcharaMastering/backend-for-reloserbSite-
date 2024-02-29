@@ -6,7 +6,7 @@ import "./LangPage.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/langPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
-import photoLink from "../../assets/lang-photo.jpg";
+import photoLink from "../../assets/lang-photo.png";
 
 function LangPage() {
   const screenSize = useResize();

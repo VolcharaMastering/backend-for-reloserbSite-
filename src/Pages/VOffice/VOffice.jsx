@@ -1,11 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useResize } from "../../utils/hooks/useResize";
-import generateRandomKey from "../../utils/keyGenerator";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import ContactsStore from "../../stores/ContactsStore";
 import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
-import AboutImg from "../../components/UI/AboutImg/AboutImg";
 import OkBlock from "../../components/OkBlock/OkBlock";
 import Layout from "../../components/Layout/Layout";
 import "./VOffice.scss";
@@ -19,10 +17,6 @@ import PriceBlock from "../../components/PriceBlock/PriceBlock";
 function VOffice() {
   const screenSize = useResize();
   const scrollToContacts = useRef(null);
-  const getRandomKey = () => {
-    const index = generateRandomKey();
-    return index;
-  };
 
   const photoComponent = () => {
     const props = {

@@ -1,0 +1,52 @@
+@import "../../../consts/block-mixins.scss";
+
+.dynamic {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: fit-content;
+  padding-left: 21px;
+  @include to-center_row($justify: center);
+  transition: width 0.8s ease-in-out;
+  box-sizing: border-box;
+  margin: 0 20px;
+  transition:
+    width 0.4s ease-in-out,
+    padding 0.4s ease-in-out;
+}
+
+.dynamic__part {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 58px;
+  background-position: right;
+  margin-left: 0;
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.dynamic__text {
+  @include link-list();
+  @include font-style($font-size: 35px, $font-weight: 500, $font-family: $sofia-font);
+  opacity: 0;
+  width: 0;
+  border-top: $borders-default;
+  border-bottom: $borders-default;
+  text-align: right;
+  transition:
+    opacity 0.8s ease-in-out,
+    width 0.8s ease-in-out;
+}
+.dynamic:hover {
+  width: auto;
+  padding-left: 57px;
+}
+.dynamic:hover .dynamic__part {
+  margin-left: auto;
+}
+
+.dynamic:hover .dynamic__text {
+  opacity: 1;
+  width: auto;
+  padding: 10px 4px;
+}
