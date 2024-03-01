@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import Carousel from "react-multi-carousel";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import "./Gallery.scss";
 import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
@@ -34,7 +34,11 @@ function Gallery({ galleryType, content, size }) {
     </section>
   ) : (
     <section className="gallery gallery_stringed">
-      <Carousel {...swipeSettings}>
+      <Carousel
+        {...swipeSettings}
+        swipeable={size === "mobile" || size === "tablet"}
+        arrows={!(size === "mobile" || size === "tablet")}
+      >
         {galleryArray &&
           galleryArray.map((image) => (
             <PhotoContainer
