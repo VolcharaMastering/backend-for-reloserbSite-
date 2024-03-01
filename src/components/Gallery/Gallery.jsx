@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import Carousel from "react-multi-carousel";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import "./Gallery.scss";
 import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";

@@ -10,11 +10,9 @@ function Button({ name, action, color, size, type }) {
     }
   };
   return (
-    <div>
-      <button className={`button ${color} ${size} ${type}`} onClick={handleClick} type="button">
-        {name}
-      </button>
-    </div>
+    <button className={`button ${color} ${size} ${type}`} onClick={handleClick} type="button">
+      {name}
+    </button>
   );
 }
 

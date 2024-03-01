@@ -17,7 +17,11 @@ function BlackBlockWithText({ title, description, text, size, linkTo, linkAction
             {item}
           </p>
         ))}
-      {linkTo && <Button name={linkTo} action={linkAction} color="dark" size={size} type="focus" />}
+      {linkTo && (
+        <div className={`black-text-block__button ${size}`}>
+          <Button name={linkTo} action={linkAction} color="dark" size={size} type="focus" />
+        </div>
+      )}
     </article>
   );
 }
