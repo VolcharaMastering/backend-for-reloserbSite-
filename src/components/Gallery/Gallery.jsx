@@ -34,7 +34,11 @@ function Gallery({ galleryType, content, size }) {
     </section>
   ) : (
     <section className="gallery gallery_stringed">
-      <Carousel {...swipeSettings}>
+      <Carousel
+        {...swipeSettings}
+        swipeable={size === "mobile" || size === "tablet"}
+        arrows={!(size === "mobile" || size === "tablet")}
+      >
         {galleryArray &&
           galleryArray.map((image) => (
             <PhotoContainer

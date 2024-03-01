@@ -15,19 +15,14 @@ const responsive = {
 const swipeSettings = {
   responsive: responsive,
   showDots: true,
-  // focusOnSelect: true,
   centerMode: true,
-  // shouldResetAutoplay: true,
   infinite: true,
-  swipeable: true,
-  draggable: true,
   autoPlay: true,
-  autoPlaySpeed: 2500,
-  keyBoardControl: true,
+  autoPlaySpeed: 2000,
   customTransition: "all 1s linear",
   pauseOnHover: true,
   containerClass: "carousel-container",
-  arrows: false,
+  arrows: true,
   dotListClass: "gallery__dot-list",
 };
 export default swipeSettings;
