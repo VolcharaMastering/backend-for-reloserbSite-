@@ -6,12 +6,22 @@
   left: auto;
   width: 100%;
   @include to-center_row();
-  height: 120px;
+  height: 80px;
   border-bottom: $borders-default;
   background-color: $light-background-color;
   padding: 2%;
   z-index: 10;
   max-width: 3000px;
+  &.desktopHD {
+    height: 110px;
+  }
+  &.desktopUHD {
+    height: 120px;
+  }
+
+  &.desktop {
+    height: 90px;
+  }
 
   .header__main {
     @include to-center_row($justify: space-between);

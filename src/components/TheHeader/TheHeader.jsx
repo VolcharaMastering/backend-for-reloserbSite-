@@ -15,7 +15,7 @@ function TheHeader() {
   const screenSize = useResize();
 
   return (
-    <header className="header">
+    <header className={`header ${screenSize.trakResolutionValue}`}>
       <Logo src={logo} />
       {!(
         screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"

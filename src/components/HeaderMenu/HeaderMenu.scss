@@ -1,7 +1,7 @@
 @import "../../consts/block-mixins.scss";
 
 .header__menu {
-  padding: 0 30px;
+  padding: 0 60px;
 
   .header__menu-block {
     @include list-without-dots();
