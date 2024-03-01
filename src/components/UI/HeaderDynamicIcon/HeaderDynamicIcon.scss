@@ -8,7 +8,7 @@
   @include to-center_row($justify: center);
   transition: width 0.8s ease-in-out;
   box-sizing: border-box;
-  margin: 0 5px;
+  margin: 0 2px;
   padding-left: 17px;
   text-decoration: none;
   transition:
@@ -22,7 +22,6 @@
   &.desktop {
     height: 55px;
     padding-left: 0;
-    margin: 0 2px;
   }
 }
 
@@ -47,7 +46,7 @@
 
 .dynamic__text {
   @include link-list();
-  @include font-style($font-size: 35px, $font-weight: 500, $font-family: $sofia-font);
+  @include font-style($font-size: 30px, $font-weight: 500, $font-family: $sofia-font);
   opacity: 0;
   width: 0;
   border-top: $borders-default;
