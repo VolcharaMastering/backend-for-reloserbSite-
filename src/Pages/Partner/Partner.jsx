@@ -10,12 +10,13 @@ import { headText, about, terms, whyWe } from "../../content/pagesContent/partne
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
+import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 
 function Partner() {
   const screenSize = useResize();
 
   useEffect(() => {
-    ContactsStore.setContacts("realEstate");
+    ContactsStore.setContacts("partner");
   }, []);
   return (
     <section className="partner">
@@ -35,6 +36,7 @@ function Partner() {
       <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
       <DropDownContainer containerData={terms} size={screenSize.trakResolutionValue} />
       <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
+      <BlockWithContacts size={screenSize.trakResolutionValue} />
     </section>
   );
 }
