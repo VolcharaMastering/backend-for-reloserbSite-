@@ -33,6 +33,7 @@ function Partner() {
         newsTitle={about.title}
         newsText={about.description}
       />
+
       <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
       <DropDownContainer containerData={terms} size={screenSize.trakResolutionValue} />
       <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
