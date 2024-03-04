@@ -11,9 +11,11 @@
     padding: 10px;
     &.tablet {
       @include to-center_column();
+      margin-top: 8%;
     }
     &.mobile {
       @include to-center_column();
+      margin-top: 8%;
     }
   }
   .footer__label {

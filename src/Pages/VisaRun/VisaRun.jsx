@@ -22,6 +22,8 @@ import { title, description } from "../../content/metaInfo.json";
 import photoLink from "../../assets/visaRun/passport.jpg";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import ContactsStore from "../../stores/ContactsStore";
+import OkBlock from "../../components/OkBlock/OkBlock";
+import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
 
 function VisaRun() {
   const screenSize = useResize();
@@ -40,24 +42,33 @@ function VisaRun() {
     ContactsStore.setContacts("visarun");
   }, []);
 
-  const cardsComponent = () => {
-    return (
-      <Layout title={title.visarun} description={description.visarun}>
-        <div className="grid-block">
-          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
-          <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
-            {whyWe.description.map((item) => (
-              <InfoCard key={getRandomKey()} title="" description={item} />
-            ))}
-          </div>
-        </div>
-      </Layout>
-    );
+  const offersComponent = () => {
+    return <OkBlock data={offers} size={screenSize.trakResolutionValue} />;
   };
+
+  const pictureComponent = () => {
+    const props = {
+      photoLink: photoLink,
+      containerType: "",
+      title: "",
+      index: "",
+      size: screenSize.trakResolutionValue,
+    };
+
+    // Return the PhotoContainer component with the props
+    return <PhotoContainer {...props} />;
+  };
+
+  const whyComponent = () => {
+    return <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />;
+  };
+
   const mapsComponent = () => {
     return (
       <>
-        <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.adress}</h2>
+        {whyWe.adress.map((item) => (
+          <h2 className={`subtitle visarun__subtitle ${screenSize.trakResolutionValue}`}>{item}</h2>
+        ))}
         <div className={`visarun-map__maps  ${screenSize.trakResolutionValue}`}>
           <SwipeButton
             leftTitle="Google"
@@ -88,13 +99,12 @@ function VisaRun() {
           text={about.description}
           size={screenSize.trakResolutionValue}
         />
-        <BlockWithPhotoAndDesc
-          photoLink={photoLink}
+        <EmptyDoubleBlock
+          firstComponent={pictureComponent}
+          secondComponent={offersComponent}
+          firstBlockSize="half"
+          secondBlockSize="half"
           size={screenSize.trakResolutionValue}
-          caption=""
-          newsTitle={offers.title}
-          newsText={offers.description}
-          position={false}
         />
         <PhotoBlock
           images={galleryArray}
@@ -103,7 +113,7 @@ function VisaRun() {
           blockTitle=""
         />
         <EmptyDoubleBlock
-          firstComponent={cardsComponent}
+          firstComponent={whyComponent}
           secondComponent={mapsComponent}
           firstBlockSize="half"
           secondBlockSize="half"

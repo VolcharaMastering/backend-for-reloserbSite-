@@ -14,6 +14,9 @@ import { about, offers, whyWe } from "../../content/pagesContent/cargoPageConten
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
+import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
+import OkBlock from "../../components/OkBlock/OkBlock";
+import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 
 function Cargo() {
   useEffect(() => {
@@ -24,6 +27,24 @@ function Cargo() {
     const index = generateRandomKey();
     return index;
   };
+
+  const photoComponent = () => {
+    const props = {
+      photoLink: promoImage,
+      containerType: "",
+      title: "",
+      index: "",
+      size: screenSize.trakResolutionValue,
+    };
+
+    // Return the PhotoContainer component with the props
+    return <PhotoContainer {...props} />;
+  };
+
+  const listComponent = () => {
+    return <OkBlock data={offers} size={screenSize.trakResolutionValue} />;
+  };
+
   return (
     <Layout title={title.cargo} description={description.cargo}>
       <section className="cargo">
@@ -35,27 +56,17 @@ function Cargo() {
           size={screenSize.trakResolutionValue}
         />
         <Gallery galleryType="block" content={galleryArray} size={screenSize.trakResolutionValue} />
-        <BlockWithPhotoAndDesc
-          photoLink={promoImage}
+
+        <div className="horisont-line" />
+        <EmptyDoubleBlock
+          firstComponent={listComponent}
+          secondComponent={photoComponent}
+          firstBlockSize="big"
+          secondBlockSize="small"
           size={screenSize.trakResolutionValue}
-          caption=""
-          newsTitle={offers.title}
-          newsText={offers.description}
         />
-        <div className="divide-line tablet" />
-        <div className="grid-block">
-          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{whyWe.title}</h2>
-          <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
-            {whyWe.description.map((item) => (
-              <InfoCard
-                key={getRandomKey()}
-                title=""
-                description={item}
-                size={screenSize.trakResolutionValue}
-              />
-            ))}
-          </div>
-        </div>
+        <div className="horisont-line" />
+        <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>
