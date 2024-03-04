@@ -29,4 +29,15 @@
       font-size: 18px;
     }
   }
+  .ok-text__bold {
+    text-align: start;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 60px;
+  }
+  .ok-text__link {
+    @include link-list();
+    font-style: italic;
+    font-weight: 700;
+  }
 }

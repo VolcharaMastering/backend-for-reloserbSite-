@@ -15,6 +15,7 @@ import { about, offers, staff, label } from "../../content/pagesContent/consultP
 import buisnessPhoto from "../../assets/consult-temp-buisness.jpg";
 import workPhoto from "../../assets/consult-temp-work.jpg";
 import AboutImg from "../../components/UI/AboutImg/AboutImg";
+import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 
 function Consult() {
   const screenSize = useResize();
@@ -61,14 +62,7 @@ function Consult() {
           newsTitle={about.title}
           newsText={about.description}
         />
-        <div className="consult__grid-block">
-          <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
-          <div className={`consult__grid ${screenSize.trakResolutionValue}`}>
-            {offers.description.map((item) => (
-              <InfoCard key={getRandomKey()} title={item.title} description={item.description} />
-            ))}
-          </div>
-        </div>
+        <DropDownContainer containerData={offers} size={screenSize.trakResolutionValue} />
         <EmptyDoubleBlock
           firstComponent={photoComponent}
           secondComponent={contactComponent}

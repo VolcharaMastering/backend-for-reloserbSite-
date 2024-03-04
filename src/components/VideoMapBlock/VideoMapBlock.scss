@@ -12,6 +12,8 @@
   }
   .video-map__subtitle {
     @include font-style($font-size: 30px, $font-family: $fira-font, $font-weight: 700);
+    align-self: flex-start;
+    padding-bottom: 10px;
   }
 }
 .video-map__maps {
