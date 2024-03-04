@@ -70,6 +70,7 @@ function Consult() {
           secondBlockSize="big"
           size={screenSize.trakResolutionValue}
         />
+        <div className="horisont-line" />
       </section>
     </Layout>
   );

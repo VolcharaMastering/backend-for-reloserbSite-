@@ -94,17 +94,17 @@
     "lang": [
       {
         "icon": "tgIcon",
-        "name": "Телеграм для связи: @soncorp ",
+        "name": "Телеграм для связи: @soncorps",
         "showName": true,
-        "linkTo": "https://t.me/soncorp "
+        "linkTo": "https://t.me/soncorps"
       }
     ],
     "partner": [
       {
         "icon": "tgIcon",
-        "name": "Телеграм для связи: @soncorp ",
+        "name": "Телеграм для связи: @soncorps",
         "showName": true,
-        "linkTo": "https://t.me/soncorp "
+        "linkTo": "https://t.me/soncorps"
       }
     ],
     "realEstate": [
