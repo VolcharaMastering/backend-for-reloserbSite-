@@ -7,6 +7,7 @@
     { "buttonName": "Грузоперевозки", "buttonAction": "cargo" },
     { "buttonName": "Визаран", "buttonAction": "visarun" },
     { "buttonName": "Курсы сербского", "buttonAction": "lang" },
+    { "buttonName": "Партнёрская программа", "buttonAction": "partner" },
     { "buttonName": "Виртуальный офис", "buttonAction": "voffice" }
   ],
   "contacts": {
@@ -91,6 +92,14 @@
       }
     ],
     "lang": [
+      {
+        "icon": "tgIcon",
+        "name": "Телеграм для связи: @soncorp ",
+        "showName": true,
+        "linkTo": "https://t.me/soncorp "
+      }
+    ],
+    "partner": [
       {
         "icon": "tgIcon",
         "name": "Телеграм для связи: @soncorp ",

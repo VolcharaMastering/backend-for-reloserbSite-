@@ -23,6 +23,7 @@ const iconsArray = [
   { srcIcon: visarun, srcIcon2: visarun2, linkTo: "/visarun" },
   { srcIcon: lang, srcIcon2: lang2, linkTo: "/lang" },
   { srcIcon: voffice, srcIcon2: voffice2, linkTo: "/voffice" },
+  { srcIcon: voffice, srcIcon2: voffice2, linkTo: "/partner" },
   { srcIcon: faq, srcIcon2: faq2, linkTo: "/faq" },
 ];
 export default iconsArray;

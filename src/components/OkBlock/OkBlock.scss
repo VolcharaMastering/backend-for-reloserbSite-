@@ -14,4 +14,8 @@
       width: 96%;
     }
   }
+  .ok-block__text {
+    @include block-text();
+    font-style: italic;
+  }
 }

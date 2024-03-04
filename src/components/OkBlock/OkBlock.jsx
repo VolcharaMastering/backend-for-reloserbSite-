@@ -16,6 +16,7 @@ function OkBlock({ data, size }) {
             <OkText gotText={item} size={size} />
           </li>
         ))}
+      {data.descText && <p className={`ok-block__text ${size}`}>{data.descText}</p>}
     </ul>
   );
 }

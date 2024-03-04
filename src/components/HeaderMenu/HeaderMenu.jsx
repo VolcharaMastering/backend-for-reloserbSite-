@@ -41,6 +41,9 @@ function HeaderMenu({ size, mobile }) {
               <TextLink location={location} linkTo="/voffice" size={size} />
             </li>
             <li className={`header__menu-link ${size}`}>
+              <TextLink location={location} linkTo="/partner" size={size} />
+            </li>
+            <li className={`header__menu-link ${size}`}>
               <TextLink location={location} linkTo="/faq" size={size} />
             </li>
           </>

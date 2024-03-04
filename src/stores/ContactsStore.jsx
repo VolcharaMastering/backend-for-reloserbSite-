@@ -23,6 +23,8 @@ class ContactsStore {
         return this.contacts.visarun;
       case "voffice":
         return this.contacts.voffice;
+      case "partner":
+        return this.contacts.partner;
       case "lang":
         return this.contacts.lang;
       default:

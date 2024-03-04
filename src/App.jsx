@@ -28,6 +28,7 @@ import Faq from "./Pages/Faq/Faq";
 import LangPage from "./Pages/LangPage/LangPage";
 import VOffice from "./Pages/VOffice/VOffice";
 import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
+import Partner from "./Pages/Partner/Partner";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -54,6 +55,7 @@ const App = observer(() => {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/lang" element={<LangPage />} />
           <Route path="/voffice" element={<VOffice />} />
+          <Route path="/partner" element={<Partner />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" Component={NotFound} />
           {/* <Route path="/reviews" element={<Reviews />} />
