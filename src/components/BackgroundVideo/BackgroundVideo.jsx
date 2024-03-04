@@ -1,11 +1,24 @@
 /* eslint-disable react/no-unknown-property */
+import { useEffect, useState } from "react";
 import "./BackgroundVideo.scss";
+import { isSafari } from "../../utils/detectSafari";
 import photoLink from "../../assets/coworkPictures/DSC00025.jpg";
 
+/**
+ * Renders a background video component with different behavior based on browser.
+ *
+ * For Safari, renders a video with controls enabled.
+ * For other browsers, renders a muted, autoplaying looped video.
+ *
+ * Accepts videoTitle, size, and videoLink props to customize the component.
+ */
 function BackgroundVideo({ videoTitle, size, videoLink }) {
-  const browser = navigator.userAgent;
-  const isSafari = /^((?!chrome|android).)*safari/i.test(browser);
-  return !isSafari ? (
+  const [safariUser, setSafariUser] = useState(false);
+
+  useEffect(() => {
+    setSafariUser(isSafari());
+  }, []);
+  return !safariUser ? (
     <div className={`background-video__shadow ${size}`}>
       <video
         autoPlay

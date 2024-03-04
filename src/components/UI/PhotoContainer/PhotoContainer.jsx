@@ -12,7 +12,11 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
   const singleIndex = generateRandomKey();
 
   const handleMouseDown = () => {
-    setTimer(setTimeout(() => {}, 500));
+    setTimer(
+      setTimeout(() => {
+        return;
+      }, 500)
+    );
   };
 
   const openPopup = () => {

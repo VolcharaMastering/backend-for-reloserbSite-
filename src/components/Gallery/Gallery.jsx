@@ -7,6 +7,12 @@ import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
 import swipeSettings from "../../utils/swipeConfig";
 import generateRandomKey from "../../utils/keyGenerator";
 
+/**
+ * Gallery component that renders images in either a blocked or carousel layout
+ * @param {string} galleryType - 'block' or 'carousel'
+ * @param {Array} content - Array of image objects
+ * @param {string} size - 'desktop', 'tablet', or 'mobile' to determine layout
+ */
 function Gallery({ galleryType, content, size }) {
   const [galleryArray, setGalleryArray] = useState([]);
 
