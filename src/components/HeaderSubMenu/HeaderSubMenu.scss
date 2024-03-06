@@ -1,23 +1,13 @@
 @import "../../consts/block-mixins.scss";
 
-.header__menu {
+.header-sub__menu {
   width: 100%;
   height: 50px;
+  background: $dark-background-color;
   padding-left: 200px;
   @include to-center_row();
-  &.tablet {
-    height: auto;
-    padding-left: 0;
-    justify-content: center;
-  }
 
-  &.mobile {
-    height: auto;
-    padding-left: 0;
-    justify-content: center;
-  }
-
-  .header__menu-block {
+  .header-sub__menu-block {
     @include list-without-dots();
 
     &.tablet {
@@ -30,7 +20,7 @@
       color: $light-text-color;
     }
 
-    .header__menu-link {
+    .header-sub__menu-link {
       &.desktopHD {
         padding: 0;
       }

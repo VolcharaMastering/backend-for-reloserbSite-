@@ -1,9 +1,8 @@
 import { useLocation } from "react-router-dom";
 import "./HeaderMenu.scss";
 import TextLink from "../UI/TextLink/TextLink";
-import iconsArray from "../../utils/imoptHeaderImages";
+import { menuIconsArray, menuArray } from "../../utils/imoptHeaderImages";
 import generateRandomKey from "../../utils/keyGenerator";
-import HeaderDynamicIcon from "../UI/HeaderDynamicIcon/HeaderDynamicIcon";
 
 function HeaderMenu({ size, mobile }) {
   const location = useLocation();
@@ -12,53 +11,31 @@ function HeaderMenu({ size, mobile }) {
     return index;
   };
   return (
-    <nav className="header__menu">
+    <nav className={`header__menu ${size}`}>
       <ul className={`header__menu-block ${size}`}>
-        {mobile ? (
-          <>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/consult" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/coworking" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/real-estate" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/cargo" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/visarun" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/lang" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/voffice" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/partner" size={size} />
-            </li>
-            <li className={`header__menu-link ${size}`}>
-              <TextLink location={location} linkTo="/faq" size={size} />
-            </li>
-          </>
-        ) : (
-          iconsArray.map((icon) => (
-            <li key={getRandomKey()} className={`header__menu-link ${size}`}>
-              <HeaderDynamicIcon icons={icon} location={location} size={size} />
-            </li>
-          ))
-        )}
-        {mobile && (
-          <li className={`header__menu-link ${size}`}>
-            <TextLink location={location} linkTo="/contacts" size={size} />
-          </li>
-        )}
+        {size === "tablet" || size === "mobile"
+          ? mobile &&
+            menuArray.map((icon) => (
+              <li key={getRandomKey()} className={`header__menu-link ${size}`}>
+                <TextLink
+                  icon={icon.srcIcon}
+                  color="dark"
+                  linkTo={icon.linkTo}
+                  location={location}
+                  size={size}
+                />
+              </li>
+            ))
+          : menuIconsArray.map((icon) => (
+              <li key={getRandomKey()} className={`header__menu-link ${size}`}>
+                <TextLink
+                  icon={icon.srcIcon}
+                  linkTo={icon.linkTo}
+                  location={location}
+                  size={size}
+                />
+              </li>
+            ))}
       </ul>
     </nav>
   );

@@ -17,6 +17,7 @@ function Contacts() {
         <BlockWithContacts size={screenSize.trakResolutionValue} />
         <VideoMapBlock size={screenSize.trakResolutionValue} />
       </section>
+      <div className="horisont-line" />
     </Layout>
   );
 }

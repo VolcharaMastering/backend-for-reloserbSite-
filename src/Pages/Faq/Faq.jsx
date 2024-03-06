@@ -11,6 +11,7 @@ function Faq() {
     <Layout title={title.faq} description={description.faq}>
       <section className="faq">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>F.A.Q.</h1>
+        <div className="horisont-line" />
         <DropDownContainer containerData={faq} size={screenSize.trakResolutionValue} />
       </section>
     </Layout>

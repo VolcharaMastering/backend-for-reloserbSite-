@@ -79,6 +79,7 @@ function Coworking() {
           </div>
         )}
         <OkBlock data={offers} size={screenSize.trakResolutionValue} />
+        <div className="horisont-line" />
         <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>

@@ -48,5 +48,5 @@
 @mixin link-list($color: $dark-text-color) {
   text-decoration: none;
   color: $color;
-  padding: 16px;
+  padding: 0 16px;
 }

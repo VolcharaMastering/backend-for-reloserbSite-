@@ -23,6 +23,7 @@ function LangPage() {
           newsText={about.description}
         />
         <OkBlock data={offers} size={screenSize.trakResolutionValue} />
+        <div className="horisont-line" />
         <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
       </section>
     </Layout>
