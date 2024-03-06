@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import "./TextLink.scss";
 import { menu } from "../../../content/labelsRu.json";
 
-function TextLink({ location, linkTo, size }) {
+function TextLink({ icon, color, location, linkTo, size }) {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -18,8 +18,9 @@ function TextLink({ location, linkTo, size }) {
       <div className="link-background">
         <NavLink
           to={linkTo}
-          className={`link ${size} ${location.pathname === linkTo && "link_active"}`}
+          className={`link ${size} ${color} ${location.pathname === linkTo && "link_active"}`}
         >
+          {icon && <img className="link-icon" src={icon} alt="headericon" />}
           {linkTo === "/" ? menu.main : menu[linkTo.substring(1)]}
         </NavLink>
       </div>

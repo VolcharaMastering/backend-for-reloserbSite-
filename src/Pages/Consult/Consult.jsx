@@ -62,7 +62,9 @@ function Consult() {
           newsTitle={about.title}
           newsText={about.description}
         />
+        <div className="horisont-line" />
         <DropDownContainer containerData={offers} size={screenSize.trakResolutionValue} />
+        <div className="horisont-line" />
         <EmptyDoubleBlock
           firstComponent={photoComponent}
           secondComponent={contactComponent}

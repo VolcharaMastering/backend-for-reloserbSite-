@@ -36,6 +36,7 @@ function Partner() {
 
       <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
       <DropDownContainer containerData={terms} size={screenSize.trakResolutionValue} />
+      <div className="horisont-line" />
       <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
       <BlockWithContacts size={screenSize.trakResolutionValue} />
     </section>

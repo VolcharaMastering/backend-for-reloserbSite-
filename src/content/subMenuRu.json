@@ -1,0 +1,34 @@
+{
+  "subMenu": {
+    "consult": {
+      "label": "Консалтинг",
+      "src": "consult.svg",
+      "link": "/consult"
+    },
+    "coworking": {
+      "label": "Коворкинг",
+      "src": "coworking.svg",
+      "link": "/coworking"
+    },
+    "real-estate": {
+      "label": "Недвижимость",
+      "src": "real-estate.svg",
+      "link": "/real-estate"
+    },
+    "cargo": {
+      "label": "Грузоперевозки",
+      "src": "cargo.svg",
+      "link": "/cargo"
+    },
+    "visarun": {
+      "label": "Визаран",
+      "src": "visarun.svg",
+      "link": "/visarun"
+    },
+    "lang": {
+      "label": "Курсы сербского",
+      "src": "lang.svg",
+      "link": "/lang"
+    }
+  }
+}
