@@ -29,21 +29,21 @@ function PhotoContainer({ index, photoLink, size, containerType, caption, title 
     };
     PopupState.setOpened(data);
   };
-  const handleMouseUp = () => {
-    if (timer <= 500) {
-      openPopup();
-    }
-    console.log(timer);
-    clearTimeout(timer);
-  };
+  // const handleMouseUp = () => {
+  //   if (timer <= 1000) {
+  //     openPopup();
+  //   }
+  //   clearTimeout(timer);
+  // };
   return containerType === "gallery" ? (
     <figure className={`photo-container ${size} ${containerType}`}>
       <img
         src={photoLink}
         alt={caption}
         className="photo-container__image_gallery"
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
+        // onMouseDown={handleMouseDown}
+        // onMouseUp={handleMouseUp}
+        onClick={openPopup}
       />
     </figure>
   ) : (
