@@ -7,7 +7,7 @@ import "./TheHeader.scss";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
 import TextLink from "../UI/TextLink/TextLink";
-import logo from "../../assets/logos/black-logo.svg";
+import logo from "../../assets/header-logo.svg";
 import HeaderSubMenu from "../HeaderSubMenu/HeaderSubMenu";
 
 function TheHeader() {

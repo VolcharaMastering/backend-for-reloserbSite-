@@ -22,6 +22,12 @@
     @include font-style($font-size: 14px);
     text-align: center;
   }
+  .footer__copy {
+    @include font-style($font-size: 20px);
+  }
+  .footer__logo {
+    width: 60px;
+  }
   .footer__company {
     @include font-style();
   }

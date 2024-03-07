@@ -30,16 +30,11 @@
     position: relative;
     flex: 1;
 
-    // &.tablet {
-    //   @include to-center_row($justify: flex-end);
-    // }
-    // &.mobile {
-    //   @include to-center_row($justify: flex-end);
-    // }
     .header__logo {
       position: absolute;
-      top: 10px;
-      left: 20px;
+      width: 100px;
+      top: 15px;
+      left: 55px;
     }
   }
   .header__page-name {
