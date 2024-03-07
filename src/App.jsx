@@ -27,8 +27,9 @@ import Consult from "./Pages/Consult/Consult";
 import Faq from "./Pages/Faq/Faq";
 import LangPage from "./Pages/LangPage/LangPage";
 import VOffice from "./Pages/VOffice/VOffice";
-import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
 import Partner from "./Pages/Partner/Partner";
+import Sitemap from "./Pages/Sitemap/Sitemap";
+import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -57,9 +58,8 @@ const App = observer(() => {
           <Route path="/voffice" element={<VOffice />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="*" Component={NotFound} />
-          {/* <Route path="/reviews" element={<Reviews />} />
-          <Route path="/blog" element={<Blog />} /> */}
         </Routes>
       </main>
       <TheFooter />

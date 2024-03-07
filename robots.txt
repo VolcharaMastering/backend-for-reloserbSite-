@@ -1,0 +1,19 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://relocationsrb.com/sitemap.xml
+
+Allow: /$
+Allow: /consult
+Allow: /coworking
+Allow: /real-estate
+Allow: /cargo
+Allow: /visarun
+Allow: /about
+Allow: /contacts
+Allow: /lang
+Allow: /voffice
+Allow: /partner
+Allow: /faq
+
+Disallow: /404

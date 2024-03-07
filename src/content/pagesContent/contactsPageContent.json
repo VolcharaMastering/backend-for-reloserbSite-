@@ -1,6 +1,6 @@
 {
   "buttons": [
-    { "buttonName": "Instant", "buttonAction": "main" },
+    { "buttonName": "ReloSerb", "buttonAction": "main" },
     { "buttonName": "Косалтинг", "buttonAction": "consult" },
     { "buttonName": "Коворкинг", "buttonAction": "coworking" },
     { "buttonName": "Недвижимость", "buttonAction": "realEstate" },
@@ -20,9 +20,9 @@
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: support@Instant-office.com",
+        "name": "Почта: support@reloserb.com",
         "showName": false,
-        "linkTo": "mailto:support@Instant-office.com"
+        "linkTo": "mailto:support@reloserb.com"
       },
       {
         "icon": "webIcon",
@@ -34,15 +34,15 @@
     "consult": [
       {
         "icon": "tgIcon",
-        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "name": "Телеграм для связи: @reloserb",
         "showName": true,
-        "linkTo": "https://t.me/RealEstate_InstantOffice"
+        "linkTo": "https://t.me/reloserb"
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: support@instant-consulting.com",
+        "name": "Почта: support@reloserb-consulting.com",
         "showName": false,
-        "linkTo": "mailto:support@instant-consulting.com"
+        "linkTo": "mailto:support@reloserb-consulting.com"
       },
       {
         "icon": "webIcon",
@@ -60,15 +60,15 @@
       },
       {
         "icon": "tgIcon",
-        "name": "Телеграм для связи: @RealEstate_InstantOffice",
+        "name": "Телеграм для связи: @reloserb",
         "showName": true,
-        "linkTo": "https://t.me/RealEstate_InstantOffice"
+        "linkTo": "https://t.me/reloserb"
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: support@instantcoworking.com",
+        "name": "Почта: support@reloserb-office.com",
         "showName": false,
-        "linkTo": "mailto:support@instantcoworking.com"
+        "linkTo": "mailto:support@reloserb-office.com"
       },
       {
         "icon": "channelIcon",
@@ -86,9 +86,15 @@
     "voffice": [
       {
         "icon": "tgIcon",
-        "name": "Телеграм для связи: @InstantConsulting",
+        "name": "Телеграм для связи: @reloserb",
         "showName": true,
-        "linkTo": "https://t.me/InstantConsulting"
+        "linkTo": "https://t.me/reloserb"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@reloserb-office.com",
+        "showName": false,
+        "linkTo": "mailto:support@reloserb-office.com"
       }
     ],
     "lang": [
@@ -97,6 +103,12 @@
         "name": "Телеграм для связи: @soncorps",
         "showName": true,
         "linkTo": "https://t.me/soncorps"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@reloserb-languge.com",
+        "showName": false,
+        "linkTo": "mailto:support@reloserb-languge.com"
       }
     ],
     "partner": [
@@ -105,6 +117,12 @@
         "name": "Телеграм для связи: @soncorps",
         "showName": true,
         "linkTo": "https://t.me/soncorps"
+      },
+      {
+        "icon": "mailIcon",
+        "name": "Почта: support@reloserb-partner.com",
+        "showName": false,
+        "linkTo": "mailto:support@reloserb-partner.com"
       }
     ],
     "realEstate": [
@@ -122,9 +140,9 @@
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: support@instant-realt.com",
+        "name": "Почта: support@reloserb-realt.com",
         "showName": false,
-        "linkTo": "mailto:support@instant-realt.com"
+        "linkTo": "mailto:support@reloserb-realt.com"
       },
       {
         "icon": "channelIcon",
@@ -148,9 +166,9 @@
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: support@instant-logistic.com",
+        "name": "Почта: support@reloserb-logistic.com",
         "showName": false,
-        "linkTo": "mailto:support@instant-logistic.com"
+        "linkTo": "mailto:support@reloserb-logistic.com"
       },
       {
         "icon": "channelIcon",
@@ -174,9 +192,9 @@
       },
       {
         "icon": "mailIcon",
-        "name": "Почта: info@instantvisarun.com",
+        "name": "Почта: info@reloserb-visarun.com",
         "showName": false,
-        "linkTo": "mailto:info@instantcoworking.com"
+        "linkTo": "mailto:info@reloserb-visarun.com"
       },
       {
         "icon": "channelIcon",

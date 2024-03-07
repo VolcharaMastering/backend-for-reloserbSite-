@@ -93,9 +93,9 @@
     ]
   },
   {
-      "newsTitle": "Специалисты 'Instant'",
+      "newsTitle": "Специалисты 'ReloSerb'",
       "photoLink": "https://sprutio.beget.com/image_cache/terek.beget:9443/paunovt9/263adecdf6ba0ec51d3427774522e8c1/specialists.jpg",
-      "newsCaption": "Специалисты 'Instant'",
+      "newsCaption": "Специалисты 'ReloSerb'",
       "newsText": [
         "Разработчики, маркетологи, коперайтеры. Мы предоставляем платформу для поиска команды и адаптации на Сербском рынке для всех digital профессий."
       ]
