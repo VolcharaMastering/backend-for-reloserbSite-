@@ -14,6 +14,8 @@ import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
+import OkBlock from "../../components/OkBlock/OkBlock";
+import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 
 function RealEstate() {
   const screenSize = useResize();
@@ -27,16 +29,7 @@ function RealEstate() {
   };
   // const videoLink ="https://relocationsrb.com/public_html/video/estate-video.mp4";
   const cardsComponent = () => {
-    return (
-      <div className="grid-block">
-        <h2 className={`subtitle ${screenSize.trakResolutionValue}`}>{offers.title}</h2>
-        <div className={`block-cards__grid ${screenSize.trakResolutionValue}`}>
-          {whyWe.description.map((item) => (
-            <InfoCard key={getRandomKey()} title="" description={item} />
-          ))}
-        </div>
-      </div>
-    );
+    return <DropDownContainer containerData={whyWe} size={screenSize.trakResolutionValue} />;
   };
   const videoComponent = () => {
     const props = {
@@ -56,13 +49,9 @@ function RealEstate() {
           text={about.description}
           size={screenSize.trakResolutionValue}
         />
-        <BlockWithBlackBackground
-          title={offers.title}
-          blocks={offers.description}
-          description=""
-          linkTo=""
-          size={screenSize.trakResolutionValue}
-        />
+
+        <OkBlock data={offers} size={screenSize.trakResolutionValue} />
+        <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
         <EmptyDoubleBlock
           firstComponent={videoComponent}
           secondComponent={cardsComponent}

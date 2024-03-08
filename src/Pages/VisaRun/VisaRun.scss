@@ -4,7 +4,23 @@
   width: 100%;
   @include to-center_column();
   .visarun__title {
-    width: 70%;
+    width: 55%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .visarun__title {
+      width: 65%;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .visarun__title {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .visarun__title {
+      width: 78%;
+    }
   }
   .visarun-map__maps {
     @include to-center_column($justify: center);
@@ -18,5 +34,8 @@
     &.mobile {
       height: 100vw;
     }
+  }
+  .visarun__subtitle {
+    align-self: flex-start;
   }
 }

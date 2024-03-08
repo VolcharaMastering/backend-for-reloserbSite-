@@ -58,15 +58,24 @@ body {
   flex: 1;
   align-self: stretch;
   border-left: $borders-default;
-  border-bottom: $borders-default;
   &.tablet {
     height: 1px;
     width: 100%;
+    border-bottom: $borders-default;
   }
   &.mobile {
     height: 1px;
     width: 100%;
+    border-bottom: $borders-default;
   }
+}
+.horisont-line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-bottom: $borders-default;
+  flex: 1;
+  align-self: stretch;
 }
 .grid-block {
   width: 100%;

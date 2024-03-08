@@ -28,7 +28,7 @@ const DropDownListTitle = observer(({ dropItem, size }) => {
       {DropDownList.lists[dropItem.id] && (
         <ul className={`drop-down-block `}>
           {dropItem.data.map((item) => (
-            <DropDownListItem ket={getRandomKey()} listItem={item} size={size} />
+            <DropDownListItem key={getRandomKey()} listItem={item} size={size} />
           ))}
         </ul>
       )}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Mettlach";
+  src:
+    local("Mettlach"),
+    url("./Mettlach.woff2") format("woff2"),
+    url("./Mettlach.woff") format("woff"),
+    url("./Mettlach.ttf") format("truetype"),
+    url("./Mettlach.otf") format("opentype");
+  font-display: swap;
+  font-weight: regular;
+}

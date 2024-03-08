@@ -1,0 +1,29 @@
+{
+  "menu": {
+    "main": {
+      "label": "Главная",
+      "src": "main.svg",
+      "link": "/"
+    },
+    "voffice": {
+      "label": "Виртуальный офис",
+      "src": "voffice.svg",
+      "link": "/voffice"
+    },
+    "partner": {
+      "label": "Партнёрская программа",
+      "src": "partner.svg",
+      "link": "/partner"
+    },
+    "faq": {
+      "label": "F.A.Q.",
+      "src": "faq.svg",
+      "link": "/faq"
+    },
+    "contacts": {
+      "label": "Контакты",
+      "src": "contacts.svg",
+      "link": "/contacts"
+    }
+  }
+}

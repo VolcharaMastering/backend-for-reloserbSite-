@@ -17,7 +17,9 @@ function VideoMapBlock({ size }) {
     <div className={`video-map ${size}`}>
       <BackgroundVideo size={size} videoLink={videoFile} videoTitle="" />
       <div className={`video-map__maps ${size}`}>
-        <h2 className={`video-map__subtitle ${size}`}>{adress}</h2>
+        {adress.map((item) => (
+          <h2 className={`video-map__subtitle ${size}`}>{item}</h2>
+        ))}
         <SwipeButton
           leftTitle="Google"
           rightTitle="Yandex"

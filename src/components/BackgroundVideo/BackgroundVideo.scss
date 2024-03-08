@@ -1,5 +1,7 @@
 @import "../../consts/block-mixins.scss";
+// @import "../../consts/fonts/fonts.scss";
 
+// $mettla-font: Mettlach;
 .background-video__shadow {
   position: relative;
   overflow: hidden;
@@ -48,11 +50,10 @@
 .background-video__title {
   @include media-font();
   text-transform: uppercase;
-  width: 30%;
+  // width: 30%;
   position: absolute;
-  top: 33%;
+  top: 40%;
   left: 5%;
-  // z-index: 10;
   text-shadow:
     -2px -2px 2px $dark-text-color,
     2px -2px 2px $dark-text-color,
