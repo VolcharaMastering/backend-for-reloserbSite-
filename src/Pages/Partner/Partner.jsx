@@ -11,6 +11,7 @@ import { headText, about, terms, whyWe } from "../../content/pagesContent/partne
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
+import Layout from "../../components/Layout/Layout";
 
 function Partner() {
   const screenSize = useResize();
