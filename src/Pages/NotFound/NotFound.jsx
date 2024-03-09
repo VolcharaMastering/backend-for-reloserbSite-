@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 import "./NotFound.scss";
-import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
+import { title, description } from "../../content/metaInfo.json";
 
 function NotFound() {
   const navigate = useNavigate();
