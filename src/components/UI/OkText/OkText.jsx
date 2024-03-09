@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./OkText.scss";
 
 function OkText({ gotText, size }) {
-  console.log(gotText);
   return (
     <div className={`ok-text ${size}`}>
       {gotText && typeof gotText === "object" && gotText.href ? (
