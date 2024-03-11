@@ -36,10 +36,10 @@ body {
   @include subtitle-text();
   padding: 2%;
   &.tablet {
-    font-size: 30px;
+    font-size: 34px;
   }
   &.mobile {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 .subtitle_white {
