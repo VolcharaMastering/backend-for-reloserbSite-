@@ -3,7 +3,8 @@
 .contacts-container {
   @include to-center_row();
   width: 100%;
-  border-top: $borders-default;
+  background-color: $dark-background-color;
+  // border-top: $borders-default;
   &.tablet {
     @include to-center_column();
   }
@@ -11,6 +12,6 @@
     @include to-center_column();
   }
 }
-.contacts-container:last-of-type {
-  border-bottom: $borders-default;
-}
+// .contacts-container:last-of-type {
+//   border-bottom: $borders-default;
+// }

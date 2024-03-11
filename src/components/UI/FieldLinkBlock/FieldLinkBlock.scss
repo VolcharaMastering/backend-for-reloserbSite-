@@ -16,6 +16,7 @@
     @include to-center-row($justify: flex-start);
     @include link-list;
     transition: $transition;
+    color: $light-text-color;
     text-align: center;
     &.tablet {
       @include to-center-row($justify: center);

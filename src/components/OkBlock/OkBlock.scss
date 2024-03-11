@@ -3,6 +3,7 @@
 .ok-block {
   @include to-center_column();
   width: 100%;
+  padding-bottom: 20px;
   .ok-block__item {
     @include list-without-dots();
     width: 60%;

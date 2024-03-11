@@ -8,6 +8,7 @@ import "./DropDownListTitle.scss";
 import generateRandomKey from "../../../utils/keyGenerator";
 import DropDownList from "../../../stores/DropDownList";
 import DropDownListItem from "../DropDownListItem/DropDownListItem";
+import wrapArrow from "../../../assets/icons/wrap.svg";
 
 const DropDownListTitle = observer(({ dropItem, size }) => {
   const handleToggleList = () => {
@@ -24,6 +25,11 @@ const DropDownListTitle = observer(({ dropItem, size }) => {
     <>
       <h2 className={`drop-down-title ${size}`} onClick={handleToggleList}>
         {dropItem.title}
+        <img
+          src={wrapArrow}
+          alt="wrap arrow"
+          className={`drop-down__wrap ${DropDownList.lists[dropItem.id] && "opened"} ${size}`}
+        />
       </h2>
       {DropDownList.lists[dropItem.id] && (
         <ul className={`drop-down-block `}>

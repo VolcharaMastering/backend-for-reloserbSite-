@@ -10,7 +10,6 @@
     padding-left: 0;
     justify-content: center;
   }
-
   &.mobile {
     height: auto;
     padding-left: 0;
@@ -19,12 +18,10 @@
 
   .header__menu-block {
     @include list-without-dots();
-
     &.tablet {
       @include to-center_column();
       color: $light-text-color;
     }
-
     &.mobile {
       @include to-center_column();
       color: $light-text-color;
