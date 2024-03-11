@@ -8,12 +8,12 @@ viewBox="0 0 18967.92 18967.92"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str3 {stroke:#222222;stroke-width:564.44;stroke-miterlimit:22.9256}
-    .str2 {stroke:#222222;stroke-width:564.44;stroke-linecap:round;stroke-miterlimit:22.9256}
-    .str0 {stroke:black;stroke-width:846.67;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
-    .str1 {stroke:black;stroke-width:1322.92;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str3 {stroke:#979797;stroke-width:564.44;stroke-miterlimit:22.9256}
+    .str2 {stroke:#979797;stroke-width:564.44;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str0 {stroke:#979797;stroke-width:846.67;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str1 {stroke:#979797;stroke-width:1322.92;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
-    .fil1 {fill:#222222;fill-rule:nonzero}
+    .fil1 {fill:#979797;fill-rule:nonzero}
    ]]>
   </style>
  </defs>
