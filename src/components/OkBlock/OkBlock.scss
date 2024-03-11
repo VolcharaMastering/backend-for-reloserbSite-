@@ -16,7 +16,8 @@
     }
   }
   .ok-block__text {
-    @include block-text();
+    @include drop-list-text();
     font-style: italic;
+    padding-bottom: 20px;
   }
 }

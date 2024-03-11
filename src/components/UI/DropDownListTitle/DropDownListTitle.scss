@@ -2,12 +2,18 @@
 
 .drop-down-title {
   position: relative;
-  @include subtitle-text($text-color: $light-text-color);
+  @include drop-title-text();
   background-color: $dark-background-color;
   width: 100%;
   border-radius: 20px;
-  padding: 10px 40px;
+  padding: 10px 70px 10px 40px;
   margin-top: 10px;
+  &.tablet {
+    font-size: 26px;
+  }
+  &.mobile {
+    font-size: 22px;
+  }
 }
 .drop-down-title:first-of-type {
   margin-top: 0;

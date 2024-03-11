@@ -23,13 +23,18 @@
     @include font-style($color: $light-text-color, $font-family: $vollkorn-font, $font-size: 30px);
     max-width: 70%;
     text-align: center;
-    padding: 1% 0;
     &.tablet {
       font-size: 25px;
     }
     &.mobile {
       font-size: 20px;
     }
+  }
+  .black-text-block__text:first-of-type {
+    padding: 1% 0 0;
+  }
+  .black-text-block__text:last-of-type {
+    padding: 0 0 1%;
   }
   .black-text-block__button {
     margin: 3% 0;
