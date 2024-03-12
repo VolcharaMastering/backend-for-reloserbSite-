@@ -2,31 +2,24 @@ import { useEffect } from "react";
 import { useResize } from "../../utils/hooks/useResize";
 import ContactsStore from "../../stores/ContactsStore";
 import Layout from "../../components/Layout/Layout";
-import "./Cargo.scss";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
 import Gallery from "../../components/Gallery/Gallery";
 import galleryArray from "../../utils/folderApi/getCargoPhotos";
-import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockWithPhotoAndDesc";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
-import InfoCard from "../../components/UI/InfoCard/InfoCard";
-import generateRandomKey from "../../utils/keyGenerator";
+import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
+import OkBlock from "../../components/OkBlock/OkBlock";
+import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
+import "./Cargo.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/cargoPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
-import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
-import OkBlock from "../../components/OkBlock/OkBlock";
-import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 
 function Cargo() {
   useEffect(() => {
     ContactsStore.setContacts("cargo");
   }, []);
   const screenSize = useResize();
-  const getRandomKey = () => {
-    const index = generateRandomKey();
-    return index;
-  };
 
   const photoComponent = () => {
     const props = {
@@ -55,7 +48,21 @@ function Cargo() {
           text={about.description}
           size={screenSize.trakResolutionValue}
         />
-        <Gallery galleryType="block" content={galleryArray} size={screenSize.trakResolutionValue} />
+        {!(
+          screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
+        ) ? (
+          <Gallery
+            galleryType="block"
+            content={galleryArray}
+            size={screenSize.trakResolutionValue}
+          />
+        ) : (
+          <Gallery
+            galleryType="stringed"
+            content={galleryArray}
+            size={screenSize.trakResolutionValue}
+          />
+        )}
 
         <div className="horisont-line" />
         <EmptyDoubleBlock

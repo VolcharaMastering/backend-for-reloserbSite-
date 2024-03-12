@@ -1,12 +1,19 @@
 @import "../../../consts/block-mixins.scss";
 
 .drop-down-title {
-  @include subtitle-text($text-color: $light-text-color);
+  position: relative;
+  @include drop-title-text();
   background-color: $dark-background-color;
   width: 100%;
   border-radius: 20px;
-  padding: 10px 40px;
+  padding: 10px 70px 10px 40px;
   margin-top: 10px;
+  &.tablet {
+    font-size: 26px;
+  }
+  &.mobile {
+    font-size: 22px;
+  }
 }
 .drop-down-title:first-of-type {
   margin-top: 0;
@@ -23,4 +30,15 @@
   padding: 1% 2%;
   width: 96%;
   margin-bottom: 10px;
+}
+
+.drop-down__wrap {
+  position: absolute;
+  transform: rotate(180deg);
+  width: 40px;
+  top: 10px;
+  right: 20px;
+  &.opened {
+    transform: rotate(0deg);
+  }
 }

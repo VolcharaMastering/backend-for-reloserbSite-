@@ -16,7 +16,7 @@
   color: $color;
 }
 @mixin media-font($font-size: 5vw, $color: $light-text-color) {
-  font-family: $mettla-font;
+  font-family: $alumni-font;
   font-size: $font-size;
   color: $color;
 }
@@ -30,6 +30,10 @@
 }
 @mixin drop-list-text($text-color: $dark-text-color) {
   @include font-style($color: $text-color, $font-family: $vollkorn-font, $font-size: 24px);
+}
+@mixin drop-title-text($text-color: $light-text-color) {
+  @include font-style($font-size: 28px, $font-family: $alumni-font, $color: $text-color);
+  font-weight: 700;
 }
 @mixin subtitle-text($text-color: $dark-text-color) {
   @include font-style($font-size: 36px, $font-family: $alumni-font, $color: $text-color);
