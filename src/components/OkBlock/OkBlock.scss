@@ -18,6 +18,6 @@
   .ok-block__text {
     @include drop-list-text();
     font-style: italic;
-    padding-bottom: 20px;
+    padding: 0 3% 20px;
   }
 }
