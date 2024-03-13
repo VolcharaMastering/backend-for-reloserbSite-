@@ -19,9 +19,7 @@ function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) 
     <article className="black-block">
       {title && <h2 className={`subtitle_white ${size}`}>{title}</h2>}
       <nav className="black-block__container">
-        <ul
-          className={`${safariUser ? "black-block__navigation" : "black-block__navigation"}  ${size}`}
-        >
+        <ul className={`black-block__navigation ${size}`}>
           {blocks.length &&
             blocks.map((singleBlock) =>
               singleBlock.blockLink ? (
