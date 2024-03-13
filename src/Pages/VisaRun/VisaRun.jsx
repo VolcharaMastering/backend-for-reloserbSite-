@@ -140,6 +140,7 @@ function VisaRun() {
           blockTitle=""
         />
         <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
+        <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
         <EmptyDoubleBlock
           firstComponent={mapsBGComponent}
           secondComponent={mapsNSComponent}
