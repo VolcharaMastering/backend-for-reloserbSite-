@@ -25,6 +25,7 @@ function VideoMapBlock({ size }) {
           rightTitle="Yandex"
           changeMap={handleTolggeYandex}
           mapState={yandexMap}
+          size={size}
         />
         <MapBlock
           size={size}
