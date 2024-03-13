@@ -65,26 +65,24 @@ function VisaRun() {
 
   const mapsComponent = () => {
     return (
-      <>
+      <div className={`visarun__maps  ${screenSize.trakResolutionValue}`}>
         {whyWe.adress.map((item) => (
-          <h2 className={`subtitle visarun__subtitle ${screenSize.trakResolutionValue}`}>{item}</h2>
+          <h2 className={`visarun__subtitle ${screenSize.trakResolutionValue}`}>{item}</h2>
         ))}
-        <div className={`visarun-map__maps  ${screenSize.trakResolutionValue}`}>
-          <SwipeButton
-            leftTitle="Google"
-            rightTitle="Yandex"
-            changeMap={handleTolggeYandex}
-            mapState={yandexMap}
-          />
-          <MapBlock
-            size={screenSize.trakResolutionValue}
-            yandexMap={yandexMap}
-            coordinate1={44.815205}
-            coordinate2={20.43524}
-            gmapsSrc={gmapSpot}
-          />
-        </div>
-      </>
+        <SwipeButton
+          leftTitle="Google"
+          rightTitle="Yandex"
+          changeMap={handleTolggeYandex}
+          mapState={yandexMap}
+        />
+        <MapBlock
+          size={screenSize.trakResolutionValue}
+          yandexMap={yandexMap}
+          coordinate1={44.815205}
+          coordinate2={20.43524}
+          gmapsSrc={gmapSpot}
+        />
+      </div>
     );
   };
   return (
