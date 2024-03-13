@@ -5,14 +5,14 @@
   background-color: $light-background-color;
   width: 100%;
   box-sizing: border-box;
-  border: $borders-default;
+  // border: $borders-default;
   height: 100%;
   padding: 5%;
 
   &.black {
     background-color: unset;
     box-sizing: border-box;
-    border: $borders-default;
+    // border: $borders-default;
     min-height: fit-content;
     max-height: max-content;
   }
