@@ -29,5 +29,52 @@
     "partner": "Партнерская программа. | Скидки и бонусы для партнеров ReloSerb. | Pарабатывайте комиссионные за каждую успешную продажу. | Начните зарабатывать с ReloSerb. | Узнайте больше о наших условиях и возможностях для партнеров. | #reloserbpartner",
     "notFound": "Страница не найдена"
   },
+  "ogData": {
+    "ogTitle": {
+      "main": "ReloSerb",
+      "contacts": "Контакты ReloSerb",
+      "coworking": "ReloSerb Коворкинг в Белграде",
+      "about": "О ReloSerb",
+      "cargo": "ReloSerb Доставка",
+      "visarun": "ReloSerb Визаран Белград Нови-сад. Отправление каждый день",
+      "consult": "ReloSerb Консультация",
+      "realEstate": "ReloSerb Риелторские услуги",
+      "faq": "ReloSerb F.A.Q",
+      "lang": "ReloSerb Школа сербского языка",
+      "voffice": "Виртуальный офис от ReloSerb",
+      "partner": "Партнерская программа ReloSerb",
+      "notFound": "ReloSerb Страница не найдена"
+    },
+    "ogDescription": {
+      "main": "ReloSerb",
+      "contacts": "Контакты ReloSerb",
+      "coworking": "ReloSerb Коворкинг в Белграде",
+      "about": "О ReloSerb",
+      "cargo": "ReloSerb Доставка",
+      "visarun": "ReloSerb Визаран Белград Нови-сад. Отправление каждый день",
+      "consult": "ReloSerb Консультация",
+      "realEstate": "ReloSerb Риелторские услуги",
+      "faq": "ReloSerb F.A.Q",
+      "lang": "ReloSerb Школа сербского языка",
+      "voffice": "Виртуальный офис от ReloSerb",
+      "partner": "Партнерская программа ReloSerb",
+      "notFound": "ReloSerb Страница не найдена"
+    },
+    "ogUrl": {
+      "main": "https://reloserb.com",
+      "contacts": "https://reloserb.com/contacts",
+      "coworking": "https://reloserb.com/coworking",
+      "about": "https://reloserb.com/about",
+      "cargo": "https://reloserb.com/cargo",
+      "visarun": "https://reloserb.com/visarun",
+      "consult": "https://reloserb.com/consult",
+      "realEstate": "https://reloserb.com/real-estate",
+      "faq": "https://reloserb.com/faq",
+      "lang": "https://reloserb.com/lang",
+      "voffice": "https://reloserb.com/voffice",
+      "partner": "https://reloserb.com/partner",
+      "notFound": "https://reloserb.com/404"
+    }
+  },
   "seo": { "name": "yandex-verification", "content": "7467034307518108" }
 }

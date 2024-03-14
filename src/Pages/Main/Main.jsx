@@ -8,11 +8,12 @@ import { mainText, about } from "../../content/pagesContent/mainPageContent.json
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoFile from "../../assets/videos/main.mp4";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function Main() {
   const screenSize = useResize();
   return (
-    <Layout title={title.main} description={description.main}>
+    <Layout title={title.main} description={description.main} page="main" ogImage={previewPhoto}>
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         videoLink={videoFile}

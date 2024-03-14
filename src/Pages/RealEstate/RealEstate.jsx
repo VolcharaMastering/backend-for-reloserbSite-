@@ -14,6 +14,7 @@ import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageC
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function RealEstate() {
   const screenSize = useResize();
@@ -38,7 +39,12 @@ function RealEstate() {
     return <BackgroundVideo {...props} />;
   };
   return (
-    <Layout title={title.realEstate} description={description.realEstate}>
+    <Layout
+      title={title.realEstate}
+      description={description.realEstate}
+      page="realEstate"
+      ogImage={previewPhoto}
+    >
       <section>
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.realEstateTItle}</h1>
         <BlackBlockWithText

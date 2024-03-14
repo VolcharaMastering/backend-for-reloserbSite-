@@ -12,6 +12,7 @@ import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
 import Layout from "../../components/Layout/Layout";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function Partner() {
   const screenSize = useResize();
@@ -20,7 +21,12 @@ function Partner() {
     ContactsStore.setContacts("partner");
   }, []);
   return (
-    <Layout title={title.partner} description={description.partner}>
+    <Layout
+      title={title.partner}
+      description={description.partner}
+      page="partner"
+      ogImage={previewPhoto}
+    >
       <section className="partner">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.partner}</h1>
         <BlackBlockWithText

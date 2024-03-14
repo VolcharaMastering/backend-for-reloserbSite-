@@ -13,6 +13,7 @@ import { title, description } from "../../content/metaInfo.json";
 import officeImage from "../../assets/v-office.png";
 import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
 import PriceBlock from "../../components/PriceBlock/PriceBlock";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function VOffice() {
   const screenSize = useResize();
@@ -43,7 +44,12 @@ function VOffice() {
     }
   };
   return (
-    <Layout title={title.voffice} description={description.voffice}>
+    <Layout
+      title={title.voffice}
+      description={description.voffice}
+      page="voffice"
+      ogImage={previewPhoto}
+    >
       <section className="v-office">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.voffice}</h1>
         <BlackBlockWithText
