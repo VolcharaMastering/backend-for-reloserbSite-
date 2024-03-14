@@ -5,7 +5,7 @@ import "./AboutUs.scss";
 import { about } from "../../content/pagesContent/aboutPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import teamPhoto from "../../assets/about/team.jpg";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/about.png";
 
 function AboutUs() {
   const screenSize = useResize();

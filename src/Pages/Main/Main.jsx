@@ -8,7 +8,7 @@ import { mainText, about } from "../../content/pagesContent/mainPageContent.json
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoFile from "../../assets/videos/main.mp4";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/main.png";
 
 function Main() {
   const screenSize = useResize();

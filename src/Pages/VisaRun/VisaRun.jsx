@@ -22,7 +22,7 @@ import BlockWithContacts from "../../components/BlockWithContacts/BlockWithConta
 import ContactsStore from "../../stores/ContactsStore";
 import OkBlock from "../../components/OkBlock/OkBlock";
 import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/visarun.png";
 
 function VisaRun() {
   const screenSize = useResize();

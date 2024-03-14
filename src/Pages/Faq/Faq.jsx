@@ -4,7 +4,7 @@ import DropDownContainer from "../../components/DropDownContainer/DropDownContai
 import { faq } from "../../content/pagesContent/faqPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import "./Faq.scss";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/faq.png";
 
 function Faq() {
   const screenSize = useResize();

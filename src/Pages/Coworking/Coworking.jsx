@@ -23,7 +23,7 @@ import {
   prices,
 } from "../../content/pagesContent/coworkingPageContent.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/coworking.png";
 
 function Coworking() {
   const screenSize = useResize();

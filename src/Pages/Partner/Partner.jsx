@@ -12,7 +12,7 @@ import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
 import Layout from "../../components/Layout/Layout";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/partner.png";
 
 function Partner() {
   const screenSize = useResize();

@@ -10,7 +10,7 @@ import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
 import { about, offers, staff, label } from "../../content/pagesContent/consultPageContent.json";
 import workPhoto from "../../assets/consult-temp-work.jpg";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/consult.png";
 
 function Consult() {
   const screenSize = useResize();
