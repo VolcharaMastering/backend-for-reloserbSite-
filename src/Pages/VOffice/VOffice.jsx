@@ -13,7 +13,7 @@ import { title, description } from "../../content/metaInfo.json";
 import officeImage from "../../assets/v-office.png";
 import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
 import PriceBlock from "../../components/PriceBlock/PriceBlock";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/voffice.png";
 
 function VOffice() {
   const screenSize = useResize();

@@ -13,7 +13,7 @@ import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageC
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/re.png";
 
 function RealEstate() {
   const screenSize = useResize();

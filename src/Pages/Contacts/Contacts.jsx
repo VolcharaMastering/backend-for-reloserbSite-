@@ -6,7 +6,7 @@ import BlockWithContacts from "../../components/BlockWithContacts/BlockWithConta
 import Layout from "../../components/Layout/Layout";
 import { title, description, ogData } from "../../content/metaInfo.json";
 import VideoMapBlock from "../../components/VideoMapBlock/VideoMapBlock";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/contacts.png";
 
 function Contacts() {
   const screenSize = useResize();

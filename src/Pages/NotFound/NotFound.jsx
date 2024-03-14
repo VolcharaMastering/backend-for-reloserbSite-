@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout";
 import "./NotFound.scss";
 import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/notfound.png";
 
 function NotFound() {
   const navigate = useNavigate();

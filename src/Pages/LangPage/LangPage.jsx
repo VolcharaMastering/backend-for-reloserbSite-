@@ -7,7 +7,7 @@ import { about, offers, whyWe } from "../../content/pagesContent/langPageContent
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import photoLink from "../../assets/lang-photo.png";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/lang.png";
 
 function LangPage() {
   const screenSize = useResize();

@@ -14,7 +14,7 @@ import { about, offers, whyWe } from "../../content/pagesContent/cargoPageConten
 import { title, description, ogData } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
-import previewPhoto from "../../assets/socPreview/enter.jpg";
+import previewPhoto from "../../assets/socPreview/cargo.png";
 
 function Cargo() {
   useEffect(() => {
