@@ -7,12 +7,13 @@ import { about, offers, whyWe } from "../../content/pagesContent/langPageContent
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import photoLink from "../../assets/lang-photo.png";
+import previewPhoto from "../../assets/socPreview/lang.png";
 
 function LangPage() {
   const screenSize = useResize();
 
   return (
-    <Layout title={title.lang} description={description.lang}>
+    <Layout title={title.lang} description={description.lang} page="lang" ogImage={previewPhoto}>
       <section className={`lang-page ${screenSize.trakResolutionValue}`}>
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.langTitle}</h1>
         <BlockWithPhotoAndDesc

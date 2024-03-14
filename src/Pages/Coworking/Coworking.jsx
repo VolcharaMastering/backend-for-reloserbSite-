@@ -23,6 +23,7 @@ import {
   prices,
 } from "../../content/pagesContent/coworkingPageContent.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
+import previewPhoto from "../../assets/socPreview/coworking.png";
 
 function Coworking() {
   const screenSize = useResize();
@@ -41,7 +42,12 @@ function Coworking() {
     }
   };
   return (
-    <Layout title={title.coworking} description={description.coworking}>
+    <Layout
+      title={title.coworking}
+      description={description.coworking}
+      page="coworking"
+      ogImage={previewPhoto}
+    >
       <section className="coworking">
         <h1 className={`title coworking__title ${screenSize.trakResolutionValue}`}>
           {titles.coworkTitle}

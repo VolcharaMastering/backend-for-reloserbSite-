@@ -5,12 +5,12 @@ import "./AboutUs.scss";
 import { about } from "../../content/pagesContent/aboutPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import teamPhoto from "../../assets/about/team.jpg";
+import previewPhoto from "../../assets/socPreview/about.png";
 
 function AboutUs() {
   const screenSize = useResize();
-
   return (
-    <Layout title={title.about} description={description.about}>
+    <Layout title={title.about} description={description.about} page="about" ogImage={previewPhoto}>
       <section className="about">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>О нас</h1>
         <BlockWithPhotoAndDesc

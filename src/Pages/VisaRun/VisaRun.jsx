@@ -22,6 +22,7 @@ import BlockWithContacts from "../../components/BlockWithContacts/BlockWithConta
 import ContactsStore from "../../stores/ContactsStore";
 import OkBlock from "../../components/OkBlock/OkBlock";
 import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
+import previewPhoto from "../../assets/socPreview/visarun.png";
 
 function VisaRun() {
   const screenSize = useResize();
@@ -115,7 +116,12 @@ function VisaRun() {
     );
   };
   return (
-    <Layout title={title.visarun} description={description.visarun}>
+    <Layout
+      title={title.visarun}
+      description={description.visarun}
+      page="visarun"
+      ogImage={previewPhoto}
+    >
       <section className="visarun">
         <h1 className={`title visarun__title ${screenSize.trakResolutionValue}`}>
           {titles.visarunTitle}

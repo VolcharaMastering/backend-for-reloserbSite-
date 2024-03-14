@@ -4,14 +4,21 @@ import ContactButtonsBlock from "../../components/ContactButtonsBlock/ContactBut
 import { useResize } from "../../utils/hooks/useResize";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import Layout from "../../components/Layout/Layout";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, ogData } from "../../content/metaInfo.json";
 import VideoMapBlock from "../../components/VideoMapBlock/VideoMapBlock";
+import previewPhoto from "../../assets/socPreview/contacts.png";
 
 function Contacts() {
   const screenSize = useResize();
 
   return (
-    <Layout title={title.contacts} description={description.contacts}>
+    <Layout
+      title={title.contacts}
+      description={description.contacts}
+      ogData={ogData}
+      page="contacts"
+      ogImage={previewPhoto}
+    >
       <section className="contacts">
         <ContactButtonsBlock size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
