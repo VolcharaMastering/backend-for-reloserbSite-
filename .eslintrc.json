@@ -1,87 +1,129 @@
 {
-    "env": {
-      "browser": true,
-      "es2023": true
+  "env": {
+    "browser": true,
+    "es2023": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "airbnb",
-      "airbnb/hooks",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react/jsx-runtime",
-      "plugin:prettier/recommended",
-      "plugin:import/recommended",
-      "prettier"
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./vite.config.json"
+  },
+  "plugins": [
+    "react",
+    "css"
+  ],
+  "rules": {
+    "no-alert": "warn",
+    "linebreak-style": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto",
+        "semi": true,
+        "singleQuote": false,
+        "tabWidth": 2
+      }
     ],
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module",
-      "project": "./vite.config.json"
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-indent": [
+      "warn",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "warn",
+      2
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect",
+      "flowVersion": "0.53"
     },
-    "plugins": ["react", "css"],
-    "rules": {
-      "no-alert": "warn",
-      "linebreak-style": "off",
-      "prettier/prettier": [
-        "warn",
-        {
-          "endOfLine": "auto",
-          "semi": true,
-          "singleQuote": false,
-          "tabWidth": 2
-        }
-      ],
-      "react/prop-types": "off",
-      "react/jsx-filename-extension": [
-        "warn",
-        { "extensions": [".js", ".jsx"] }
-      ],
-      "react/jsx-props-no-spreading": "off",
-      "react/jsx-one-expression-per-line": "off",
-      "react/jsx-curly-newline": "off",
-      "react/jsx-wrap-multilines": "off",
-      "react/jsx-indent": ["warn", 2],
-      "react/jsx-indent-props": ["warn", 2],
-      "import/prefer-default-export": "off",
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never"
-        }
-      ],
-      "no-unused-vars": "warn",
-      "no-console": "off",
-      "func-names": "off"
-    },
-    "settings": {
-      "react": {
-        "createClass": "createReactClass",
-        "pragma": "React",
-        "fragment": "Fragment",
-        "version": "detect",
-        "flowVersion": "0.53"
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      {
+        "property": "freeze",
+        "object": "Object"
       },
-      "propWrapperFunctions": [
-        "forbidExtraProps",
-        { "property": "freeze", "object": "Object" },
-        { "property": "myFavoriteWrapper" },
-        { "property": "forbidExtraProps", "exact": true }
-      ],
-      "componentWrapperFunctions": [
-        "observer",
-        { "property": "styled" },
-        { "property": "observer", "object": "Mobx" },
-        { "property": "observer", "object": "<pragma>" }
-      ],
-      "formComponents": ["CustomForm", { "name": "Form", "formAttribute": "endpoint" }],
-      "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }]
-    }
+      {
+        "property": "myFavoriteWrapper"
+      },
+      {
+        "property": "forbidExtraProps",
+        "exact": true
+      }
+    ],
+    "componentWrapperFunctions": [
+      "observer",
+      {
+        "property": "styled"
+      },
+      {
+        "property": "observer",
+        "object": "Mobx"
+      },
+      {
+        "property": "observer",
+        "object": "<pragma>"
+      }
+    ],
+    "formComponents": [
+      "CustomForm",
+      {
+        "name": "Form",
+        "formAttribute": "endpoint"
+      }
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
+    ]
   }
-  
+}

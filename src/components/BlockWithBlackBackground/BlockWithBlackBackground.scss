@@ -5,34 +5,48 @@
   @include to-center_column($justify: center);
   background-color: $dark-background-color;
   box-sizing: border-box;
-  // height: 80vh;
-  // .black-block__title {
-  //   @include subtitle-text($text-color: $light-text-color);
-  //   margin: 2%;
-  // }
+
+  .black-block__container {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+  }
   .black-block__navigation {
-    @include gridAutoFill($template-cols: repeat(auto-fit, minmax(280px, 1fr)), $gap: 0);
+    @include gridAutoFill(
+      $template-cols: repeat(auto-fit, minmax(280px, 1fr)),
+      $gap: 10px 10px,
+      $align: auto
+    );
     padding: 2%;
+    height: 100%;
 
     .black-block__info-block {
       @include link-list();
       height: 100%;
     }
   }
-
+  .black-block__navigation_safari {
+    @include to-center_row($align: initial);
+    padding: 2%;
+    height: 100%;
+  }
+  .black-block__card {
+    @include list-without-dots();
+    border: $borders-default;
+    width: 100%;
+    height: 100%;
+  }
   .black-block__description {
     @include block-text($text-color: $light-text-color);
     @include link-list($color: $light-text-color);
-    width: 70%;
     text-align: center;
-    margin: 20px;
+    margin-bottom: 50px;
     box-sizing: border-box;
+    border: $borders-default;
+    padding: 2%;
 
     &.mobile {
-      width: 100%;
+      margin: 50px 6%;
     }
   }
-  // .black-block__description:hover {
-  //   @include text-link-hover();
-  // }
 }

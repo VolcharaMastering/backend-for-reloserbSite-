@@ -1,40 +1,52 @@
+/* eslint-disable import/order */
+/* eslint-disable import/no-extraneous-dependencies */
 import { useState } from "react";
 import { useResize } from "../../utils/hooks/useResize";
-import { useLocation } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
-import Logo from "../UI/Logo/Logo";
-import "./TheHeader.scss";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import SwipeMenu from "../SwipeMenu/SwipeMenu";
-import TextLink from "../UI/TextLink/TextLink";
-import logo from "../../assets/logos/black-logo.svg";
+import HeaderSubMenu from "../HeaderSubMenu/HeaderSubMenu";
+import Logo from "../UI/Logo/Logo";
+import "./TheHeader.scss";
+import mobileLogo from "../../assets/mobile-logo.svg";
+import logo from "../../assets/header-logo.svg";
 
 function TheHeader() {
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const screenSize = useResize();
 
   return (
-    <header className="header">
-      <Logo src={logo} />
-      {!(
-        screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
-      ) ? (
-        <section className="header__main">
-          <HeaderMenu size={screenSize.trakResolutionValue} />
-          <TextLink location={location} linkTo="/contacts" size={screenSize.trakResolutionValue} />
-        </section>
-      ) : (
-        <section className={`header__name ${screenSize.trakResolutionValue}`}>
-          <Hamburger
-            toggled={isOpen}
-            label="Show menu"
-            toggle={setIsOpen}
-            size={30}
-            direction="right"
-            color="#979797"
-          />
-        </section>
+    <header className={`header ${screenSize.trakResolutionValue}`}>
+      <section className="header__main">
+        <HeaderMenu size={screenSize.trakResolutionValue} />
+        {!(
+          screenSize.trakResolutionValue === "tablet" || screenSize.trakResolutionValue === "mobile"
+        ) && (
+          <>
+            <HeaderSubMenu size={screenSize.trakResolutionValue} />
+            <div className="header__logo">
+              <Logo src={logo} />
+            </div>
+          </>
+        )}
+      </section>
+      {(screenSize.trakResolutionValue === "tablet" ||
+        screenSize.trakResolutionValue === "mobile") && (
+        <>
+          <div className="header__mobile-logo">
+            <Logo src={mobileLogo} />
+          </div>
+          <div className={`header__name ${screenSize.trakResolutionValue}`}>
+            <Hamburger
+              toggled={isOpen}
+              label="Show menu"
+              toggle={setIsOpen}
+              size={30}
+              direction="right"
+              color="#000"
+            />
+          </div>
+        </>
       )}
       {isOpen && <SwipeMenu setIsOpen={setIsOpen} screenSize={screenSize.trakResolutionValue} />}
     </header>

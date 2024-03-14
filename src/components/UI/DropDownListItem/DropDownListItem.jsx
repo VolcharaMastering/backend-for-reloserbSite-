@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { NavLink } from "react-router-dom";
 import "./DropDownListItem.scss";
 

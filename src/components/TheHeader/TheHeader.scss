@@ -3,25 +3,40 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: auto;
   width: 100%;
   @include to-center_row();
-  height: 80px;
+  height: 100px;
   border-bottom: $borders-default;
   background-color: $light-background-color;
-  padding: 2%;
   z-index: 10;
+  max-width: 3000px;
+  &.mobile {
+    height: 70px;
+  }
+  &.tablet {
+    height: 70px;
+  }
 
   .header__main {
-    @include to-center_row($justify: space-between);
+    @include to-center_column($align: flex-start);
+    width: 100%;
+    height: 100%;
+    position: relative;
     flex: 1;
 
-    &.tablet {
-      @include to-center_row($justify: flex-end);
+    .header__logo {
+      position: absolute;
+      width: 100px;
+      top: 15px;
+      left: 55px;
     }
-    &.mobile {
-      @include to-center_row($justify: flex-end);
-    }
+  }
+  .header__mobile-logo {
+    position: absolute;
+    width: 150px;
+    top: 21px;
+    left: 40px;
   }
   .header__page-name {
     @include font-style($font-size: 70px, $font-family: $yanone-font);
@@ -35,5 +50,10 @@
     &.mobile {
       @include font-style($font-size: 40px, $font-family: $yanone-font);
     }
+  }
+  .header__name {
+    position: absolute;
+    top: 12px;
+    right: 20px;
   }
 }

@@ -1,11 +1,9 @@
 /* eslint-disable react/no-array-index-key */
-import Carousel from "react-multi-carousel";
 import { useEffect, useState } from "react";
-import "react-multi-carousel/lib/styles.css";
 import "./Gallery.scss";
 import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
-import swipeSettings from "../../utils/swipeConfig";
 import generateRandomKey from "../../utils/keyGenerator";
+import SwipeGallery from "../SwipeGallery/SwipeGallery";
 
 function Gallery({ galleryType, content, size }) {
   const [galleryArray, setGalleryArray] = useState([]);
@@ -33,20 +31,8 @@ function Gallery({ galleryType, content, size }) {
         ))}
     </section>
   ) : (
-    <section className="gallery gallery_stringed">
-      <Carousel {...swipeSettings}>
-        {galleryArray &&
-          galleryArray.map((image) => (
-            <PhotoContainer
-              key={image.index}
-              index={image.index}
-              photoLink={image.name.default}
-              size={size}
-              containerType="gallery"
-              caption="Some description"
-            />
-          ))}
-      </Carousel>
+    <section className={`gallery gallery_stringed ${size}`}>
+      <SwipeGallery content={galleryArray} size={size} />
     </section>
   );
 }

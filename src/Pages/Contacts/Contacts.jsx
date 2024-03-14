@@ -8,12 +8,7 @@ import { title, description } from "../../content/metaInfo.json";
 import VideoMapBlock from "../../components/VideoMapBlock/VideoMapBlock";
 
 function Contacts() {
-  // const [ setContact] = useState("main");
   const screenSize = useResize();
-
-  // const handleSetContact = (gotContact) => {
-  //   setContact(gotContact);
-  // };
 
   return (
     <Layout title={title.contacts} description={description.contacts}>
@@ -22,6 +17,7 @@ function Contacts() {
         <BlockWithContacts size={screenSize.trakResolutionValue} />
         <VideoMapBlock size={screenSize.trakResolutionValue} />
       </section>
+      <div className="horisont-line" />
     </Layout>
   );
 }

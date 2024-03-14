@@ -30,7 +30,13 @@ function FooterMenu({ size }) {
           <TextLink location="" linkTo="/visarun" />
         </li>
         <li className="footer__menu-link">
+          <TextLink location="" linkTo="/lang" />
+        </li>
+        <li className="footer__menu-link">
           <TextLink location="" linkTo="/faq" />
+        </li>
+        <li className="footer__menu-link">
+          <TextLink location="" linkTo="/sitemap" />
         </li>
       </ul>
     </nav>

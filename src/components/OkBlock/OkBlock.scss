@@ -1,0 +1,23 @@
+@import "../../consts/block-mixins.scss";
+
+.ok-block {
+  @include to-center_column();
+  width: 100%;
+  padding-bottom: 20px;
+  .ok-block__item {
+    @include list-without-dots();
+    width: 60%;
+    &.tablet {
+      width: 90%;
+    }
+
+    &.mobile {
+      width: 96%;
+    }
+  }
+  .ok-block__text {
+    @include drop-list-text();
+    font-style: italic;
+    padding: 0 3% 20px;
+  }
+}

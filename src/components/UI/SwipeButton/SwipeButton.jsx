@@ -1,14 +1,14 @@
 import ToggleButton from "react-toggle-button";
 import "./SwipeButton.scss";
 
-function SwipeButton({ leftTitle, rightTitle, changeMap, mapState }) {
+function SwipeButton({ leftTitle, rightTitle, changeMap, mapState, size }) {
   const handleToggle = () => {
     changeMap();
   };
 
   return (
     <div className="slider">
-      <h2 className="subtitle">{leftTitle}</h2>
+      <h2 className={`subtitle ${size}`}>{leftTitle}</h2>
       <ToggleButton
         inactiveLabel="G"
         activeLabel="Я"
@@ -29,7 +29,7 @@ function SwipeButton({ leftTitle, rightTitle, changeMap, mapState }) {
           },
         }}
       />
-      <h2 className="subtitle">{rightTitle}</h2>
+      <h2 className={`subtitle ${size}`}>{rightTitle}</h2>
     </div>
   );
 }

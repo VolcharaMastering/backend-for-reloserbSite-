@@ -1,0 +1,44 @@
+@import "../../consts/block-mixins.scss";
+
+.price {
+  @include to-center_column($justify: center);
+  width: 100%;
+
+  padding: 2%;
+  .price__table {
+    @include gridAutoFill($template-cols: repeat(2, minmax(100px, 1fr)), $gap: 1px);
+    width: 50%;
+    background-color: $border-color;
+    padding: 1px;
+    overflow: hidden;
+
+    &.tablet {
+      width: 80%;
+    }
+    &.mobile {
+      width: 100%;
+    }
+
+    .price__label {
+      background-color: $light-background-color;
+      @include block-text();
+
+      @include list-without-dots();
+      @include to-center_row($justify: center);
+
+      &.mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .price__promo {
+    padding: 2% 0;
+    &.tablet {
+      padding: 5% 0;
+    }
+    &.mobile {
+      padding: 10% 0;
+    }
+  }
+}

@@ -18,7 +18,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   @include font-style();
-  @include to-center_column(center, space-between);
+  @include to-center_column(center, center);
 }
 .title {
   @include title-text();
@@ -36,10 +36,10 @@ body {
   @include subtitle-text();
   padding: 2%;
   &.tablet {
-    font-size: 30px;
+    font-size: 34px;
   }
   &.mobile {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 .subtitle_white {
@@ -58,15 +58,24 @@ body {
   flex: 1;
   align-self: stretch;
   border-left: $borders-default;
-  border-bottom: $borders-default;
   &.tablet {
     height: 1px;
     width: 100%;
+    border-bottom: $borders-default;
   }
   &.mobile {
     height: 1px;
     width: 100%;
+    border-bottom: $borders-default;
   }
+}
+.horisont-line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-bottom: $borders-default;
+  flex: 1;
+  align-self: stretch;
 }
 .grid-block {
   width: 100%;

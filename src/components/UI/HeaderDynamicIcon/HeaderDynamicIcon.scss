@@ -1,0 +1,95 @@
+@import "../../../consts/block-mixins.scss";
+
+.dynamic {
+  height: 90px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: fit-content;
+  @include to-center_row($justify: center);
+  transition: width 0.8s ease-in-out;
+  box-sizing: border-box;
+  margin: 0 2px;
+  padding-left: 17px;
+  text-decoration: none;
+  transition:
+    width 0.4s ease-in-out,
+    padding 0.4s ease-in-out;
+  &.desktopHD {
+    height: 70px;
+    padding-left: 6px;
+  }
+
+  &.desktop {
+    height: 55px;
+    padding-left: 0;
+  }
+}
+
+.dynamic__part {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 51px;
+  background-position: right;
+  margin-left: 0;
+  transition: margin-left 0.4s ease-in-out;
+  &.desktopHD {
+    height: 70px;
+    width: 40px;
+  }
+
+  &.desktop {
+    height: 55px;
+    width: 31px;
+  }
+}
+
+.dynamic__text {
+  @include link-list();
+  @include font-style($font-size: 30px, $font-weight: 500, $font-family: $sofia-font);
+  opacity: 0;
+  width: 0;
+  border-top: $borders-default;
+  border-bottom: $borders-default;
+  text-align: right;
+  transition:
+    opacity 0.5s ease-in-out,
+    width 0.5s ease-in-out;
+  &.desktopHD {
+    font-size: 25px;
+  }
+
+  &.desktop {
+    font-size: 22px;
+    padding: 15px;
+  }
+}
+.dynamic:hover {
+  width: auto;
+  padding-left: 50px;
+  &.desktopHD {
+    padding-left: 39px;
+  }
+
+  &.desktop {
+    padding-left: 30px;
+  }
+}
+.dynamic:hover .dynamic__part {
+  margin-left: auto;
+}
+
+.dynamic:hover .dynamic__text {
+  opacity: 1;
+  width: auto;
+  padding: 10px 4px;
+  &.desktopHD {
+    padding: 5px 4px;
+    font-size: 25px;
+  }
+
+  &.desktop {
+    padding: 10px 4px;
+    font-size: 22px;
+  }
+}

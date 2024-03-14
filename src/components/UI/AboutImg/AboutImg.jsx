@@ -10,12 +10,13 @@ function AboutImg({ linkToImg, imgCaption, imgInfo }) {
     <figure className="about-img">
       <img src={linkToImg} className="about-img__picture" alt={imgCaption} />
       <figcaption className="about-img__info">
-        <h2 className="subtitle">{imgCaption}</h2>
-        {imgInfo.map((item) => (
-          <p key={getRandomKey} className="about-img__text">
-            {item}
-          </p>
-        ))}
+        {imgCaption && <h2 className="subtitle">{imgCaption}</h2>}
+        {imgInfo &&
+          imgInfo.map((item) => (
+            <p key={getRandomKey} className="about-img__text">
+              {item}
+            </p>
+          ))}
       </figcaption>
     </figure>
   );

@@ -14,6 +14,7 @@ function BlockWithPhotoAndDesc({ photoLink, size, caption, newsTitle, newsText, 
           title={newsTitle}
         />
       </figure>
+      <div className={`divide-line ${size}`} />
       <figcaption className={`news-container__caption ${size}`}>
         <TextBlock newsTitle={newsTitle} newsText={newsText} size={size} />
       </figcaption>
@@ -23,6 +24,7 @@ function BlockWithPhotoAndDesc({ photoLink, size, caption, newsTitle, newsText, 
       <figcaption className={`news-container__caption ${size}`}>
         <TextBlock newsTitle={newsTitle} newsText={newsText} size={size} />
       </figcaption>
+      <div className={`divide-line ${size}`} />
       <figure className={`news-container__photo ${size}`}>
         <PhotoContainer
           photoLink={photoLink}

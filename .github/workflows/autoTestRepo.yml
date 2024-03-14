@@ -1,0 +1,34 @@
+name: CI/CD for test site 
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4  
+      with:
+        ref: develop
+  
+    - name: Install
+      run: npm ci
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env: 
+
+        SSH_PRIVATE_KEY: ${{ secrets.RELOCATE_SSH }}
+        REMOTE_HOST: ${{ secrets.TEST_HOST }}
+        REMOTE_USER: ${{ secrets.SERVER_USER }}
+        TARGET: '/opt/instantRelocate/Coworking/dist/'
+        SOURCE: 'dist/'
+        
