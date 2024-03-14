@@ -1,27 +1,19 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { isSafari } from "../../utils/detectSafari";
 import "./BlockWithBlackBackground.scss";
 import generateRandomKey from "../../utils/keyGenerator";
 import InfoCard from "../UI/InfoCard/InfoCard";
 
 function BlockWithBlackBackground({ title, blocks, description, linkTo, size }) {
-  const [safariUser, setSafariUser] = useState(false);
   const getRandomKey = () => {
     const index = generateRandomKey();
     return index;
   };
 
-  useEffect(() => {
-    setSafariUser(isSafari());
-  }, []);
   return (
     <article className="black-block">
       {title && <h2 className={`subtitle_white ${size}`}>{title}</h2>}
       <nav className="black-block__container">
-        <ul
-          className={`${safariUser ? "black-block__navigation" : "black-block__navigation"}  ${size}`}
-        >
+        <ul className={`black-block__navigation ${size}`}>
           {blocks.length &&
             blocks.map((singleBlock) =>
               singleBlock.blockLink ? (

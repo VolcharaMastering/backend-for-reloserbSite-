@@ -3,5 +3,5 @@
 .slider {
   @include to-center_row($justify: flex-start);
   width: 167px;
-  margin: 0;
+  margin-bottom: 10px;
 }
