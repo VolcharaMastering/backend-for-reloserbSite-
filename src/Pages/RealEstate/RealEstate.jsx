@@ -9,7 +9,6 @@ import BlockWithContacts from "../../components/BlockWithContacts/BlockWithConta
 import OkBlock from "../../components/OkBlock/OkBlock";
 import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 import "./RealEstate.scss";
-import generateRandomKey from "../../utils/keyGenerator";
 import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
@@ -22,10 +21,6 @@ function RealEstate() {
   useEffect(() => {
     ContactsStore.setContacts("realEstate");
   }, []);
-  const getRandomKey = () => {
-    const index = generateRandomKey();
-    return index;
-  };
   // const videoLink ="https://relocationsrb.com/public_html/video/estate-video.mp4";
   const cardsComponent = () => {
     return <DropDownContainer containerData={whyWe} size={screenSize.trakResolutionValue} />;
@@ -33,7 +28,7 @@ function RealEstate() {
   const videoComponent = () => {
     const props = {
       size: screenSize.trakResolutionValue,
-      videoLink: videoLink,
+      videoLink,
       videoTitle: "",
     };
     return <BackgroundVideo {...props} />;
