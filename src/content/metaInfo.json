@@ -46,10 +46,10 @@
       "notFound": "ReloSerb Страница не найдена"
     },
     "ogDescription": {
-      "main": "ReloSerb — единственный сервис, который вам нужен для комфортной релокации в Сербию. Мы предлагаем все услуги в одном окне: от поиска недвижимости и оформления ВНЖ, до аренды коворкинг и языковых курсов.",
+      "main": "Предлагаем все услуги в одном окне: от поиска недвижимости и оформления ВНЖ, до аренды коворкинга и языковых курсов.",
       "contacts": "Для бесплатной консультации наших специалистов свяжитесь с нами любым удобным вам способом: по телефону, электронной почте, в Telegram или приходите к нам в офисе.",
       "coworking": "Идеальное место для работы, нетворкинга и мероприятий в 15 минутах от центра Белграда. Первые три часа бесплатно!",
-      "about": "О ReloSerb",
+      "about": "ReloSerb — это единственный сервис, который вам нужен для комфортной релокации в Сербию. Опыт и знания наших специалистов помогут решить любой ваш вопрос в новой стране.",
       "cargo": "В кроткие сроки доставим в Сербию все, что не поместилось в ваши чемоданы.",
       "visarun": "Возим на визаран из Белграда и Нови-Сада, в аэропорт Никола Тесла, IKEA и любую точку Сербию безопасно и с комфортом.",
       "consult": "Вместе с нами вы получите ВНЖ, поменяете водительские права, откроете счета в банке и свою компанию в Сербии без задержек и стрессов.",
@@ -61,19 +61,19 @@
       "notFound": "ReloSerb Страница не найдена"
     },
     "ogUrl": {
-      "main": "https://tested.relocationsrb.com/",
-      "contacts": "https://tested.relocationsrb.com/contacts/",
-      "coworking": "https://tested.relocationsrb.com/coworking/",
-      "about": "https://tested.relocationsrb.com/about/",
-      "cargo": "https://tested.relocationsrb.com/cargo/",
-      "visarun": "https://tested.relocationsrb.com/visarun/",
-      "consult": "https://tested.relocationsrb.com/consult/",
-      "realEstate": "https://tested.relocationsrb.com/real-estate/",
-      "faq": "https://tested.relocationsrb.com/faq/",
-      "lang": "https://tested.relocationsrb.com/lang/",
-      "voffice": "https://tested.relocationsrb.com/voffice/",
-      "partner": "https://tested.relocationsrb.com/partner/",
-      "notFound": "https://tested.relocationsrb.com/404/"
+      "main": "https://relocationsrb.com/",
+      "contacts": "https://relocationsrb.com/contacts/",
+      "coworking": "https://relocationsrb.com/coworking/",
+      "about": "https://relocationsrb.com/about/",
+      "cargo": "https://relocationsrb.com/cargo/",
+      "visarun": "https://relocationsrb.com/visarun/",
+      "consult": "https://relocationsrb.com/consult/",
+      "realEstate": "https://relocationsrb.com/real-estate/",
+      "faq": "https://relocationsrb.com/faq/",
+      "lang": "https://relocationsrb.com/lang/",
+      "voffice": "https://relocationsrb.com/voffice/",
+      "partner": "https://relocationsrb.com/partner/",
+      "notFound": "https://relocationsrb.com/404/"
     }
   },
   "seo": { "name": "yandex-verification", "content": "7467034307518108" }

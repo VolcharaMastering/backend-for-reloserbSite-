@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { ogData } from "../../content/metaInfo.json";
 
 function Layout({ children, title, description, seoName, seoContent, page, ogImage }) {
-  console.log(ogData);
   return (
     <>
       <Helmet>
