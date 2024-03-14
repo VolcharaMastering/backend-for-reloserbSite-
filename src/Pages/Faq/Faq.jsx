@@ -4,11 +4,12 @@ import DropDownContainer from "../../components/DropDownContainer/DropDownContai
 import { faq } from "../../content/pagesContent/faqPageContent.json";
 import { title, description } from "../../content/metaInfo.json";
 import "./Faq.scss";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function Faq() {
   const screenSize = useResize();
   return (
-    <Layout title={title.faq} description={description.faq}>
+    <Layout title={title.faq} description={description.faq} page="faq" ogImage={previewPhoto}>
       <section className="faq">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>F.A.Q.</h1>
         <div className="horisont-line" />

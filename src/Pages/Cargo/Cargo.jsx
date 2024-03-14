@@ -11,9 +11,10 @@ import OkBlock from "../../components/OkBlock/OkBlock";
 import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 import "./Cargo.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/cargoPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, ogData } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function Cargo() {
   useEffect(() => {
@@ -39,7 +40,13 @@ function Cargo() {
   };
 
   return (
-    <Layout title={title.cargo} description={description.cargo}>
+    <Layout
+      title={title.cargo}
+      description={description.cargo}
+      ogData={ogData}
+      page="cargo"
+      ogImage={previewPhoto}
+    >
       <section className="cargo">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.cargoTitle}</h1>
         <BlackBlockWithText

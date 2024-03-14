@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./NotFound.scss";
 import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function NotFound() {
   const navigate = useNavigate();
@@ -18,7 +21,12 @@ function NotFound() {
     navigate(-1);
   };
   return (
-    <Layout title={title.notFound} description={description.notFound}>
+    <Layout
+      title={title.notFound}
+      description={description.notFound}
+      page="notFound"
+      ogImage={previewPhoto}
+    >
       <div className="not-found">
         <p className="not-found__caption">Check yourself. There is no such page</p>
         <h1 className="title">{titles.notFound}</h1>

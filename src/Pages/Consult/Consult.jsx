@@ -10,6 +10,7 @@ import { titles } from "../../content/titles.json";
 import { title, description } from "../../content/metaInfo.json";
 import { about, offers, staff, label } from "../../content/pagesContent/consultPageContent.json";
 import workPhoto from "../../assets/consult-temp-work.jpg";
+import previewPhoto from "../../assets/socPreview/enter.jpg";
 
 function Consult() {
   const screenSize = useResize();
@@ -19,7 +20,12 @@ function Consult() {
   }, []);
 
   return (
-    <Layout title={title.consult} description={description.consult}>
+    <Layout
+      title={title.consult}
+      description={description.consult}
+      page="consult"
+      ogImage={previewPhoto}
+    >
       <section className="consult">
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.consultTitle}</h1>
         <BlockWithPhotoAndDesc
