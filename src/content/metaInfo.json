@@ -61,19 +61,19 @@
       "notFound": "ReloSerb Страница не найдена"
     },
     "ogUrl": {
-      "main": "https://relocationsrb.com/",
-      "contacts": "https://relocationsrb.com/contacts/",
-      "coworking": "https://relocationsrb.com/coworking/",
-      "about": "https://relocationsrb.com/about/",
-      "cargo": "https://relocationsrb.com/cargo/",
-      "visarun": "https://relocationsrb.com/visarun/",
-      "consult": "https://relocationsrb.com/consult/",
-      "realEstate": "https://relocationsrb.com/real-estate/",
-      "faq": "https://relocationsrb.com/faq/",
-      "lang": "https://relocationsrb.com/lang/",
-      "voffice": "https://relocationsrb.com/voffice/",
-      "partner": "https://relocationsrb.com/partner/",
-      "notFound": "https://relocationsrb.com/404/"
+      "main": "https://tested.relocationsrb.com/",
+      "contacts": "https://tested.relocationsrb.com/contacts/",
+      "coworking": "https://tested.relocationsrb.com/coworking/",
+      "about": "https://tested.relocationsrb.com/about/",
+      "cargo": "https://tested.relocationsrb.com/cargo/",
+      "visarun": "https://tested.relocationsrb.com/visarun/",
+      "consult": "https://tested.relocationsrb.com/consult/",
+      "realEstate": "https://tested.relocationsrb.com/real-estate/",
+      "faq": "https://tested.relocationsrb.com/faq/",
+      "lang": "https://tested.relocationsrb.com/lang/",
+      "voffice": "https://tested.relocationsrb.com/voffice/",
+      "partner": "https://tested.relocationsrb.com/partner/",
+      "notFound": "https://tested.relocationsrb.com/404/"
     }
   },
   "seo": { "name": "yandex-verification", "content": "7467034307518108" }
