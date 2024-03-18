@@ -16,7 +16,7 @@ import {
   whyWe,
   photoDescription,
 } from "../../content/pagesContent/visarunPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import photoLink from "../../assets/visaRun/passport.jpg";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import ContactsStore from "../../stores/ContactsStore";
@@ -119,6 +119,7 @@ function VisaRun() {
     <Layout
       title={title.visarun}
       description={description.visarun}
+      keywords={keywords.visarun}
       page="visarun"
       ogImage={previewPhoto}
     >

@@ -5,7 +5,7 @@ import BackgroundVideo from "../../components/BackgroundVideo/BackgroundVideo";
 import BlackBlockWithText from "../../components/BlackBlockWithText/BlackBlockWithText";
 import BlockWithBlackBackground from "../../components/BlockWithBlackBackground/BlockWithBlackBackground";
 import { mainText, about } from "../../content/pagesContent/mainPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoFile from "../../assets/videos/main.mp4";
 import previewPhoto from "../../assets/socPreview/main.png";
@@ -13,7 +13,13 @@ import previewPhoto from "../../assets/socPreview/main.png";
 function Main() {
   const screenSize = useResize();
   return (
-    <Layout title={title.main} description={description.main} page="main" ogImage={previewPhoto}>
+    <Layout
+      title={title.main}
+      description={description.main}
+      keywords={keywords.main}
+      page="main"
+      ogImage={previewPhoto}
+    >
       <BackgroundVideo
         size={screenSize.trakResolutionValue}
         videoLink={videoFile}

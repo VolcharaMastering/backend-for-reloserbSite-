@@ -9,7 +9,7 @@ import Layout from "../../components/Layout/Layout";
 import "./VOffice.scss";
 import { titles } from "../../content/titles.json";
 import { about, headText, price } from "../../content/pagesContent/v-oficePageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import officeImage from "../../assets/v-office.png";
 import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
 import PriceBlock from "../../components/PriceBlock/PriceBlock";
@@ -47,6 +47,7 @@ function VOffice() {
     <Layout
       title={title.voffice}
       description={description.voffice}
+      keywords={keywords.voffice}
       page="voffice"
       ogImage={previewPhoto}
     >
