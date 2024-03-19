@@ -8,7 +8,7 @@ import BlockWithPhotoAndDesc from "../../components/BlockWithPhotoAndDesc/BlockW
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import "./Partner.scss";
 import { headText, about, terms, whyWe } from "../../content/pagesContent/partnerPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/coworkPictures/DSC00025.jpg";
 import Layout from "../../components/Layout/Layout";
@@ -24,6 +24,7 @@ function Partner() {
     <Layout
       title={title.partner}
       description={description.partner}
+      keywords={keywords.partner}
       page="partner"
       ogImage={previewPhoto}
     >

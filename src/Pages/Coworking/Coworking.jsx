@@ -14,7 +14,7 @@ import PriceBlock from "../../components/PriceBlock/PriceBlock";
 import OkBlock from "../../components/OkBlock/OkBlock";
 import "./Coworking.scss";
 import { titles } from "../../content/titles.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import {
   about,
   offers,
@@ -45,6 +45,7 @@ function Coworking() {
     <Layout
       title={title.coworking}
       description={description.coworking}
+      keywords={keywords.coworking}
       page="coworking"
       ogImage={previewPhoto}
     >

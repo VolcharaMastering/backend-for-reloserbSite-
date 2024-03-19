@@ -4,7 +4,7 @@ import OkBlock from "../../components/OkBlock/OkBlock";
 import Layout from "../../components/Layout/Layout";
 import "./LangPage.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/langPageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import photoLink from "../../assets/lang-photo.png";
 import previewPhoto from "../../assets/socPreview/lang.png";
@@ -13,7 +13,13 @@ function LangPage() {
   const screenSize = useResize();
 
   return (
-    <Layout title={title.lang} description={description.lang} page="lang" ogImage={previewPhoto}>
+    <Layout
+      title={title.lang}
+      description={description.lang}
+      keywords={keywords.lang}
+      page="lang"
+      ogImage={previewPhoto}
+    >
       <section className={`lang-page ${screenSize.trakResolutionValue}`}>
         <h1 className={`title ${screenSize.trakResolutionValue}`}>{titles.langTitle}</h1>
         <BlockWithPhotoAndDesc

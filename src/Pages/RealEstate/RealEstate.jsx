@@ -10,7 +10,7 @@ import OkBlock from "../../components/OkBlock/OkBlock";
 import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 import "./RealEstate.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
 import previewPhoto from "../../assets/socPreview/re.png";
@@ -37,6 +37,7 @@ function RealEstate() {
     <Layout
       title={title.realEstate}
       description={description.realEstate}
+      keywords={keywords.realEstate}
       page="realEstate"
       ogImage={previewPhoto}
     >
