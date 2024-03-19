@@ -11,7 +11,7 @@ import OkBlock from "../../components/OkBlock/OkBlock";
 import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 import "./Cargo.scss";
 import { about, offers, whyWe } from "../../content/pagesContent/cargoPageContent.json";
-import { title, description, keywords, ogData } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
 import previewPhoto from "../../assets/socPreview/cargo.png";
@@ -44,7 +44,6 @@ function Cargo() {
       title={title.cargo}
       description={description.cargo}
       keywords={keywords.cargo}
-      ogData={ogData}
       page="cargo"
       ogImage={previewPhoto}
     >
