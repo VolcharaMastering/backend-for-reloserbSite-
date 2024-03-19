@@ -10,6 +10,9 @@ function DropDownContainer({ containerData, size }) {
   return (
     <section className={`drop-container ${size}`}>
       <h2 className={`subtitle ${size}`}>{containerData.title}</h2>
+      {containerData.caption && (
+        <p className={`drop-container__text ${size}`}>{containerData.caption}</p>
+      )}
       {containerData.description &&
         containerData.description.map((dropBlock) => (
           <DropDownListTitle key={getRandomKey()} dropItem={dropBlock} size={size} />

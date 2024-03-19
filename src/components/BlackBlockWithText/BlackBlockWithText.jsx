@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import generateRandomKey from "../../utils/keyGenerator";
 import Button from "../UI/Button/Button";
 import "./BlackBlockWithText.scss";
@@ -14,7 +15,22 @@ function BlackBlockWithText({ title, description, text, size, linkTo, linkAction
       {text &&
         text.map((item) => (
           <p key={getRandomKey()} className={`black-text-block__text ${size}`}>
-            {item}
+            {item.split(/({.*?})/).map((thisItem) =>
+              thisItem.includes("{")
+                ? (() => {
+                    const linkData = JSON.parse(thisItem);
+                    return (
+                      <NavLink
+                        to={linkData.url}
+                        target="_blank"
+                        className="black-text-block__text linked"
+                      >
+                        {linkData.replaceText}
+                      </NavLink>
+                    );
+                  })()
+                : thisItem
+            )}
           </p>
         ))}
       {linkTo && (
