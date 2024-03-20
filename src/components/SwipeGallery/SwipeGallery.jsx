@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, FreeMode } from "swiper/modules";
+import { Autoplay, Keyboard, FreeMode, Pagination, Navigation } from "swiper/modules";
 
 import generateRandomKey from "../../utils/keyGenerator";
 import "./SwipeGallery.scss";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
 
@@ -38,7 +40,15 @@ function SwipeGallery({ content, size }) {
       keyboard={{
         enabled: true,
       }}
-      modules={[Keyboard, FreeMode]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      navigation={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Autoplay, Keyboard, Pagination, FreeMode, Navigation]}
       className="mySwiper"
     >
       {content.map((image) => (
