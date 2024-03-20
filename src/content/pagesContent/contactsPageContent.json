@@ -7,7 +7,7 @@
     { "buttonName": "Грузоперевозки", "buttonAction": "cargo" },
     { "buttonName": "Визаран", "buttonAction": "visarun" },
     { "buttonName": "Курсы сербского", "buttonAction": "lang" },
-    { "buttonName": "Партнёрская программа", "buttonAction": "partner" },
+    { "buttonName": "Партнерская программа", "buttonAction": "partner" },
     { "buttonName": "Виртуальный офис", "buttonAction": "voffice" }
   ],
   "contacts": {
