@@ -1,40 +1,21 @@
 import "./FooterMenu.scss";
 import TextLink from "../UI/TextLink/TextLink";
+import { menuArray } from "../../utils/imoptHeaderImages";
+import generateRandomKey from "../../utils/keyGenerator";
 
 function FooterMenu({ size }) {
+  const getRandomKey = () => {
+    const index = generateRandomKey();
+    return index;
+  };
   return (
     <nav className="footer__menu">
       <ul className={`footer__menu-block ${size}`}>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/about" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/contacts" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/consult" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/coworking" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/real-estate" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/cargo" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/visarun" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/lang" />
-        </li>
-        <li className="footer__menu-link">
-          <TextLink location="" linkTo="/faq" />
-        </li>
+        {menuArray.map((icon) => (
+          <li key={getRandomKey()} className="footer__menu-link">
+            <TextLink linkTo={icon.linkTo} location="" size={size} />
+          </li>
+        ))}
         <li className="footer__menu-link">
           <TextLink location="" linkTo="/sitemap" />
         </li>
