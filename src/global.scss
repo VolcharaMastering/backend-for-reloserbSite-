@@ -34,22 +34,28 @@ body {
 
 .subtitle {
   @include subtitle-text();
+  text-align: center;
   padding: 2%;
   &.tablet {
     font-size: 34px;
+    padding: 2% 10%;
   }
   &.mobile {
     font-size: 30px;
+    padding: 2% 10%;
   }
 }
 .subtitle_white {
   @include subtitle-text($text-color: $light-text-color);
+  text-align: center;
   padding: 2%;
   &.tablet {
     font-size: 30px;
+    padding: 2% 10%;
   }
   &.mobile {
     font-size: 28px;
+    padding: 2% 10%;
   }
 }
 .divide-line {
