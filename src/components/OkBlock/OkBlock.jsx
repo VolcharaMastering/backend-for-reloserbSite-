@@ -2,7 +2,7 @@ import generateRandomKey from "../../utils/keyGenerator";
 import OkText from "../UI/OkText/OkText";
 import "./OkBlock.scss";
 
-function OkBlock({ data, size }) {
+function OkBlock({ data, inblock, size }) {
   const getRandomKey = () => {
     const index = generateRandomKey();
     return index;
@@ -12,7 +12,7 @@ function OkBlock({ data, size }) {
       <h2 className={`subtitle ${size}`}>{`${data.title}`}</h2>
       {data.description &&
         data.description.map((item) => (
-          <li key={getRandomKey()} className={`ok-block__item ${size}`}>
+          <li key={getRandomKey()} className={`ok-block__item ${inblock && "whide"} ${size}`}>
             <OkText gotText={item} size={size} />
           </li>
         ))}

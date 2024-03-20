@@ -12,32 +12,34 @@ function BlackBlockWithText({ title, description, text, size, linkTo, linkAction
     <article className="black-text-block">
       {title && <h2 className={`subtitle_white black-text-block__title ${size}`}>{title}</h2>}
       {description && <p className="black-text-block__description">{description}</p>}
-      {text &&
-        text.map((item) => (
-          <p key={getRandomKey()} className={`black-text-block__text ${size}`}>
-            {item.split(/({.*?})/).map((thisItem) =>
-              thisItem.includes("{")
-                ? (() => {
-                    const linkData = JSON.parse(thisItem);
-                    return (
-                      <NavLink
-                        to={linkData.url}
-                        target="_blank"
-                        className="black-text-block__text linked"
-                      >
-                        {linkData.replaceText}
-                      </NavLink>
-                    );
-                  })()
-                : thisItem
-            )}
-          </p>
-        ))}
-      {linkTo && (
-        <div className={`black-text-block__button ${size}`}>
-          <Button name={linkTo} action={linkAction} color="dark" size={size} type="focus" />
-        </div>
-      )}
+      <div className={`black-text-block__container ${size}`}>
+        {text &&
+          text.map((item) => (
+            <p key={getRandomKey()} className={`black-text-block__text ${size}`}>
+              {item.split(/({.*?})/).map((thisItem) =>
+                thisItem.includes("{")
+                  ? (() => {
+                      const linkData = JSON.parse(thisItem);
+                      return (
+                        <NavLink
+                          to={linkData.url}
+                          target="_blank"
+                          className={`black-text-block__text linked ${size}`}
+                        >
+                          {linkData.replaceText}
+                        </NavLink>
+                      );
+                    })()
+                  : thisItem
+              )}
+            </p>
+          ))}
+        {linkTo && (
+          <div className={`black-text-block__button ${size}`}>
+            <Button name={linkTo} action={linkAction} color="dark" size={size} type="focus" />
+          </div>
+        )}
+      </div>
     </article>
   );
 }
