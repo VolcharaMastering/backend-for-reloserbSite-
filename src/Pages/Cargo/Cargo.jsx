@@ -10,11 +10,19 @@ import PhotoContainer from "../../components/UI/PhotoContainer/PhotoContainer";
 import OkBlock from "../../components/OkBlock/OkBlock";
 import EmptyDoubleBlock from "../../components/EmptyDoubleBlock/EmptyDoubleBlock";
 import "./Cargo.scss";
-import { about, offers, whyWe } from "../../content/pagesContent/cargoPageContent.json";
-import { title, description, ogData } from "../../content/metaInfo.json";
+import {
+  about,
+  offers,
+  whyWe,
+  delivery,
+  faq,
+  howDeliver,
+} from "../../content/pagesContent/cargoPageContent.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import promoImage from "../../assets/cargo/cargo1.jpg";
 import previewPhoto from "../../assets/socPreview/cargo.png";
+import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 
 function Cargo() {
   useEffect(() => {
@@ -43,7 +51,7 @@ function Cargo() {
     <Layout
       title={title.cargo}
       description={description.cargo}
-      ogData={ogData}
+      keywords={keywords.cargo}
       page="cargo"
       ogImage={previewPhoto}
     >
@@ -72,6 +80,8 @@ function Cargo() {
         )}
 
         <div className="horisont-line" />
+        <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
+        <div className="horisont-line" />
         <EmptyDoubleBlock
           firstComponent={listComponent}
           secondComponent={photoComponent}
@@ -79,7 +89,14 @@ function Cargo() {
           secondBlockSize="small"
           size={screenSize.trakResolutionValue}
         />
-        <OkBlock data={whyWe} size={screenSize.trakResolutionValue} />
+        <DropDownContainer containerData={delivery} size={screenSize.trakResolutionValue} />
+        <BlackBlockWithText
+          title={howDeliver.title}
+          description=""
+          text={howDeliver.description}
+          size={screenSize.trakResolutionValue}
+        />
+        <DropDownContainer containerData={faq} size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>

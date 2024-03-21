@@ -7,7 +7,7 @@ import { useResize } from "../../utils/hooks/useResize";
 import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import { titles } from "../../content/titles.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { about, offers, staff, label } from "../../content/pagesContent/consultPageContent.json";
 import workPhoto from "../../assets/consult-temp-work.jpg";
 import previewPhoto from "../../assets/socPreview/consult.png";
@@ -23,6 +23,7 @@ function Consult() {
     <Layout
       title={title.consult}
       description={description.consult}
+      keywords={keywords.consult}
       page="consult"
       ogImage={previewPhoto}
     >

@@ -9,8 +9,14 @@ import BlockWithContacts from "../../components/BlockWithContacts/BlockWithConta
 import OkBlock from "../../components/OkBlock/OkBlock";
 import DropDownContainer from "../../components/DropDownContainer/DropDownContainer";
 import "./RealEstate.scss";
-import { about, offers, whyWe } from "../../content/pagesContent/realEstatePageContent.json";
-import { title, description } from "../../content/metaInfo.json";
+import {
+  about,
+  offers,
+  whyWe,
+  faq,
+  howBuy,
+} from "../../content/pagesContent/realEstatePageContent.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import { titles } from "../../content/titles.json";
 import videoLink from "../../assets/videos/estate-video.mp4";
 import previewPhoto from "../../assets/socPreview/re.png";
@@ -21,9 +27,8 @@ function RealEstate() {
   useEffect(() => {
     ContactsStore.setContacts("realEstate");
   }, []);
-  // const videoLink ="https://relocationsrb.com/public_html/video/estate-video.mp4";
   const cardsComponent = () => {
-    return <DropDownContainer containerData={whyWe} size={screenSize.trakResolutionValue} />;
+    return <OkBlock data={whyWe} inblock size={screenSize.trakResolutionValue} />;
   };
   const videoComponent = () => {
     const props = {
@@ -37,6 +42,7 @@ function RealEstate() {
     <Layout
       title={title.realEstate}
       description={description.realEstate}
+      keywords={keywords.realEstate}
       page="realEstate"
       ogImage={previewPhoto}
     >
@@ -49,8 +55,6 @@ function RealEstate() {
           size={screenSize.trakResolutionValue}
         />
 
-        <OkBlock data={offers} size={screenSize.trakResolutionValue} />
-        <div className={`horisont-line ${screenSize.trakResolutionValue}`} />
         <EmptyDoubleBlock
           firstComponent={videoComponent}
           secondComponent={cardsComponent}
@@ -58,7 +62,14 @@ function RealEstate() {
           secondBlockSize="half"
           size={screenSize.trakResolutionValue}
         />
-
+        <OkBlock data={offers} size={screenSize.trakResolutionValue} />
+        <BlackBlockWithText
+          title={howBuy.title}
+          description=""
+          text={howBuy.description}
+          size={screenSize.trakResolutionValue}
+        />
+        <DropDownContainer containerData={faq} size={screenSize.trakResolutionValue} />
         <BlockWithContacts size={screenSize.trakResolutionValue} />
       </section>
     </Layout>

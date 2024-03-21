@@ -16,24 +16,43 @@
     text-align: center;
     margin-bottom: 20px;
   }
+  .black-text-block__container {
+    width: 70%;
+    &.tablet {
+      width: 100%;
+    }
+    &.mobile {
+      width: 100%;
+    }
+  }
   .black-text-block__text {
     @include font-style($color: $light-text-color, $font-family: $vollkorn-font, $font-size: 30px);
-    max-width: 70%;
+    width: 100%;
     text-align: start;
+    padding: 0 2%;
     &.tablet {
       font-size: 25px;
     }
     &.mobile {
       font-size: 20px;
     }
+    &.linked {
+      @include link-list($color: $light-text-color);
+      font-weight: 700;
+      transition: $transition;
+    }
+    &.linked:hover {
+      opacity: 0.7;
+    }
   }
   .black-text-block__text:first-of-type {
-    padding: 1% 0 0;
+    padding: 1% 2% 0;
   }
   .black-text-block__text:last-of-type {
-    padding: 0 0 1%;
+    padding: 0 2% 2%;
   }
   .black-text-block__button {
+    @include to-center-row($justify: center);
     margin: 3% 0;
   }
 }

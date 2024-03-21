@@ -34,22 +34,28 @@ body {
 
 .subtitle {
   @include subtitle-text();
+  text-align: center;
   padding: 2%;
   &.tablet {
     font-size: 34px;
+    padding: 2% 10%;
   }
   &.mobile {
     font-size: 30px;
+    padding: 2% 10%;
   }
 }
 .subtitle_white {
   @include subtitle-text($text-color: $light-text-color);
+  text-align: center;
   padding: 2%;
   &.tablet {
     font-size: 30px;
+    padding: 2% 10%;
   }
   &.mobile {
     font-size: 28px;
+    padding: 2% 10%;
   }
 }
 .divide-line {
@@ -93,3 +99,20 @@ body {
     }
   }
 }
+// Swiper styles Works only here
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: $dark-text-color;
+  opacity: 1;
+  background: $border-color;
+}
+
+.swiper-pagination-bullet-active {
+  color: $dark-text-color;
+  background: $light-text-color;
+}
+// endOfswiperStyles

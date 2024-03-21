@@ -7,12 +7,14 @@
   .ok-block__item {
     @include list-without-dots();
     width: 60%;
-    &.tablet {
-      width: 90%;
+    &.whide {
+      width: 100%;
     }
-
-    &.mobile {
-      width: 96%;
+    &.tablet:not(.whide) {
+      width: 94%;
+    }
+    &.mobile:not(.whide) {
+      width: 94%;
     }
   }
   .ok-block__text {

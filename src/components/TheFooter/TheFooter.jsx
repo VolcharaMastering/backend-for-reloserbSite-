@@ -11,7 +11,6 @@ function TheFooter() {
       <FooterMenu size={screenSize.trakResolutionValue} />
       <div className={`footer__designed ${screenSize.trakResolutionValue}`}>
         <p className="footer__label">Designed and developed by:</p>
-        <p className="footer__copy">&nbsp;&copy;&nbsp;&nbsp;&nbsp;</p>
         <div className="footer__logo">
           <Logo src={logo} />
         </div>

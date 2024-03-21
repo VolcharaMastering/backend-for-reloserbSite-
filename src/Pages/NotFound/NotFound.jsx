@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./NotFound.scss";
 import { titles } from "../../content/titles.json";
-import { title, description } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import previewPhoto from "../../assets/socPreview/notfound.png";
 
 function NotFound() {
@@ -24,6 +24,7 @@ function NotFound() {
     <Layout
       title={title.notFound}
       description={description.notFound}
+      keywords={keywords.notFound}
       page="notFound"
       ogImage={previewPhoto}
     >

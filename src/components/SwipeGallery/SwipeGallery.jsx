@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, FreeMode } from "swiper/modules";
+import { Autoplay, Keyboard, FreeMode, Pagination, Navigation } from "swiper/modules";
 
-import generateRandomKey from "../../utils/keyGenerator";
 import "./SwipeGallery.scss";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import PhotoContainer from "../UI/PhotoContainer/PhotoContainer";
 
@@ -30,15 +31,40 @@ function SwipeGallery({ content, size }) {
         break;
     }
   }, [size]);
+
+  // const pagination = {
+  //   renderBullet: function (index, className) {
+  //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+  //   },
+  // };
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
+
   return (
     <Swiper
+      style={{
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-bullet-horizontal-gap": "5px",
+        "--swiper-pagination-bottom": "2px",
+      }}
       slidesPerView={viewSlides}
       spaceBetween={2}
+      pagination={pagination}
       freeMode={true}
+      grabCursor={true}
       keyboard={{
         enabled: true,
       }}
-      modules={[Keyboard, FreeMode]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      navigation={true}
+      modules={[Autoplay, Keyboard, Pagination, FreeMode, Navigation]}
       className="mySwiper"
     >
       {content.map((image) => (

@@ -4,7 +4,7 @@ import ContactButtonsBlock from "../../components/ContactButtonsBlock/ContactBut
 import { useResize } from "../../utils/hooks/useResize";
 import BlockWithContacts from "../../components/BlockWithContacts/BlockWithContacts";
 import Layout from "../../components/Layout/Layout";
-import { title, description, ogData } from "../../content/metaInfo.json";
+import { title, description, keywords } from "../../content/metaInfo.json";
 import VideoMapBlock from "../../components/VideoMapBlock/VideoMapBlock";
 import previewPhoto from "../../assets/socPreview/contacts.png";
 
@@ -15,7 +15,7 @@ function Contacts() {
     <Layout
       title={title.contacts}
       description={description.contacts}
-      ogData={ogData}
+      keywords={keywords.contacts}
       page="contacts"
       ogImage={previewPhoto}
     >
