@@ -18,7 +18,7 @@ function TextLink({ icon, color, location, linkTo, size }) {
       <div className="link-background">
         <NavLink
           to={linkTo}
-          target={linkTo === "/sitemap" ? "blank" : ""}
+          target={linkTo === "/sitemap.html" ? "blank" : ""}
           className={`link ${size} ${color} ${location.pathname === linkTo ? "link_active" : ""}`}
         >
           {icon && <img className="link-icon" src={icon} alt="headericon" />}

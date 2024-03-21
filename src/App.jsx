@@ -58,7 +58,7 @@ const App = observer(() => {
           <Route path="/voffice" element={<VOffice />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/sitemap.html" element={<Sitemap />} />
           <Route path="*" Component={NotFound} />
         </Routes>
       </main>

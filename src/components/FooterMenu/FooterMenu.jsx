@@ -17,7 +17,7 @@ function FooterMenu({ size }) {
           </li>
         ))}
         <li className="footer__menu-link">
-          <TextLink location="" linkTo="/sitemap" size={size} />
+          <TextLink location="" linkTo="/sitemap.html" size={size} />
         </li>
       </ul>
     </nav>
