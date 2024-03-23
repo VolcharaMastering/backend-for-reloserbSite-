@@ -14,9 +14,9 @@
     "main": [
       {
         "icon": "phoneIcon",
-        "name": "Номер телефона: +381 63 737 2704",
+        "name": "Номер телефона:+381 63 181 1582",
         "showName": false,
-        "linkTo": "tel: +381637372704"
+        "linkTo": "tel: +381631811582"
       },
       {
         "icon": "mailIcon",
@@ -54,9 +54,9 @@
     "coworking": [
       {
         "icon": "phoneIcon",
-        "name": "Номер телефона: +381 63 737 2704",
+        "name": "Номер телефона:+381 63 181 1582",
         "showName": false,
-        "linkTo": "tel: +381637372704"
+        "linkTo": "tel: +381631811582"
       },
       {
         "icon": "tgIcon",
@@ -128,9 +128,9 @@
     "realEstate": [
       {
         "icon": "phoneIcon",
-        "name": "Номер телефона: +381 63 737 2704",
+        "name": "Номер телефона:+381 63 181 1582",
         "showName": false,
-        "linkTo": "tel: +381637372704"
+        "linkTo": "tel: +381631811582"
       },
       {
         "icon": "tgIcon",
