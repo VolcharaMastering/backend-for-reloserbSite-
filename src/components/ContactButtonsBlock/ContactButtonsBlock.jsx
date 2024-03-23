@@ -25,6 +25,13 @@ function ContactButtonsBlock({ size }) {
               />
             </li>
           ))}
+        <Button
+          name="form"
+          action={{ isOpened: true, formType: "feddback", formContent: "" }}
+          color="light"
+          size={size}
+          type="form"
+        />
       </ul>
     </div>
   );

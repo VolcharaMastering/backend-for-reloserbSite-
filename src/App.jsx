@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Form } from "react-router-dom";
 import "@fontsource/sofia-sans-extra-condensed";
 import "@fontsource/fira-sans-extra-condensed";
 import "@fontsource/yanone-kaffeesatz";
@@ -30,6 +30,8 @@ import VOffice from "./Pages/VOffice/VOffice";
 import Partner from "./Pages/Partner/Partner";
 import Sitemap from "./Pages/Sitemap/Sitemap";
 import PaddingFromHeader from "./components/UI/PaddinFromHeader/PaddingFromHeader";
+import FormStore from "./stores/FormStore";
+import UsersForms from "./components/UI/UsersForms/UsersForms";
 
 const App = observer(() => {
   const screenSize = useResize();
@@ -39,6 +41,13 @@ const App = observer(() => {
         <Popup
           popupType="photo"
           popupContent={popupState.popups}
+          size={screenSize.trakResolutionValue}
+        />
+      )}
+      {FormStore.forms.isOpened && (
+        <UsersForms
+          usersFormsType={FormStore.forms.formType}
+          popupContent={FormStore.forms.formContent}
           size={screenSize.trakResolutionValue}
         />
       )}
