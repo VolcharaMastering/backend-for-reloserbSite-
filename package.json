@@ -45,6 +45,7 @@
     "react-router-sitemap-maker": "^1.1.0",
     "react-toggle-button": "^2.2.0",
     "sass": "^1.69.7",
+    "script-tag-in-react": "^0.0.6",
     "sitemap": "^7.1.1",
     "swiper": "^11.0.7",
     "uuid": "^9.0.1",

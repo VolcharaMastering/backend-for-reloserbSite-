@@ -46,8 +46,9 @@ const App = observer(() => {
       )}
       {FormStore.forms.isOpened && (
         <UsersForms
-          usersFormsType={FormStore.forms.formType}
-          popupContent={FormStore.forms.formContent}
+          formType={FormStore.forms.formType}
+          formData={FormStore.forms.formData}
+          srcToThirdParty={FormStore.forms.srcToThirdParty}
           size={screenSize.trakResolutionValue}
         />
       )}

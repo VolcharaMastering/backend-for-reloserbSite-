@@ -2,8 +2,6 @@
 
 .users-forms {
   position: relative;
-  // top: 15%;
-  // left: 33vw;
 
   @include to-center_column();
   border-radius: 10px;
@@ -15,7 +13,7 @@
   background: border-box rgb(255, 255, 255);
 
   .users-forms__close {
-    background-image: url(../../assets/close.svg);
+    background-image: url(../../../assets/close.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
@@ -25,6 +23,12 @@
     border: none;
     top: -30px;
     right: -30px;
+    opacity: 1;
+    transition: $transition;
+  }
+  .users-forms__close:hover {
+    cursor: pointer;
+    opacity: 0.5;
   }
 
   .users-forms__image {

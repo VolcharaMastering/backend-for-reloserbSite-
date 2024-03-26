@@ -4,7 +4,6 @@ import "./Button.scss";
 
 function Button({ name, action, color, size, type }) {
   const handleClick = () => {
-    // console.log(action.formType);
     if (type === "contact") {
       ContactsStore.setContacts(action);
     }

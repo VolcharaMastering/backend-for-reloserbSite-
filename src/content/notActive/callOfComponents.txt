@@ -130,3 +130,16 @@
         <meta property="og:url" content={ogData.ogUrl[page]} />
         <meta property="og:site_name" content="ReloSerb. Переезд и легализация в Сербии" />
         <meta property="og:locale" content="ru_RU" />
+
+         <Button
+          name="form"
+          action={{
+            isOpened: true,
+            formType: "bitra",
+            formData: "inline/26/c693m8",
+            srcToThirdParty: "https://cdn-ru.bitrix24.ru/b27062060/crm/form/loader_26.js",
+          }}
+          color="light"
+          size={size}
+          type="form"
+        />
